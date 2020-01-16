@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon --exec npx babel-node index.js"
+    "client:build": "cd client && npm run build",
+    "start": "npm run client:build && npx nodemon --exec npx babel-node index.js"
   },
   "repository": {
     "type": "git",

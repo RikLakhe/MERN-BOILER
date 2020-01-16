@@ -26,5 +26,5 @@ app.use(express.static(path.resolve(__dirname, './client/build')));
 const server = http.createServer(app);
 
 server.listen(port, () => {
-    console.log(`Server running at port : http://localhost:3002/${server.address().port}`);
+    console.log(`Server running at port : http://localhost:${server.address().port}/`);
 });
