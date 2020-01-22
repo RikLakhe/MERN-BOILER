@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -12,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="23177" />
+    <option name="totalTimeSeconds" value="23656" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,7 +28,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.6.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -82,7 +81,7 @@
       <workItem from="1579599149893" duration="600000" />
       <workItem from="1579666281778" duration="3944000" />
       <workItem from="1579670876041" duration="186000" />
-      <workItem from="1579671095950" duration="3053000" />
+      <workItem from="1579671095950" duration="4016000" />
     </task>
     <servers />
   </component>
@@ -100,10 +99,10 @@
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
     <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579259146195" />
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579670834002">
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579674458968">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579670834001" />
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579674458968" />
     <state width="1325" height="167" key="GridCell.Tab.0.bottom" timestamp="1579366726683">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
