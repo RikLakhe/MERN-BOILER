@@ -1,0 +1,32 @@
+{
+  "name": "mern-boiler",
+  "version": "0.0.0",
+  "description": "MERN stack devleopment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RikLakhe/MERN-BOILER.git"
+  },
+  "keywords": [
+    "node",
+    "MERN",
+    "React",
+    "Express",
+    "Node",
+    "Mongo"
+  ],
+  "author": "Rikesh Lal Shrestha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RikLakhe/MERN-BOILER/issues"
+  },
+  "homepage": "https://github.com/RikLakhe/MERN-BOILER#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
