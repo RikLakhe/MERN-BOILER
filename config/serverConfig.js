@@ -5,6 +5,12 @@ const config ={
     headers:{ 'content-type': 'application/json' },
     mongoURL: process.env.MONGO_URL || 'mongodb://localhost:27017/',
     dbName: 'blog-post',
+    mailHost:'smtp.mailtrap.io',
+    mailPort:2525,
+    mailAuth:{
+        user:'f4877c176b8012',
+        pass:'9ee0e10b1b43c5',
+    }
 };
 
 export const openServer = (app) => {

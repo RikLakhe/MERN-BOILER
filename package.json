@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:build": "cd client && npm run build",
-    "start": "npm run client:build && npx nodemon --exec npx babel-node index.js"
+    "start": "npm run client:build && node --exec npx babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
     "mongodb": "^3.5.0",
     "mongoose": "^5.8.7",
     "morgan": "^1.9.1",
+    "nodemailer": "^6.4.2",
     "path": "^0.12.7",
     "uuid": "^3.3.3"
   },
