@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:build": "cd client && npm run build",
-    "start": "npm run client:build && node --exec npx babel-node index.js"
+    "start": "npm run client:build && node babel-node index.js"
   },
   "repository": {
     "type": "git",
