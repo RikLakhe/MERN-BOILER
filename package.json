@@ -1,0 +1,22 @@
+{
+  "name": "mern-boiler",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && node index.js",
+    "build": "cd client && npm install && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RikLakhe/MERN-BOILER.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RikLakhe/MERN-BOILER/issues"
+  },
+  "homepage": "https://github.com/RikLakhe/MERN-BOILER#readme"
+}
