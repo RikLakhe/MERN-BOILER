@@ -21,9 +21,9 @@
   },
   "homepage": "https://github.com/RikLakhe/MERN-BOILER#readme",
   "devDependencies": {
-    "express": "^4.17.1"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "dotenv": "^8.2.0"
   }
 }
