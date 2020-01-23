@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="" />
+    <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="39610" />
+    <option name="totalTimeSeconds" value="40543" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -122,7 +126,7 @@
       <workItem from="1579671095950" duration="15868000" />
       <workItem from="1579752214812" duration="1468000" />
       <workItem from="1579755983142" duration="6000" />
-      <workItem from="1579767014082" duration="11611000" />
+      <workItem from="1579767014082" duration="12766000" />
     </task>
     <servers />
   </component>
@@ -217,9 +221,9 @@
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
     <state x="1990" y="246" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579262300379" />
-    <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579776017311">
+    <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579779547335">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579776017311" />
+    <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579779547335" />
   </component>
 </project>
