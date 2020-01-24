@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +14,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="41159" />
+    <option name="totalTimeSeconds" value="45234" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,12 +135,23 @@
       <workItem from="1579671095950" duration="15868000" />
       <workItem from="1579752214812" duration="1468000" />
       <workItem from="1579755983142" duration="6000" />
-      <workItem from="1579767014082" duration="13433000" />
+      <workItem from="1579767014082" duration="14007000" />
+      <workItem from="1579838165413" duration="6804000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -173,11 +195,11 @@
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
     <state x="1914" y="242" width="573" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579767104178" />
-    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579691542846">
+    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579854898915">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
-    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579691542846" />
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579854898915" />
     <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1579767951795">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
