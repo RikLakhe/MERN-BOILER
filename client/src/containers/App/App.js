@@ -1,12 +1,22 @@
-import React from 'react';
-import {Button} from "antd";
+import React, {Fragment} from 'react';
+import { withRouter, Switch, Route} from 'react-router-dom'
 
-import AppLayout from "../../components/Layout"
+import PublicRoute from '../../routes/PublicRoute'
 
-const App = props => {
-  return (
-    <AppLayout />
-  );
-};
+import {
+    AsyncAppLayout,
+    AsyncStaticAppLayout,
+    AsyncAuth,
+    AsyncHome
+} from './AsyncComponents'
 
-export default App;
+const App = () => (
+    <Fragment>
+      <Switch>
+        <PublicRoute exact path="/" layout={AsyncAppLayout} component={AsyncHome} />
+        <PublicRoute exact path="/login" layout={AsyncStaticAppLayout} component={AsyncAuth} />
+      </Switch>
+    </Fragment>
+);
+
+export default withRouter(App);
