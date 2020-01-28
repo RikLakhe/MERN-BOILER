@@ -19,6 +19,47 @@
     display: flex
     align-items: center
 
+  .nav-item-active
+    width: 100%
+
+    .menu-icon
+      display: flex
+      justify-content: space-between
+      padding: 15px
+
+    .nav-icon
+      float: right
+      font-size: 20px
+
+    h3
+      color: white
+
+    hr
+      margin: 0
+      padding: 0
+      width: 100%
+      border: 1px solid $unique
+
 
 .app-left-menu-active
   width: 300px
+
+
+.app-left-nav
+  .nav-item-active
+    ul
+      padding-top: 10px
+      padding-bottom: 10px
+
+    li
+      list-style: none
+      text-decoration: none
+      color: $white
+
+    li:hover
+      color: $tertiary
+      font-size: 30px
+      text-decoration: underline
+
+    .menu-route-icon
+      padding: 10px

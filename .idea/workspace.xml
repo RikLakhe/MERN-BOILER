@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/constants/menuRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/header.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/Main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/_config.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_config.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="63381" />
+    <option name="totalTimeSeconds" value="66479" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -150,7 +142,7 @@
       <workItem from="1579838165413" duration="14170000" />
       <workItem from="1580096792520" duration="1501000" />
       <workItem from="1580124023285" duration="2855000" />
-      <workItem from="1580184161609" duration="15393000" />
+      <workItem from="1580184161609" duration="19115000" />
     </task>
     <servers />
   </component>
