@@ -2,9 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/header.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/layout.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/routes/PublicRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/_config.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +35,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="48188" />
+    <option name="totalTimeSeconds" value="59755" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,19 +59,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.6.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/Layout/SideNavRight" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/Layout" />
+      <recent name="$PROJECT_DIR$/client/src/styles" />
+      <recent name="$PROJECT_DIR$/client/src/containers/App" />
       <recent name="$PROJECT_DIR$/config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/server" />
-      <recent name="$PROJECT_DIR$/client/src/components/Layout/SideNav" />
+      <recent name="$PROJECT_DIR$/client/src/components/Layout/SideNavRight" />
+      <recent name="$PROJECT_DIR$/client/src/components/Layout/SideNavs" />
+      <recent name="$PROJECT_DIR$/client/src/components/Layout/Main" />
       <recent name="$PROJECT_DIR$/client/src/components/Layout/Header" />
-      <recent name="$PROJECT_DIR$/client/src/components/Layout/Footer" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -135,7 +161,10 @@
       <workItem from="1579752214812" duration="1468000" />
       <workItem from="1579755983142" duration="6000" />
       <workItem from="1579767014082" duration="14007000" />
-      <workItem from="1579838165413" duration="12130000" />
+      <workItem from="1579838165413" duration="14170000" />
+      <workItem from="1580096792520" duration="1501000" />
+      <workItem from="1580124023285" duration="2855000" />
+      <workItem from="1580184161609" duration="11005000" />
     </task>
     <servers />
   </component>
@@ -194,15 +223,19 @@
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
     <state x="1914" y="242" width="573" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579767104178" />
-    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579854898915">
+    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580199483817">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
-    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579854898915" />
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580199483817" />
     <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1579767951795">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579767951795" />
+    <state x="1868" y="319" width="906" height="439" key="EditFileWatcherDialog" timestamp="1580192284324">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1868" y="319" width="906" height="439" key="EditFileWatcherDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580192284324" />
     <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579674458968">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -231,6 +264,10 @@
     <state width="1325" height="167" key="GridCell.Tab.0.right/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855635" />
     <state width="1325" height="167" key="GridCell.Tab.0.right/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579366726683" />
     <state width="1920" height="278" key="GridCell.Tab.0.right/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579692915803" />
+    <state x="1815" y="174" key="SettingsEditor" timestamp="1580190791030">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1815" y="174" key="SettingsEditor/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580190791030" />
     <state x="432" y="130" width="540" height="540" key="StructurePopup" timestamp="1579862992016">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
