@@ -2,32 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/header.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/layout.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes/PublicRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/styles/_config.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header/header.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/header.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/Main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/_config.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/_config.sass" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="59755" />
+    <option name="totalTimeSeconds" value="63381" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -164,7 +150,7 @@
       <workItem from="1579838165413" duration="14170000" />
       <workItem from="1580096792520" duration="1501000" />
       <workItem from="1580124023285" duration="2855000" />
-      <workItem from="1580184161609" duration="11005000" />
+      <workItem from="1580184161609" duration="15393000" />
     </task>
     <servers />
   </component>
@@ -223,11 +209,11 @@
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
     <state x="1914" y="242" width="573" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579767104178" />
-    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580199483817">
+    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580199875948">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
-    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580199483817" />
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580199875948" />
     <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1579767951795">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -276,6 +262,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579773335715" />
+    <state x="1884" y="240" width="884" height="598" key="find.popup" timestamp="1580203479192">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1884" y="240" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580203479192" />
     <state x="444" y="943" width="672" height="677" key="run.anything.popup" timestamp="1579307855683">
       <screen x="0" y="768" width="1366" height="768" />
     </state>

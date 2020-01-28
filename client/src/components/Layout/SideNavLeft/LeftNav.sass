@@ -1,8 +1,24 @@
 @import "src/styles/config"
 
 .app-left-nav
-  background-color: $tertiary
-  width: 100px
+  width: 50px
   display: flex
   align-items: center
   flex-flow: row wrap
+  background-color: $primary
+  transition: width $animation-time/2
+
+  .nav-icon
+    font-size: 30px
+    padding: 10px
+
+  .nav-item
+    writing-mode: vertical-rl
+    text-orientation: upright
+    color: white
+    display: flex
+    align-items: center
+
+
+.app-left-menu-active
+  width: 300px

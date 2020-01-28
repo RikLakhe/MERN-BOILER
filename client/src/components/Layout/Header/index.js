@@ -8,7 +8,7 @@ const Header = props => {
     } = props;
 
     return (
-        <div className={`app-header ${displayMenu && 'app-header-menu'}`}>
+        <div className={`app-header ${displayMenu ? 'app-header-menu-active':'app-header-menu-inactive'}`}>
             MERN-BOILER
         </div>
     )

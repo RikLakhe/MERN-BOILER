@@ -8,7 +8,7 @@ const Footer = props => {
     } = props;
 
     return (
-        <div className={`app-footer ${displayMenu && 'app-footer-menu'}`}>
+        <div className={`app-footer ${displayMenu ? 'app-footer-menu-active':'app-footer-menu-inactive'}`}>
             ©{" "}2020, RIKLAKHE. All Rights Reserved.
         </div>
     )
