@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Auth/LoginForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Auth/SignUpForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Auth/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Loading/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Loading/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/MainStatic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/Home/HomeContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/Layout/AppLayoutContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/Layout/AppLayoutStaticContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/styles/normalization.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/Main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/Main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/PublicRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/PublicRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="70915" />
+    <option name="totalTimeSeconds" value="71297" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -160,7 +139,7 @@
       <workItem from="1579838165413" duration="14170000" />
       <workItem from="1580096792520" duration="1501000" />
       <workItem from="1580124023285" duration="2855000" />
-      <workItem from="1580184161609" duration="24424000" />
+      <workItem from="1580184161609" duration="25232000" />
     </task>
     <servers />
   </component>
