@@ -1,0 +1,27 @@
+@import "../../../styles/_config.sass"
+
+.spinner
+  margin: 100px auto
+  width: 40px
+  height: 40px
+  position: relative
+  text-align: center
+  -webkit-animation: loading-rotate 2.0s infinite linear
+  animation: loading-rotate 2.0s infinite linear
+
+.dot1, .dot2
+  width: 60%
+  height: 60%
+  display: inline-block
+  position: absolute
+  top: 0
+  background-color: #333
+  border-radius: 100%
+  -webkit-animation: loading-bounce 2.0s infinite ease-in-out , loading-color 2s linear infinite
+  animation: loading-bounce 2.0s infinite ease-in-out , loading-color 2s linear infinite
+
+.dot2
+  top: auto
+  bottom: 0
+  -webkit-animation-delay: -1.0s
+  animation-delay: -1.0s

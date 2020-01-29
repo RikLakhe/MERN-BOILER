@@ -7,3 +7,57 @@ $white: #FFF
 
 $animation-time: 1s
 
+@-webkit-keyframes loading-bounce
+  0%, 100%
+    -webkit-transform: scale(0.0)
+  50%
+    -webkit-transform: scale(1.0)
+
+@keyframes loading-bounce
+  0%, 100%
+    transform: scale(0.0)
+    -webkit-transform: scale(0.0)
+  50%
+    transform: scale(1.0)
+    -webkit-transform: scale(1.0)
+
+@-webkit-keyframes loading-rotate
+  100%
+    -webkit-transform: rotate(360deg)
+
+@keyframes loading-rotate
+  0%
+    transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+
+@-webkit-keyframes loading-color
+  0%
+    background-color: $primary
+  30%
+    background-color: $primary
+  50%
+    background-color: $primary
+  70%
+    background-color: $unique
+  80%
+    background-color: $primary
+  90%
+    background-color: $primary
+  100%
+    background-color: $primary
+
+@keyframes loading-color
+  0%
+    background-color: $primary
+  30%
+    background-color: $primary
+  50%
+    background-color: $primary
+  70%
+    background-color: $unique
+  80%
+    background-color: $primary
+  90%
+    background-color: $primary
+  100%
+    background-color: $primary

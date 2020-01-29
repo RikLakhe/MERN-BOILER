@@ -18,6 +18,8 @@
     color: white
     display: flex
     align-items: center
+    animation-name: menu-animation2
+    animation-duration: 2s
 
   .nav-item-active
     width: 100%
@@ -47,6 +49,9 @@
 
 .app-left-nav
   .nav-item-active
+    animation-name: menu-animation1
+    animation-duration: 2s
+
     ul
       padding-top: 10px
       padding-bottom: 10px
@@ -63,3 +68,16 @@
 
     .menu-route-icon
       padding: 10px
+
+
+@keyframes menu-animation1
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes menu-animation2
+  0%
+    opacity: 0
+  100%
+    opacity: 1
