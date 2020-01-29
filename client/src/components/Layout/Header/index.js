@@ -7,7 +7,7 @@ const Header = props => {
         displayMenu
     } = props;
 
-    console.log('process.env.URL',process.env)
+    console.log('process.env.URL',process)
 
     return (
         <div className={`app-header ${displayMenu ? 'app-header-menu-active':'app-header-menu-inactive'}`}>
