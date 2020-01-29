@@ -10,7 +10,7 @@ const SignUpForm = props => {
     return (
         <div>
             Sign Up Form
-            <Button size={"large"} onClick={() => setSignUp(!isSignUp)} block>LOGIN<Icon type="arrow-right"/></Button>
+            <Button size={"large"} onClick={() => setSignUp(!isSignUp)} block><Icon type="arrow-left"/>LOGIN INSTEAD</Button>
         </div>
     )
 };
