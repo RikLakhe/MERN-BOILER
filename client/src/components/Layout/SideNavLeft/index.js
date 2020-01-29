@@ -1,7 +1,9 @@
 import React from "react";
 import {Icon} from 'antd'
+import {Link} from "react-router-dom";
 
 import './LeftNav.sass';
+import LogoImage from "../../../assets/lakhemern.png"
 
 import menuRoute from "../../../constants/menuRoute";
 
@@ -17,7 +19,7 @@ const SideNavLeft = props => {
                 displayMenu ?
                     <div className="nav-item-active">
                         <div className="menu-icon">
-                            <h3>Welcome!</h3>
+                            <img src={LogoImage} alt="Logo" />
                             <Icon
                                 className={'nav-icon'}
                                 type="close" style={{color: 'white'}}
@@ -25,7 +27,6 @@ const SideNavLeft = props => {
                                     setDisplayMenu(!displayMenu)
                                 }}/>
                         </div>
-
                         <hr/>
                         <ul>
                             {
@@ -33,7 +34,7 @@ const SideNavLeft = props => {
                                 menuRoute.map(
                                     menuItem => {
                                         return (
-                                            <li key={menuItem.menuKey}><Icon type={menuItem.icon} className={'menu-route-icon'}/>{menuItem.menuName}</li>
+                                            <li key={menuItem.menuKey}><Link to={menuItem.route}><Icon type={menuItem.icon} className={'menu-route-icon'}/>{menuItem.menuName}</Link></li>
                                         )
                                     })
                             }

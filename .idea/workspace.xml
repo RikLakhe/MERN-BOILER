@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/menuRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/menuRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="71297" />
+    <option name="totalTimeSeconds" value="80047" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,23 +43,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.6.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/containers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/utils" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/utils" />
+      <recent name="$PROJECT_DIR$/client/public" />
+      <recent name="$PROJECT_DIR$/client/src/assets" />
+      <recent name="$PROJECT_DIR$/client/src/containers" />
+      <recent name="$PROJECT_DIR$/client/src/components/Layout" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/components/Layout" />
       <recent name="$PROJECT_DIR$/client/src/styles" />
       <recent name="$PROJECT_DIR$/client/src/containers/App" />
       <recent name="$PROJECT_DIR$/config" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/containers" />
-      <recent name="$PROJECT_DIR$/client/src/components/Layout" />
-      <recent name="$PROJECT_DIR$/client/src/components/Layout/SideNavRight" />
-      <recent name="$PROJECT_DIR$/client/src/components/Layout/SideNavs" />
-      <recent name="$PROJECT_DIR$/client/src/components/Layout/Main" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -140,6 +149,7 @@
       <workItem from="1580096792520" duration="1501000" />
       <workItem from="1580124023285" duration="2855000" />
       <workItem from="1580184161609" duration="25232000" />
+      <workItem from="1580271111320" duration="15506000" />
     </task>
     <servers />
   </component>
@@ -193,16 +203,16 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580210185617">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580295139596">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580210185617" />
-    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580211000948">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580295139596" />
+    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580285833307">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
-    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580211000948" />
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580285833307" />
     <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1579767951795">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -251,15 +261,19 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579773335715" />
-    <state x="1884" y="240" width="884" height="598" key="find.popup" timestamp="1580203479192">
+    <state x="1883" y="239" width="884" height="598" key="find.popup" timestamp="1580289426689">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1884" y="240" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580203479192" />
+    <state x="1883" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580289426689" />
     <state x="444" y="943" width="672" height="677" key="run.anything.popup" timestamp="1579307855683">
       <screen x="0" y="768" width="1366" height="768" />
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
     <state x="1990" y="246" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579262300379" />
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1580295351205">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580295351205" />
     <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579779547335">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
