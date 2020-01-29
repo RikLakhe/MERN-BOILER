@@ -5,7 +5,7 @@ import {API_URL} from '../constants/appConfig'
 const http = () => {
     // Create axios for http request GET, POST, PUT AND DELETE
     const api = axios.create({
-        baseURL: `http://${API_URL}/`,
+        baseURL: `${API_URL}/`,
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
