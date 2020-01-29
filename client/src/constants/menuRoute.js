@@ -20,9 +20,9 @@ export default [
         icon:'profile',
         route:'/user',
     },{
-        menuName:'About',
-        menuKey:'about',
+        menuName:'Login / Signup',
+        menuKey:'login-signup',
         icon:'contacts',
-        route:'/about',
+        route:'/login',
     }
 ]
