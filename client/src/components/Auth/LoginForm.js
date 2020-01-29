@@ -8,7 +8,8 @@ import LogoImage from "../../assets/lakhemern.png"
 const LoginForm = props => {
     const {
         isSignUp,
-        setSignUp
+        setSignUp,
+        login,
     } = props;
 
     return (
@@ -19,7 +20,10 @@ const LoginForm = props => {
             <hr />
             <Button type={'link'} onClick={() => setSignUp(!isSignUp)} style={{float: 'right'}}>SIGN UP <Icon
                 type="edit"/> </Button>
-            <Button size={"large"} className={'login-button'} onClick={() => setSignUp(!isSignUp)} block>LOGIN<Icon
+            <Button size={"large"} className={'login-button'} onClick={() => {
+                login({hhhh:'hhhh'});
+                // setSignUp(!isSignUp);
+            }} block>LOGIN<Icon
                 type="arrow-right"/> </Button>
         </div>
     )
