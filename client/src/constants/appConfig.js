@@ -5,6 +5,9 @@ const appConfig = {
     projectLinked: 'https://www.linkedin.com/in/rikesh-lal-shrestha-55b063132/'
 };
 
-export const API_URL = window.location.origin || 'http://localhost:3001';
+const production  = window.location.origin;
+const development = 'http://localhost:3001/';
+
+export const API_URL = (process.env.NODE_ENV ? production : development);
 
 export default appConfig;
