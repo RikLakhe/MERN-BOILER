@@ -4,7 +4,6 @@ import {Button, Icon} from "antd";
 import "./Login.sass"
 
 import LogoImage from "../../assets/lakhemern.png"
-import {API_URL} from "../../constants/appConfig";
 
 const LoginForm = props => {
     const {
@@ -12,8 +11,6 @@ const LoginForm = props => {
         setSignUp,
         login,
     } = props;
-
-    console.log('ggg', API_URL, process.env.NODE_ENV);
 
     return (
         <div className={"login-form"}>
