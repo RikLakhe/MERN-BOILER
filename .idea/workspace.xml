@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/middleware/AuthHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Auth/Login.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Auth/Login.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Auth/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Auth/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Footer/footer.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="86963" />
+    <option name="totalTimeSeconds" value="95085" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,7 +154,7 @@
       <workItem from="1580124023285" duration="2855000" />
       <workItem from="1580184161609" duration="25232000" />
       <workItem from="1580271111320" duration="15506000" />
-      <workItem from="1580357206628" duration="4391000" />
+      <workItem from="1580357206628" duration="15010000" />
     </task>
     <servers />
   </component>

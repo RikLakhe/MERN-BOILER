@@ -6,8 +6,8 @@ const appConfig = {
 };
 
 const production = window.location.origin;
-const development = `${process.env.REACT_APP_REST_API_HOST}` || 'localhost:3001';
+const development = `${process.env.REACT_APP_REST_API_HOST}` || 'http://localhost:3001';
 
-export const API_URL = (process.env.NODE_ENV ? production : development);
+export const API_URL = (process.env.NODE_ENV==='production'? production : development);
 
 export default appConfig;

@@ -3,6 +3,7 @@ import axios from 'axios';
 import {API_URL} from '../constants/appConfig'
 
 const http = () => {
+    console.log('gg',API_URL)
     // Create axios for http request GET, POST, PUT AND DELETE
     const api = axios.create({
         headers: {

@@ -1,7 +1,7 @@
-import {fetch} from '../utils/httpsUtil.js'
+import {store} from '../utils/httpsUtil.js'
 
 export const loginService = formData => {
-    return fetch('v1/auth/')
+    return store('v1/auth/',formData)
         .then(response => {
             console.log('success', response.data)
         })
