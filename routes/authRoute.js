@@ -20,7 +20,6 @@ router.post("/", (req, res, next) => {
                 let accessToken = jwtUtils.freshToken({name: userName, type: 'admin'}, '1 min');
                 return res
                     .status(200)
-                    .cookie('XSRF-TOKEN', accessToken, AppConfig.cookieOptions)
                     .json({
                         status: 'SUCCESS',
                         token: accessToken

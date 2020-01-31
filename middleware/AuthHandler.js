@@ -21,7 +21,7 @@ module.exports = {
             let tokenStatus = jwtUtils.isTokenExpired(req.headers['xsrf-token']);
             if (!tokenStatus) {
                 let accessToken = jwtUtils.freshToken({status: "new token"}, '5 min');
-                res.cookie('XSRF-TOKEN', accessToken, AppConfig.cookieOptions);
+                res.setHeader('xsrf-token',accessToken);
                 next();
             } else {
                 return res.status(401).json({

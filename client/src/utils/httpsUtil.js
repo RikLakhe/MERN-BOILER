@@ -11,12 +11,13 @@ const http = () => {
             'Content-Type': 'application/json',
         },
         responseType: 'json',
+        // withCredentials: true
     });
 
     // Add a request interceptor
     api.interceptors.response.use(
         response => {
-
+            console.log('inside',response)
             return response;
         },
         error => {
