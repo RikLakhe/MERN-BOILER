@@ -1,33 +1,46 @@
 const express = require('express');
 const AppConfig = require('../config/appConfig');
-const AuthHandler = require('../middleware/AuthHandler')
+const AuthHandler = require('../middleware/AuthHandler');
+const jwtUtils = require('../utils/jwtUtils')
 
 const router = express.Router();
 
-router.get("/", AuthHandler.cookieSet2, (req, res, next) => {
-    return res.status(200).json({
-        message: 'SUCCESS'
-    })
-});
-
-// router.post("/", AuthHandler.checkCookies, AuthHandler.cookieSet, (req, res, next) => {
 router.post("/", (req, res, next) => {
-    console.log('here', req.body, req.headers['xsrf-token']);
-    if(req.body){
+    if (req.body) {
         const {userName, password} = req.body;
-        if(!userName || !password){
-            return res.status(400).json({
-                message: 'FAIL'
-            });
-        }else{
-            return res.json({
-                message: 'SUCCESS'
-            });
+        if (!userName || !password) {
+            return res
+                .status(400)
+                .json({
+                    status: 'FAIL',
+                    message: 'All field are required'
+                });
+        } else {
+            if(userName === 'admiN' && password === 'adminN'){
+                let accessToken = jwtUtils.freshToken({name: userName, type: 'admin'}, '1 min');
+                return res
+                    .status(200)
+                    .cookie('XSRF-TOKEN', accessToken, AppConfig.cookieOptions)
+                    .json({
+                        status: 'SUCCESS',
+                        token: accessToken
+                    });
+            }else{
+                return res
+                    .status(400)
+                    .json({
+                        status: 'FAIL',
+                        message: 'Login failed'
+                    });
+            }
+
         }
     }
-
-
 });
+
+router.post("/restrict", AuthHandler.tokenCheck, (req, res, next) => {
+    return res.json({status: "testinggg"})
+})
 
 module.exports = router;
 

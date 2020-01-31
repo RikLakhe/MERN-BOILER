@@ -20,7 +20,7 @@ export default [
         icon:'profile',
         route:'/user',
     },{
-        menuName:'Login / Signup',
+        menuName:'Login',
         menuKey:'login-signup',
         icon:'contacts',
         route:'/login',

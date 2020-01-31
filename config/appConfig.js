@@ -4,6 +4,7 @@ module.exports = {
     cookieOptions: {
         maxAge: 60 * 1000,
         httpOnly: true,
-        signed: true,
+        signed: false,
     },
+    jwtSecret: 'secretjwt',
 };

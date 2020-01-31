@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/utils/jwtUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/menuRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/menuRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/AuthHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/AuthHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="97151" />
+    <option name="totalTimeSeconds" value="104739" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -143,7 +149,8 @@
       <workItem from="1580124023285" duration="2855000" />
       <workItem from="1580184161609" duration="25232000" />
       <workItem from="1580271111320" duration="15506000" />
-      <workItem from="1580357206628" duration="19079000" />
+      <workItem from="1580357206628" duration="19611000" />
+      <workItem from="1580448489909" duration="10673000" />
     </task>
     <servers />
   </component>
@@ -207,10 +214,10 @@
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
     <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580285833307" />
-    <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2" timestamp="1580383163179">
+    <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2" timestamp="1580460607566">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
-    <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580383163179" />
+    <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580460607566" />
     <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1579767951795">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -259,10 +266,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580362022375" />
-    <state x="1883" y="239" width="884" height="598" key="find.popup" timestamp="1580289426689">
+    <state x="1883" y="239" width="884" height="598" key="find.popup" timestamp="1580464902130">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1883" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580289426689" />
+    <state x="1883" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580464902130" />
     <state x="444" y="943" width="672" height="677" key="run.anything.popup" timestamp="1579307855683">
       <screen x="0" y="768" width="1366" height="768" />
     </state>
