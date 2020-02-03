@@ -6,6 +6,7 @@ import './LeftNav.sass';
 import LogoImage from "../../../assets/lakhemern.png"
 
 import menuRoute from "../../../constants/menuRoute";
+import {isAllowed} from "../../../utils/authUtils";
 
 const SideNavLeft = props => {
     const {
@@ -33,18 +34,37 @@ const SideNavLeft = props => {
                                 menuRoute &&
                                 menuRoute.map(
                                     menuItem => {
-                                        return (
-                                            <li key={menuItem.menuKey}>
-                                                <Link to={menuItem.route}>
-                                                    <Icon
-                                                        type={menuItem.icon}
-                                                        className={'menu-route-icon'
-                                                        }
-                                                    />
-                                                    {menuItem.menuName}
-                                                </Link>
-                                            </li>
-                                        )
+                                        if (menuItem.permission) {
+                                            if (isAllowed(menuItem.permission)) {
+                                                return (
+                                                    <li key={menuItem.menuKey}>
+                                                        <Link to={menuItem.route}>
+                                                            <Icon
+                                                                type={menuItem.icon}
+                                                                className={'menu-route-icon'
+                                                                }
+                                                            />
+                                                            {menuItem.menuName}
+                                                        </Link>
+                                                    </li>
+                                                )
+                                            } else {
+                                                return null;
+                                            }
+                                        } else {
+                                            return (
+                                                <li key={menuItem.menuKey}>
+                                                    <Link to={menuItem.route}>
+                                                        <Icon
+                                                            type={menuItem.icon}
+                                                            className={'menu-route-icon'
+                                                            }
+                                                        />
+                                                        {menuItem.menuName}
+                                                    </Link>
+                                                </li>
+                                            )
+                                        }
                                     })
                             }
                         </ul>

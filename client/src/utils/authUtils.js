@@ -1,6 +1,6 @@
 import jwtDecode from "jwt-decode"
 import {loadLocalStorage} from "./commonUtils";
-import {MERN_TOKEN} from "../constants/appConfig";
+import {MERN_PERMISSION, MERN_TOKEN} from "../constants/appConfig";
 
 let isTokenExpired = (token) => {
     try {
@@ -17,4 +17,10 @@ let getToken = () => {
 
 export let isAuthenticated = () => {
     return !!getToken() && !isTokenExpired(getToken());
+};
+
+export const isAllowed = (itemPermission) => {
+    let mernPermission = loadLocalStorage(MERN_PERMISSION);
+    console.log('check', MERN_PERMISSION, itemPermission, mernPermission)
+    return (itemPermission === mernPermission);
 };

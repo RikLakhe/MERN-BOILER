@@ -3,13 +3,18 @@ export const saveLocalStorage = (storageName, storageData) => {
 };
 
 export const loadLocalStorage = (storageName) => {
-    localStorage.getItem(storageName);
+    const data = localStorage.getItem(storageName);
+    try {
+        return JSON.parse(data); // converts a JSON string into a Javascript Object
+    } catch (e) {
+        return data;
+    }
 };
 
-export const cleanLocalStorage = (storageName) =>{
-    if(storageName){
+export const cleanLocalStorage = (storageName) => {
+    if (storageName) {
         localStorage.removeItem(storageName)
-    }else{
+    } else {
         localStorage.clear();
     }
 };

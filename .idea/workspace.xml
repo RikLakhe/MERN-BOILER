@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/utils/authUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/utils/commonUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/utils/history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/AuthHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/AuthHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/menuRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/menuRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/authUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/authUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/commonUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/commonUtils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="115847" />
+    <option name="totalTimeSeconds" value="117051" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -160,7 +149,7 @@
       <workItem from="1580357206628" duration="19611000" />
       <workItem from="1580448489909" duration="15648000" />
       <workItem from="1580472781529" duration="408000" />
-      <workItem from="1580703195757" duration="12236000" />
+      <workItem from="1580703195757" duration="13440000" />
     </task>
     <servers />
   </component>
