@@ -19,7 +19,7 @@ const SideNavLeft = props => {
                 displayMenu ?
                     <div className="nav-item-active">
                         <div className="menu-icon">
-                            <img src={LogoImage} alt="Logo" />
+                            <img src={LogoImage} alt="Logo"/>
                             <Icon
                                 className={'nav-icon'}
                                 type="close" style={{color: 'white'}}
@@ -34,7 +34,16 @@ const SideNavLeft = props => {
                                 menuRoute.map(
                                     menuItem => {
                                         return (
-                                            <li key={menuItem.menuKey}><Link to={menuItem.route}><Icon type={menuItem.icon} className={'menu-route-icon'}/>{menuItem.menuName}</Link></li>
+                                            <li key={menuItem.menuKey}>
+                                                <Link to={menuItem.route}>
+                                                    <Icon
+                                                        type={menuItem.icon}
+                                                        className={'menu-route-icon'
+                                                        }
+                                                    />
+                                                    {menuItem.menuName}
+                                                </Link>
+                                            </li>
                                         )
                                     })
                             }

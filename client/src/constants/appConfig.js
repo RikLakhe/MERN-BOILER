@@ -10,4 +10,8 @@ const development = `${process.env.REACT_APP_REST_API_HOST}` || 'http://localhos
 
 export const API_URL = (process.env.NODE_ENV==='production'? production : development);
 
+// localstorage name
+export const MERN_TOKEN = 'MERN-TOKEN';
+export const MERN_PERMISSION = 'MERN-PERMISSION';
+
 export default appConfig;

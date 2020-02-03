@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/utils/authUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/utils/commonUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/utils/history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/AuthHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/AuthHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
     </list>
@@ -14,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="107292" />
+    <option name="totalTimeSeconds" value="115847" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -148,6 +159,8 @@
       <workItem from="1580271111320" duration="15506000" />
       <workItem from="1580357206628" duration="19611000" />
       <workItem from="1580448489909" duration="15648000" />
+      <workItem from="1580472781529" duration="408000" />
+      <workItem from="1580703195757" duration="12236000" />
     </task>
     <servers />
   </component>
@@ -251,18 +264,19 @@
     <state width="1325" height="167" key="GridCell.Tab.0.right/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855635" />
     <state width="1325" height="167" key="GridCell.Tab.0.right/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579366726683" />
     <state width="1920" height="278" key="GridCell.Tab.0.right/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579692915803" />
-    <state x="1815" y="174" key="SettingsEditor" timestamp="1580190791030">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="344" y="38" key="SettingsEditor" timestamp="1580718822665">
+      <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="1815" y="174" key="SettingsEditor/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580190791030" />
+    <state x="344" y="38" key="SettingsEditor/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1580718822665" />
     <state x="432" y="130" width="540" height="540" key="StructurePopup" timestamp="1579862992016">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="432" y="130" width="540" height="540" key="StructurePopup/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1579862992016" />
-    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580362022375">
+    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580726605971">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580362022375" />
+    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580726605971" />
     <state x="1883" y="239" width="884" height="598" key="find.popup" timestamp="1580464902130">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

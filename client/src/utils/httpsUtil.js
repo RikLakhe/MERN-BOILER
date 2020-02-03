@@ -1,23 +1,27 @@
 import axios from 'axios';
 
-import {API_URL} from '../constants/appConfig'
+import {API_URL, MERN_TOKEN} from '../constants/appConfig'
+import {loadLocalStorage, saveLocalStorage} from "./commonUtils";
 
 const http = () => {
-    console.log('gg',API_URL)
     // Create axios for http request GET, POST, PUT AND DELETE
     const api = axios.create({
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
+            'XSRF-TOKEN': loadLocalStorage(MERN_TOKEN),
         },
         responseType: 'json',
+        // credentials: "include",
         // withCredentials: true
     });
 
     // Add a request interceptor
     api.interceptors.response.use(
         response => {
-            console.log('inside',response)
+            if (response.headers && response.headers['xsrf-token']) {
+                saveLocalStorage(MERN_TOKEN, response.headers['xsrf-token']);
+            }
             return response;
         },
         error => {
