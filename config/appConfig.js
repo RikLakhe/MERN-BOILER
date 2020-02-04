@@ -12,4 +12,5 @@ module.exports = {
         signed: true,
     },
     jwtSecret: 'secretjwt',
+    projectKey:'APPLEPIE'
 };

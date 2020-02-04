@@ -7,8 +7,8 @@ import {MERN_PERMISSION, MERN_TOKEN} from "../constants/appConfig";
 export const loginService = formData => {
     return store('v1/auth/login', formData)
         .then(response => {
-            saveLocalStorage(MERN_TOKEN, response.data.token);
-            saveLocalStorage(MERN_PERMISSION, response.data.permission);
+            saveLocalStorage(MERN_TOKEN, response.token);
+            saveLocalStorage(MERN_PERMISSION, response.permission);
             history.push("/");
         })
         .catch(error => {

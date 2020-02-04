@@ -2,7 +2,8 @@ const appConfig = {
     projectName: 'LAKHEMERN',
     projectDate: 2020,
     projectOwn: 'RIKLAKHE',
-    projectLinked: 'https://www.linkedin.com/in/rikesh-lal-shrestha-55b063132/'
+    projectLinked: 'https://www.linkedin.com/in/rikesh-lal-shrestha-55b063132/',
+    projectKey: 'APPLEPIE'
 };
 
 const production = window.location.origin;
