@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/jwtUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/utils/cryptoUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/cryptoUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/menuRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/menuRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/AuthHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/AuthHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
@@ -17,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="104739" />
+    <option name="totalTimeSeconds" value="122258" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,24 +45,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.6.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CityRemit/app-ui" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/Layout" />
+      <recent name="$PROJECT_DIR$/client/src/styles" />
+      <recent name="$PROJECT_DIR$/client/src/containers/App" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/utils" />
       <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$/client/src/assets" />
       <recent name="$PROJECT_DIR$/client/src/containers" />
       <recent name="$PROJECT_DIR$/client/src/components/Layout" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/components/Layout" />
-      <recent name="$PROJECT_DIR$/client/src/styles" />
-      <recent name="$PROJECT_DIR$/client/src/containers/App" />
-      <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -150,7 +154,9 @@
       <workItem from="1580184161609" duration="25232000" />
       <workItem from="1580271111320" duration="15506000" />
       <workItem from="1580357206628" duration="19611000" />
-      <workItem from="1580448489909" duration="10673000" />
+      <workItem from="1580448489909" duration="15648000" />
+      <workItem from="1580472781529" duration="408000" />
+      <workItem from="1580703195757" duration="13440000" />
     </task>
     <servers />
   </component>
@@ -226,10 +232,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1868" y="319" width="906" height="439" key="EditFileWatcherDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580192284324" />
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1579674458968">
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580808866351">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579674458968" />
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580808866351" />
     <state width="1920" height="278" key="GridCell.Tab.0.bottom" timestamp="1579692915804">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -254,18 +260,19 @@
     <state width="1325" height="167" key="GridCell.Tab.0.right/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855635" />
     <state width="1325" height="167" key="GridCell.Tab.0.right/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579366726683" />
     <state width="1920" height="278" key="GridCell.Tab.0.right/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579692915803" />
-    <state x="1815" y="174" key="SettingsEditor" timestamp="1580190791030">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="344" y="38" key="SettingsEditor" timestamp="1580718822665">
+      <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="1815" y="174" key="SettingsEditor/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580190791030" />
+    <state x="344" y="38" key="SettingsEditor/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1580718822665" />
     <state x="432" y="130" width="540" height="540" key="StructurePopup" timestamp="1579862992016">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="432" y="130" width="540" height="540" key="StructurePopup/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1579862992016" />
-    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580362022375">
+    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580726605971">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580362022375" />
+    <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580726605971" />
     <state x="1883" y="239" width="884" height="598" key="find.popup" timestamp="1580464902130">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
