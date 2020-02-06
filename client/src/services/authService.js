@@ -16,8 +16,8 @@ export const loginService = formData => {
         })
 };
 
-export const logoutService = formData => {
-    return store('v1/auth/logout', formData)
+export const logoutService = () => {
+    return store('v1/auth/logout')
         .then(response => {
             cleanLocalStorage();
             history.push("/");

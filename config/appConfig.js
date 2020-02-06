@@ -12,5 +12,9 @@ module.exports = {
         signed: true,
     },
     jwtSecret: 'secretjwt',
-    projectKey:'APPLEPIE'
+    projectKey:'APPLEPIE',
+    mongoDB: {
+        url: 'mongodb+srv://lakheMern:9849225111@lakhemern-8mon9.mongodb.net/test?retryWrites=true&w=majority',
+        database : 'boilerplate'
+    }
 };

@@ -4,7 +4,7 @@ const AuthHandler = require('../middleware/AuthHandler');
 
 const jwtUtils = require('../utils/jwtUtils');
 const cryptoUtils = require('../utils/cryptoUtil')
-
+const {creatUser, findUser} = require('../controller/usersController')
 
 const router = express.Router();
 
@@ -29,39 +29,28 @@ router.post("/login", (req, res, next) => {
                         message: 'All field are required'
                     });
             } else {
-                if (userName === 'admin' && password === 'admin') {
-                    let accessToken = jwtUtils.freshToken({name: userName, type: 'ADMIN'}, '1 min');
-                    return res
-                        .status(200)
-                        .cookie('XSRF-TOKEN', accessToken, AppConfig.cookieOptionsLogin)
-                        .json({
-                            data: cryptoUtils.encrypt({
-                                status: 'SUCCESS',
-                                token: accessToken,
-                                permission: 'ADMIN'
-                            })
-                        });
-                } else if (userName === 'PPP' && password === 'ppp') {
-                    let accessToken = jwtUtils.freshToken({name: userName, type: 'PARTNER'}, '1 min');
-                    return res
-                        .status(200)
-                        .cookie('XSRF-TOKEN', accessToken, AppConfig.cookieOptionsLogin)
-                        .send({
-                            data: cryptoUtils.encrypt({
-                                status: 'SUCCESS',
-                                token: accessToken,
-                                permission: 'PARTNER'
-                            })
-                        });
-                } else {
-                    return res
-                        .status(400)
-                        .json({
-                            status: 'FAIL',
-                            message: 'Login failed'
-                        });
-                }
-
+                findUser(userName, password).then(dbRes => {
+                    if (dbRes && dbRes.length > 0) {
+                        let accessToken = jwtUtils.freshToken({name: userName, type: 'ADMIN'}, '1 min');
+                        return res
+                            .status(200)
+                            .cookie('XSRF-TOKEN', accessToken, AppConfig.cookieOptionsLogin)
+                            .json({
+                                data: cryptoUtils.encrypt({
+                                    status: 'SUCCESS',
+                                    token: accessToken,
+                                    permission: dbRes[0].permission
+                                })
+                            });
+                    } else {
+                        return res
+                            .status(400)
+                            .json({
+                                status: 'FAIL',
+                                message: 'Login failed'
+                            });
+                    }
+                })
             }
         }
     }
