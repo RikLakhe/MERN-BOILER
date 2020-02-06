@@ -1,10 +1,15 @@
 const Users = require('../model/usersModel');
 
 // CRUD
+const creatUser = () => {
+}
 
 // READ
-module.exports = findUser = (userName, password) =>{
-    Users.find({
-
+const findUser = (userName, password) => {
+    return Users.find({
+        userName,
+        password
     })
 };
+
+module.exports = {creatUser, findUser};

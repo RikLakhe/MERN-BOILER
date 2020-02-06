@@ -5,11 +5,17 @@ export default [
         icon: 'home',
         route: '/',
     }, {
+        menuName: 'Category',
+        menuKey: 'category',
+        icon: 'tags',
+        route: '/category',
+        permission: 'ADMIN'
+    },{
         menuName: 'Products',
         menuKey: 'products',
         icon: 'tags',
         route: '/products',
-        permission: 'ADMIN'
+        permission: 'PARTNER'
     }, {
         menuName: 'Checkout',
         menuKey: 'checkout',
@@ -20,11 +26,5 @@ export default [
         menuKey: 'profile',
         icon: 'profile',
         route: '/user',
-        permission: 'PARTNER'
-    }, {
-        menuName: 'Login',
-        menuKey: 'login-signup',
-        icon: 'contacts',
-        route: '/login',
     }
 ]

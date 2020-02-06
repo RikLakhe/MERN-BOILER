@@ -14,6 +14,7 @@ module.exports = {
     jwtSecret: 'secretjwt',
     projectKey:'APPLEPIE',
     mongoDB: {
-        url: 'mongodb+srv://lakheMern:9849225111@lakhemern-8mon9.mongodb.net/test?retryWrites=true&w=majority'
+        url: 'mongodb+srv://lakheMern:9849225111@lakhemern-8mon9.mongodb.net/test?retryWrites=true&w=majority',
+        database : 'boilerplate'
     }
 };

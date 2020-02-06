@@ -6,7 +6,7 @@ import './LeftNav.sass';
 import LogoImage from "../../../assets/lakhemern.png"
 
 import menuRoute from "../../../constants/menuRoute";
-import {isAllowed} from "../../../utils/authUtils";
+import {isAllowed, isAuthenticated} from "../../../utils/authUtils";
 
 const SideNavLeft = props => {
     const {
@@ -66,6 +66,30 @@ const SideNavLeft = props => {
                                             )
                                         }
                                     })
+                            }
+                            {
+                                isAuthenticated() ?
+                                    <li key={'logout'}>
+                                        <Link to={"/logout"}>
+                                            <Icon
+                                                type={"logout"}
+                                                className={'menu-route-icon'
+                                                }
+                                            />
+                                            Logout
+                                        </Link>
+                                    </li>
+                                    :
+                                    <li key={'login'}>
+                                        <Link to={"/login"}>
+                                            <Icon
+                                                type={"login"}
+                                                className={'menu-route-icon'
+                                                }
+                                            />
+                                            Login
+                                        </Link>
+                                    </li>
                             }
                         </ul>
                         <hr/>

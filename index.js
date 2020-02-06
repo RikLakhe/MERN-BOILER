@@ -4,6 +4,7 @@ const logger = require('morgan');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const MongoClient = require('mongodb').MongoClient;
+const mongoose = require('mongoose');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -29,19 +30,17 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-// replace the uri string with your connection string.
-MongoClient.connect(AppConfig.mongoDB.url, function(err, client) {
-    if(err) {
-        console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
-    }
-    console.log('Connected...');
-    const collection = client.db("MERNLAKHE").collection("users");
-    // perform actions on the collection object
-    client.close();
-});
-
 const port = process.env.PORT || "3001";
 
 app.listen(port, () => {
-    console.log(`server running in port : ${port}`)
+    console.log(`server running in port : ${port}`);
+
+    // replace the uri string with your connection string.
+    mongoose
+        .connect(AppConfig.mongoDB.url, {
+            dbName: AppConfig.mongoDB.database,
+            useNewUrlParser: true,
+        })
+        .then(() => console.log(`DB Connected Database : ${AppConfig.mongoDB.database}`))
+        .catch(err => console.log('error',err));
 });

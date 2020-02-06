@@ -6,7 +6,7 @@ import {loginService} from "../../services/authService"
 
 const AuthContainer = props => {
     /**
-     * Add Blog
+     * Call Login service
      *
      * @param {object} formData
      *

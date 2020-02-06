@@ -2,14 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/usersModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/exception.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/assets/warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Auth/Logout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Exception/Forbidden.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Exception/InternalServer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Exception/NotFound.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Exception/exception.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/Auth/LogoutContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/Exception/ForbiddenContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/Exception/InternalServerContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/Exception/NotFoundContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavRight/RightNav.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/menuRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/menuRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/authUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/authUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/usersModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +35,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="123936" />
+    <option name="totalTimeSeconds" value="133018" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,24 +59,24 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.6.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CityRemit/app-ui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/containers/Exception" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/containers/Exception" />
+      <recent name="$PROJECT_DIR$/client/src/assets" />
+      <recent name="$PROJECT_DIR$/client/src/utils" />
+      <recent name="$PROJECT_DIR$/client/public" />
+      <recent name="$PROJECT_DIR$/client/src/containers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/components/Layout" />
       <recent name="$PROJECT_DIR$/client/src/styles" />
       <recent name="$PROJECT_DIR$/client/src/containers/App" />
       <recent name="$PROJECT_DIR$/config" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/utils" />
-      <recent name="$PROJECT_DIR$/client/public" />
-      <recent name="$PROJECT_DIR$/client/src/assets" />
-      <recent name="$PROJECT_DIR$/client/src/containers" />
-      <recent name="$PROJECT_DIR$/client/src/components/Layout" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -153,6 +171,9 @@
       <workItem from="1580448489909" duration="15648000" />
       <workItem from="1580472781529" duration="408000" />
       <workItem from="1580703195757" duration="13440000" />
+      <workItem from="1580881238860" duration="2051000" />
+      <workItem from="1580962179352" duration="4799000" />
+      <workItem from="1580977077259" duration="7188000" />
     </task>
     <servers />
   </component>
@@ -206,11 +227,11 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580295139596">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580986456350">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580295139596" />
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580986456350" />
     <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580285833307">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -273,11 +294,11 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1883" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580464902130" />
-    <state x="444" y="943" width="672" height="677" key="run.anything.popup" timestamp="1579307855683">
-      <screen x="0" y="768" width="1366" height="768" />
+    <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1580986667616">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
-    <state x="1990" y="246" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1579262300379" />
+    <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580986667616" />
     <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1580295351205">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
