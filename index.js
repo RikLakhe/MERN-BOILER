@@ -20,6 +20,7 @@ app.use(
     express.json(),
     cookieParser(AppConfig.cookieSecret),
     express.static(path.resolve(__dirname, "client", "build"))
+    // express.static(path.resolve(__dirname, "testST"))
 );
 app.disable('etag');
 
@@ -28,6 +29,7 @@ app.use("/v1", Routes);
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    // res.sendFile(path.join(__dirname, "testST", "index.html"));
 });
 
 const port = process.env.PORT || "3001";
@@ -42,5 +44,5 @@ app.listen(port, () => {
             useNewUrlParser: true,
         })
         .then(() => console.log(`DB Connected Database : ${AppConfig.mongoDB.database}`))
-        .catch(err => console.log('error',err));
+        .catch(err => console.log('error', err));
 });

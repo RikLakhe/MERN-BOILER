@@ -5,11 +5,17 @@ const creatUser = () => {
 }
 
 // READ
-const findUser = (userName, password) => {
-    return Users.find({
-        userName,
-        password
-    })
+const findUser = async (userName, password) => {
+    try {
+        const temp = await Users.find({
+            userName,
+            password
+        });
+
+        return temp
+    } catch {
+        console.log('errorrrrrr 1234')
+    }
 };
 
 module.exports = {creatUser, findUser};

@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<div id="st-notification-frame"></div>
+<form id="st-form" action="https://www.example.com">
+    <div id="st-card-number" className="st-card-number"></div>
+    <div id="st-expiration-date" className="st-expiration-date"></div>
+    <div id="st-security-code" className="st-security-code"></div>
+    <input type="hidden" name="promotionCode" value="27"/>
+    <input type="text" name="DeliveryInstructions" value="leave in porch"/>
+    <button type="submit" id="st-form__submit" className="st-form__submit">
+        Pay securely
+    </button>
+    <div id="st-animated-card" class="st-animated-card-wrapper"></div>
+</form>
+<script src="https://webservices.securetrading.net/js/v2/st.js" ></script>
+<script>
+    (function () {
+        var st = SecureTrading({
+            jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFjY291bnR0eXBlZGVzY3JpcHRpb24iOiJFQ09NIiwiYmFzZWFtb3VudCI6IjEwNTAiLCJjdXJyZW5jeWNvZGUiOiJHQlAiLCJzaXRlcmVmZXJlbmNlIjoidGVzdF9zaXRlMTIzNDUifSwiaWF0IjoiMTU1OTAzMzg0OSIsImlzcyI6Imp3dC51c2VyIn0=.RI6FUGp4fehJyhxhy2hib2UO2pluqU4AXqz1l1lRJcY',
+            submitOnError: false,
+            animatedCard: true,
+            livestatus: 0,
+            submitFields: ['errorcode', 'transactionreference'],
+        });
+        st.Components();
+
+    })();
+</script>
+</body>
+</html>
