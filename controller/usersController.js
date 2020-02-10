@@ -8,7 +8,6 @@ const creatUser = () => {
 // READ
 const findUser = (req, res, next) => {
     if (res.locals.decryptData) {
-        console.log('decr3', res.locals.decryptData);
         const {userName, password} = res.locals.decryptData;
         if (!userName || !password) {
             res.locals.status = 400;

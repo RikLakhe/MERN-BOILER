@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/middleware/reqrestHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Category/Form.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/Category/AddCategoryContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/Category/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/Main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/Main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/Main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/categoriesRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/categoriesRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="146260" />
+    <option name="totalTimeSeconds" value="152110" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -155,7 +165,7 @@
       <workItem from="1581052360507" duration="8681000" />
       <workItem from="1581071433882" duration="1298000" />
       <workItem from="1581072739591" duration="4839000" />
-      <workItem from="1581307415104" duration="5829000" />
+      <workItem from="1581307415104" duration="15307000" />
     </task>
     <servers />
   </component>
@@ -209,11 +219,11 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580986456350">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581314581859">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580986456350" />
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581314581859" />
     <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581313738396">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -231,10 +241,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1868" y="319" width="906" height="439" key="EditFileWatcherDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580192284324" />
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580808866351">
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581321478078">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580808866351" />
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581321478078" />
     <state width="1920" height="278" key="GridCell.Tab.0.bottom" timestamp="1579692915804">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -272,10 +282,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580726605971" />
-    <state x="1883" y="239" width="884" height="598" key="find.popup" timestamp="1580464902130">
+    <state x="1883" y="239" width="884" height="598" key="find.popup" timestamp="1581329358410">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1883" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580464902130" />
+    <state x="1883" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581329358410" />
     <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1580986667616">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

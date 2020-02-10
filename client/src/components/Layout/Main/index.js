@@ -10,7 +10,9 @@ const Main = props => {
     return (
         <div className={`app-main`}>
             <div className={`main-container ${displayMenu ? 'main-container-menu-active' : 'main-container-menu-inactive'}`}>
-                {props.children}
+                <div className="app-contents">
+                    {props.children}
+                </div>
             </div>
         </div>
     )
