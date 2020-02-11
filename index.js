@@ -3,7 +3,6 @@ const path = require('path');
 const logger = require('morgan');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 
 const dotenv = require('dotenv');
@@ -42,6 +41,7 @@ app.listen(port, () => {
         .connect(AppConfig.mongoDB.url, {
             dbName: AppConfig.mongoDB.database,
             useNewUrlParser: true,
+            useUnifiedTopology: true
         })
         .then(() => console.log(`DB Connected Database : ${AppConfig.mongoDB.database}`))
         .catch(err => console.log('error', err));

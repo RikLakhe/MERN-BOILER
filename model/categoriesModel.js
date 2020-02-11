@@ -13,7 +13,7 @@ const categorySchema = new Schema({
             require: [true, 'Category Name is required'],
             unique: [true, 'Category Code must be unique']
         },
-    categoryActive:
+    isCategoryActive:
         {
             type: Boolean,
             require: [true, 'Category Status is required'],

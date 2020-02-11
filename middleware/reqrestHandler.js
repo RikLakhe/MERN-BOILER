@@ -9,7 +9,7 @@ const requestOnlyHandler = (req, res, next) => {
 
         // no data is sent from front end send error
         if (!data) {
-            res.locals.status = 400;
+            res.locals.status = 401;
             res.locals.encryptData = {
                 status: 'FAIL',
                 message: 'Error request'
@@ -19,24 +19,25 @@ const requestOnlyHandler = (req, res, next) => {
             res.locals.decryptData = cryptoUtils.decrypt(data);
         }
     } else {
-        res.locals.status = 400;
+        res.locals.status = 401;
         res.locals.decryptData = {
             status: 'FAIL',
             message: 'Error request'
         };
     }
 
-    console.log('request without token handling');
     next();
 };
 
 const requestWithTokenHandler = (req, res, next) => {
+    console.log('restrict',req.headers['xsrf-token'],req.signedCookies['XSRF-TOKEN'])
     // token and req decryption handling
     if (
         req.headers['xsrf-token'] &&
         req.signedCookies['XSRF-TOKEN'] &&
         req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token']
     ) {
+
 
         // token handling check token validation with time
         let tokenStatus = jwtUtils.isTokenExpired(req.headers['xsrf-token']);
@@ -84,7 +85,6 @@ const requestWithTokenHandler = (req, res, next) => {
         };
     }
 
-    console.log('req handled with token');
     next();
 };
 

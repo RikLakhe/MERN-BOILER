@@ -2,6 +2,7 @@ import React, {Fragment} from 'react';
 import {withRouter, Switch, Route} from 'react-router-dom'
 
 import PublicRoute from '../../routes/PublicRoute'
+import PrivateRoute from '../../routes/PrivateRoute'
 
 import {
     AsyncAppLayout,
@@ -22,7 +23,7 @@ const App = () => (
             <PublicRoute exact path="/login" layout={(AsyncStaticAppLayout)} component={(AsyncAuth)}/>
             <PublicRoute exact path="/logout" layout={(AsyncStaticAppLayout)} component={(AsyncLogout)}/>
 
-            <PublicRoute exact path="/category" layout={(AsyncAppLayout)} component={(AsyncCategory)}/>
+            <PrivateRoute exact path="/category" layout={(AsyncAppLayout)} component={(AsyncCategory)}/>
 
             <PublicRoute exact path="/product" layout={(AsyncStaticAppLayout)} component={(AsyncAuth)}/>
             <PublicRoute exact path="/checkout" layout={(AsyncStaticAppLayout)} component={(AsyncAuth)}/>

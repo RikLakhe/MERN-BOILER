@@ -7,7 +7,8 @@ const FormItem = Form.Item;
 
 const AddForm = props => {
     const {
-        form
+        form,
+        addCategory
     } = props;
 
     const {
@@ -37,7 +38,7 @@ const AddForm = props => {
         e.preventDefault();
         validateFields((err, values) => {
             if (!err) {
-                console.log('submittedd');
+                addCategory(values);
             }
         })
     }
