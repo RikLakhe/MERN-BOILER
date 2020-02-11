@@ -11,6 +11,24 @@ export const AsyncStaticAppLayout = loadable({
     loading: Loading,
 });
 
+
+// Exception
+export const AsyncForbidden = loadable({
+    loader: () => import('../Exception/ForbiddenContainer'),
+    loading: Loading,
+});
+
+export const AsyncInternalServer = loadable({
+    loader: () => import('../Exception/InternalServerContainer'),
+    loading: Loading,
+});
+
+export const AsyncNotFound = loadable({
+    loader: () => import('../Exception/NotFoundContainer'),
+    loading: Loading,
+});
+//
+
 export const AsyncAuth = loadable({
     loader: () => import('../Auth/AuthContainer'),
     loading: Loading,
@@ -26,17 +44,7 @@ export const AsyncHome = loadable({
     loading: Loading,
 });
 
-export const AsyncForbidden = loadable({
-    loader: () => import('../Exception/ForbiddenContainer'),
-    loading: Loading,
-});
-
-export const AsyncInternalServer = loadable({
-    loader: () => import('../Exception/InternalServerContainer'),
-    loading: Loading,
-});
-
-export const AsyncNotFound = loadable({
-    loader: () => import('../Exception/NotFoundContainer'),
+export const AsyncCategory = loadable({
+    loader: () => import('../Category/AddCategoryContainer'),
     loading: Loading,
 });

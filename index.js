@@ -3,7 +3,6 @@ const path = require('path');
 const logger = require('morgan');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 
 const dotenv = require('dotenv');
@@ -20,6 +19,7 @@ app.use(
     express.json(),
     cookieParser(AppConfig.cookieSecret),
     express.static(path.resolve(__dirname, "client", "build"))
+    // express.static(path.resolve(__dirname, "testST"))
 );
 app.disable('etag');
 
@@ -28,6 +28,7 @@ app.use("/v1", Routes);
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    // res.sendFile(path.join(__dirname, "testST", "index.html"));
 });
 
 const port = process.env.PORT || "3001";
@@ -40,7 +41,8 @@ app.listen(port, () => {
         .connect(AppConfig.mongoDB.url, {
             dbName: AppConfig.mongoDB.database,
             useNewUrlParser: true,
+            useUnifiedTopology: true
         })
         .then(() => console.log(`DB Connected Database : ${AppConfig.mongoDB.database}`))
-        .catch(err => console.log('error',err));
+        .catch(err => console.log('error', err));
 });

@@ -1,7 +1,7 @@
 const cookieParser = require('cookie-parser');
 
 const AppConfig = require('../config/appConfig');
-const jwtUtils = require('../utils/jwtUtils')
+const jwtUtils = require('../utils/jwtUtils');
 
 module.exports = {
     cookieSet: (req, res, next) => {
