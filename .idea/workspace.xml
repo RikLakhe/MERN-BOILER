@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/routes/PrivateRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/reqrestHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/reqrestHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/categoriesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/categoriesModel.js" afterDir="false" />
     </list>
@@ -19,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="161412" />
+    <option name="totalTimeSeconds" value="163875" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,6 +159,7 @@
       <workItem from="1581348351849" duration="836000" />
       <workItem from="1581349221773" duration="4669000" />
       <workItem from="1581393590342" duration="10982000" />
+      <workItem from="1581416867380" duration="300000" />
     </task>
     <servers />
   </component>
@@ -232,10 +227,10 @@
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581076195846" />
-    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1581412717187">
+    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1581412902513">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581412717187" />
+    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581412902513" />
     <state x="1868" y="319" width="906" height="439" key="EditFileWatcherDialog" timestamp="1580192284324">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -278,6 +273,10 @@
     </state>
     <state x="432" y="130" width="540" height="540" key="StructurePopup/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1579862992016" />
     <state x="432" y="130" width="654" height="540" key="StructurePopup/41.27.1325.741@41.27.1325.741" timestamp="1581348734329" />
+    <state x="2107" y="194" width="427" height="690" key="VcsDiffUtil.ChangesDialog" timestamp="1581412903795">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2107" y="194" width="427" height="690" key="VcsDiffUtil.ChangesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581412903795" />
     <state x="1466" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1580726605971">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

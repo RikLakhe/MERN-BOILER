@@ -30,7 +30,7 @@ const requestOnlyHandler = (req, res, next) => {
 };
 
 const requestWithTokenHandler = (req, res, next) => {
-    console.log('restrict',req.headers['xsrf-token'],req.signedCookies['XSRF-TOKEN'])
+    console.log('restrict', req.headers['xsrf-token'], req.signedCookies['XSRF-TOKEN'])
     // token and req decryption handling
     if (
         req.headers['xsrf-token'] &&
@@ -42,9 +42,8 @@ const requestWithTokenHandler = (req, res, next) => {
         // token handling check token validation with time
         let tokenStatus = jwtUtils.isTokenExpired(req.headers['xsrf-token']);
         if (!tokenStatus) {
-            let accessToken = jwtUtils.freshToken({status: "new token"}, '5 min');
-            res.cookie('XSRF-TOKEN', accessToken, AppConfig.cookieOptions);
-            res.setHeader('xsrf-token', accessToken);
+
+            res.locals.newAccessToken = jwtUtils.freshToken({status: "new token"}, '5 min');
 
             // decrypt data from body and pass into next handler
             if (req && req.body) {
@@ -89,19 +88,36 @@ const requestWithTokenHandler = (req, res, next) => {
 };
 
 const responseHandler = (req, res, next) => {
-    return (res.locals.status && res.locals.accessToken) ?
-        res
+    console.log('at last', res.locals.status, res.locals.accessToken, res.locals.newAccessToken);
+
+    if (res.locals.status===200 && res.locals.accessToken && !res.locals.newAccessToken) {
+        console.log("1")
+        res.setHeader('xsrf-token', res.locals.accessToken);
+        return res
             .status(res.locals.status)
             .cookie('XSRF-TOKEN', res.locals.accessToken, AppConfig.cookieOptionsLogin)
             .json({
                 data: cryptoUtils.encrypt(res.locals.encryptData)
             })
-        :
-        res
+    } else if (res.locals.status===200 && !res.locals.accessToken && res.locals.newAccessToken) {
+        console.log("2")
+        res.setHeader('xsrf-token', res.locals.newAccessToken);
+        return res
+            .status(res.locals.status)
+            .cookie('XSRF-TOKEN', res.locals.newAccessToken, AppConfig.cookieOptionsLogin)
+            .json({
+                data: cryptoUtils.encrypt(res.locals.encryptData)
+            })
+    } else {
+        console.log("3")
+
+        return res
             .status(res.locals.status)
             .json({
                 data: cryptoUtils.encrypt(res.locals.encryptData)
             })
+    }
+
 
 };
 

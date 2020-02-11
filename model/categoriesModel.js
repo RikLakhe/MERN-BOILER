@@ -11,7 +11,6 @@ const categorySchema = new Schema({
         {
             type: String,
             require: [true, 'Category Name is required'],
-            unique: [true, 'Category Code must be unique']
         },
     isCategoryActive:
         {

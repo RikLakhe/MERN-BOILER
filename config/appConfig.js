@@ -2,12 +2,12 @@ module.exports = {
     name: "Rikesh Lal Shrestha",
     cookieSecret: 'secret',
     cookieOptions: {
-        expires: new Date(Date.now() + 10000),
+        maxAge: 60 * 5000,
         // httpOnly: true,
         signed: true,
     },
     cookieOptionsLogin: {
-        expires: new Date(Date.now() + 10000),
+        maxAge: 60 * 1000,
         // httpOnly: true,
         signed: true,
     },
