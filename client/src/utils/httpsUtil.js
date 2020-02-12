@@ -13,7 +13,7 @@ const http = () => {
             'XSRF-TOKEN': loadLocalStorage(MERN_TOKEN),
         },
         responseType: 'json',
-        // credentials: "include",
+        credentials: "include",
         // withCredentials: true
     });
 

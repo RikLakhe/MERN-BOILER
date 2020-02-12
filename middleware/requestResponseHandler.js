@@ -33,9 +33,8 @@ const requestWithTokenHandler = (req, res, next) => {
     console.log('restrict', req.headers['xsrf-token'], req.signedCookies['XSRF-TOKEN'])
     // token and req decryption handling
     if (
-        req.headers['xsrf-token'] &&
-        req.signedCookies['XSRF-TOKEN'] &&
-        req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token']
+        req.headers['xsrf-token']
+        // && req.signedCookies['XSRF-TOKEN'] && req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token']
     ) {
 
 
@@ -90,7 +89,7 @@ const requestWithTokenHandler = (req, res, next) => {
 const responseHandler = (req, res, next) => {
     console.log('at last', res.locals.status, res.locals.accessToken, res.locals.newAccessToken);
 
-    if (res.locals.status===200 && res.locals.accessToken && !res.locals.newAccessToken) {
+    if (res.locals.status === 200 && res.locals.accessToken && !res.locals.newAccessToken) {
         console.log("1")
         res.setHeader('xsrf-token', res.locals.accessToken);
         return res
@@ -99,7 +98,7 @@ const responseHandler = (req, res, next) => {
             .json({
                 data: cryptoUtils.encrypt(res.locals.encryptData)
             })
-    } else if (res.locals.status===200 && !res.locals.accessToken && res.locals.newAccessToken) {
+    } else if (res.locals.status === 200 && !res.locals.accessToken && res.locals.newAccessToken) {
         console.log("2")
         res.setHeader('xsrf-token', res.locals.newAccessToken);
         return res
@@ -117,8 +116,6 @@ const responseHandler = (req, res, next) => {
                 data: cryptoUtils.encrypt(res.locals.encryptData)
             })
     }
-
-
 };
 
 module.exports = {requestOnlyHandler, requestWithTokenHandler, responseHandler};

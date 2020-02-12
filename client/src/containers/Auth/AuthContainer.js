@@ -1,8 +1,10 @@
 import React from "react";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
 
 import Auth from "../../components/Auth";
 
-import {loginService} from "../../services/authService"
+import * as authService from "../../services/authService";
 
 const AuthContainer = props => {
     /**
@@ -13,7 +15,7 @@ const AuthContainer = props => {
      * @return response
      */
     const login = (formData) => {
-        return loginService(formData)
+        props.actions.loginService(formData)
     }
 
     return (
@@ -24,4 +26,26 @@ const AuthContainer = props => {
     )
 };
 
-export default AuthContainer;
+/**
+ * Map the state to props.
+ */
+const mapStateToProps = state => ({
+
+});
+
+/**
+ * Map the actions to props.
+ */
+const mapDispatchToProps = dispatch => {
+    return {
+        actions: bindActionCreators(
+            Object.assign(
+                {},
+                authService,
+            ),
+            dispatch
+        ),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AuthContainer);

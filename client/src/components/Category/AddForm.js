@@ -8,7 +8,8 @@ const FormItem = Form.Item;
 const AddForm = props => {
     const {
         form,
-        addCategory
+        addCategory,
+        listCategory
     } = props;
 
     const {

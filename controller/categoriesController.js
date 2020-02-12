@@ -15,18 +15,19 @@ const addCategory = (req, res, next) => {
         } else {
             const category = new Category({categoryCode, categoryName, isCategoryActive});
 
-            category.save((err, data) => {
-                if (err) {
+            category.save((error, response) => {
+                if (error) {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: err
+                        message: error
                     };
                     next()
                 } else {
                     res.locals.status = 200;
                     res.locals.encryptData = {
                         status: 'SUCCESS',
+                        data: response
                     };
                     next()
                 }
@@ -37,4 +38,42 @@ const addCategory = (req, res, next) => {
     }
 };
 
-module.exports = {addCategory};
+// READ LIST
+const listCategory = (req, res, next) => {
+    if (res.locals.decryptData) {
+        const {pageNumber, pageSize} = res.locals.decryptData;
+        Category.find()
+            .skip((pageSize || 0) * (pageNumber || 0))
+            .limit(pageSize || 5)
+            .sort({date: -1})
+            .exec((error, response) => {
+                if (error) {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        message: error
+                    };
+                    next();
+                } else {
+                    if (response.length === 0) {
+                        res.locals.status = 200;
+                        res.locals.encryptData = {
+                            status: 'SUCCESS',
+                            data: {}
+                        };
+                        next();
+                    } else {
+                        console.log('got',response)
+                        res.locals.status = 200;
+                        res.locals.encryptData = {
+                            status: 'SUCCESS',
+                            data: response
+                        };
+                        next();
+                    }
+                }
+            });
+    }
+};
+
+module.exports = {addCategory, listCategory};

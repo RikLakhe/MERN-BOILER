@@ -2,10 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/actions/authAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/actions/categoryAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/actions/httpsErrorsAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/constants/actionTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/reducers/authReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/reducers/httpsErrorsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/store/configureStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/store/logger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/reqrestHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/reqrestHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/categoriesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/categoriesModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Category/AddCategoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Category/AddCategoryContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/AuthHandler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/encryptHandle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/reqrestHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/categoriesRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/categoriesRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cryptoUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cryptoUtil.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +38,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="163875" />
+    <option name="totalTimeSeconds" value="172549" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,7 +184,8 @@
       <workItem from="1581348351849" duration="836000" />
       <workItem from="1581349221773" duration="4669000" />
       <workItem from="1581393590342" duration="10982000" />
-      <workItem from="1581416867380" duration="300000" />
+      <workItem from="1581416867380" duration="1386000" />
+      <workItem from="1581480177140" duration="12258000" />
     </task>
     <servers />
   </component>
@@ -213,16 +239,16 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581314581859">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581485255827">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581314581859" />
-    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581313738396">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581485255827" />
+    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581480660024">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
-    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581313738396" />
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581480660024" />
     <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2" timestamp="1581076195846">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
