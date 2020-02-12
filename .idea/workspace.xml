@@ -2,35 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/actions/authAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/actions/categoryAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/actions/httpsErrorsAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/constants/actionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/authReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/httpsErrorsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/configureStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/store/logger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Category/AddCategoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Category/AddCategoryContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Auth/LogoutContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Auth/LogoutContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/AuthHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/encryptHandle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/reqrestHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/categoriesRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/categoriesRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/cryptoUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cryptoUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="172549" />
+    <option name="totalTimeSeconds" value="172906" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">

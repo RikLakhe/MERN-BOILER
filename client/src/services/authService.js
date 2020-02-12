@@ -52,11 +52,9 @@ export const logoutService = () => {
 
         return store('v1/auth/logout')
             .then(response => {
-                if (response.status === 'SUCCESS') {
-                    cleanLocalStorage();
-                    dispatch(logoutRequestFailure(response));
-                    history.push("/");
-                }
+                cleanLocalStorage();
+                dispatch(logoutRequestFailure(response));
+                history.push("/");
             })
             .catch(error => dispatch(logoutRequestSuccess(error.response)));
     }

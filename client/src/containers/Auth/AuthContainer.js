@@ -16,7 +16,7 @@ const AuthContainer = props => {
      */
     const login = (formData) => {
         props.actions.loginService(formData)
-    }
+    };
 
     return (
         <Auth

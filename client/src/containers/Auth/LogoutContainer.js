@@ -1,17 +1,19 @@
 import React from "react";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
 
 import Logout from "../../components/Auth/Logout";
 
-import {logoutService} from "../../services/authService"
+import * as authService from "../../services/authService";
 
-const AuthContainer = props => {
+const LogoutContainer = props => {
     /**
      * Call Logout service
      *
      */
     const logout = () => {
-        return logoutService()
-    }
+        props.actions.logoutService()
+    };
 
     return (
         <Logout
@@ -21,4 +23,26 @@ const AuthContainer = props => {
     )
 };
 
-export default AuthContainer;
+/**
+ * Map the state to props.
+ */
+const mapStateToProps = state => ({
+
+});
+
+/**
+ * Map the actions to props.
+ */
+const mapDispatchToProps = dispatch => {
+    return {
+        actions: bindActionCreators(
+            Object.assign(
+                {},
+                authService,
+            ),
+            dispatch
+        ),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LogoutContainer);
