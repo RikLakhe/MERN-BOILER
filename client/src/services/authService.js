@@ -52,8 +52,8 @@ export const logoutService = () => {
 
         return store('v1/auth/logout')
             .then(response => {
-                cleanLocalStorage();
                 dispatch(logoutRequestFailure(response));
+                cleanLocalStorage();
                 history.push("/");
             })
             .catch(error => dispatch(logoutRequestSuccess(error.response)));

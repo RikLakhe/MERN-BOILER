@@ -63,7 +63,6 @@ const listCategory = (req, res, next) => {
                         };
                         next();
                     } else {
-                        console.log('got',response)
                         res.locals.status = 200;
                         res.locals.encryptData = {
                             status: 'SUCCESS',

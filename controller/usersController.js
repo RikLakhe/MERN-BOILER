@@ -30,10 +30,10 @@ const findUser = (req, res, next) => {
                         next();
                     } else {
                         res.locals.status = 200;
-                        res.locals.accessToken = jwtUtils.freshToken({name: userName, type: 'ADMIN'}, '1 min');
+                        res.locals.newAccessToken = jwtUtils.freshToken({name: userName, type: 'ADMIN'}, '1 min');
                         res.locals.encryptData = {
                             status: 'SUCCESS',
-                            token: res.locals.accessToken,
+                            token: res.locals.newAccessToken,
                             permission: response[0].permission
                         };
                         next();

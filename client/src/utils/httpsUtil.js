@@ -13,19 +13,19 @@ const http = () => {
             'XSRF-TOKEN': loadLocalStorage(MERN_TOKEN),
         },
         responseType: 'json',
-        credentials: "include",
+        // credentials: "include",
         // withCredentials: true
     });
 
     // Add a request interceptor
     api.interceptors.response.use(
         response => {
-            if (response.headers && response.headers['xsrf-token']) {
+            if (response && response.headers && response.headers['xsrf-token']) {
                 saveLocalStorage(MERN_TOKEN, response.headers['xsrf-token']);
             }
             if (response && response.data && response.data.data) {
                 return decrypt(response.data.data);
-            }else{
+            } else {
                 return undefined;
             }
         },

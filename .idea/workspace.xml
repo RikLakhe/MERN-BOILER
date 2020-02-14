@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Auth/LogoutContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Auth/LogoutContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Auth/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Auth/Logout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="172906" />
+    <option name="totalTimeSeconds" value="176849" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -162,6 +165,8 @@
       <workItem from="1581393590342" duration="10982000" />
       <workItem from="1581416867380" duration="1386000" />
       <workItem from="1581480177140" duration="12258000" />
+      <workItem from="1581508879591" duration="599000" />
+      <workItem from="1581652671162" duration="4725000" />
     </task>
     <servers />
   </component>

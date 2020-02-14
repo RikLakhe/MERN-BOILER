@@ -87,20 +87,12 @@ const requestWithTokenHandler = (req, res, next) => {
 };
 
 const responseHandler = (req, res, next) => {
-    console.log('at last', res.locals.status, res.locals.accessToken, res.locals.newAccessToken);
-
-    if (res.locals.status === 200 && res.locals.accessToken && !res.locals.newAccessToken) {
-        res.setHeader('xsrf-token', res.locals.accessToken);
+    console.log('at last', res.locals.status, res.locals.newAccessToken);
+    if (res.locals.status === 200 && !res.locals.accessToken && res.locals.newAccessToken) {
+        console.log('at last 1', res.locals.status, res.locals.newAccessToken);
         return res
             .status(res.locals.status)
-            .cookie('XSRF-TOKEN', res.locals.accessToken, AppConfig.cookieOptionsLogin)
-            .json({
-                data: cryptoUtils.encrypt(res.locals.encryptData)
-            })
-    } else if (res.locals.status === 200 && !res.locals.accessToken && res.locals.newAccessToken) {
-        res.setHeader('xsrf-token', res.locals.newAccessToken);
-        return res
-            .status(res.locals.status)
+            .header('XSRF-TOKEN', res.locals.newAccessToken)
             .cookie('XSRF-TOKEN', res.locals.newAccessToken, AppConfig.cookieOptionsLogin)
             .json({
                 data: cryptoUtils.encrypt(res.locals.encryptData)

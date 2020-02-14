@@ -13,9 +13,13 @@ const Routes = require('./routes/routes');
 
 const app = express();
 
+const corsOptions = {
+    exposedHeaders: 'XSRF-TOKEN',
+};
+
 app.use(
     logger('dev'),
-    cors(),
+    cors(corsOptions),
     express.json(),
     cookieParser(AppConfig.cookieSecret),
     express.static(path.resolve(__dirname, "client", "build"))
