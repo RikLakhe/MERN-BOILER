@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Category/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Auth/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Auth/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Category/AddForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Category/AddCategoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Category/CategoryContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="176849" />
+    <option name="totalTimeSeconds" value="184297" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -167,6 +168,10 @@
       <workItem from="1581480177140" duration="12258000" />
       <workItem from="1581508879591" duration="599000" />
       <workItem from="1581652671162" duration="4725000" />
+      <workItem from="1581911652884" duration="4037000" />
+      <workItem from="1581997858928" duration="599000" />
+      <workItem from="1582012790867" duration="4358000" />
+      <workItem from="1582019684784" duration="7332000" />
     </task>
     <servers />
   </component>
@@ -297,10 +302,10 @@
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
     <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580986667616" />
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1580295351205">
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1582017660944">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580295351205" />
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582017660944" />
     <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579779547335">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

@@ -2,11 +2,11 @@ import React from "react";
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
-import AddForm from '../../components/Category/AddForm'
+import Category from '../../components/Category'
 
 import * as categoryService from "../../services/categoryService"
 
-const AddCategoryContainer = props => {
+const CategoryContainer = props => {
     /**
      * add new category
      *
@@ -28,7 +28,7 @@ const AddCategoryContainer = props => {
     };
 
     return (
-        <AddForm
+        <Category
             addCategory={addCategory}
             listCategory={listCategory}
             {...props}
@@ -39,9 +39,7 @@ const AddCategoryContainer = props => {
 /**
  * Map the state to props.
  */
-const mapStateToProps = state => ({
-
-});
+const mapStateToProps = state => ({});
 
 /**
  * Map the actions to props.
@@ -58,4 +56,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddCategoryContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryContainer);
