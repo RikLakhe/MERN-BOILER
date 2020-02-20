@@ -39,8 +39,20 @@ const column = [
     {
         title: 'header 14',
         dataIndex: 'id4',
+    },
+    {
+        title: 'actions',
+        render: (record,index)=>{
+            return <button onClick={()=> console.log('clicked on',record)}>test</button>
+        }
     }
 ]
+
+const pagination = {
+    pageNumber : 2,
+    pageSize: 5,
+    totalRecords: 30,
+}
 
 const CategoryList = props =>{
     return (
@@ -48,6 +60,7 @@ const CategoryList = props =>{
             <CustomTable
                 column={column}
                 dataSource={dataSource}
+                pagination={pagination}
             />
         </div>
     )
