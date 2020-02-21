@@ -50,8 +50,8 @@ export const listCategoryService = formData => {
         return store('v1/category/list', formData)
             .then(response => {
                 if (response.status === 'SUCCESS') {
-                    dispatch(categoryFetchRequestSuccess(response.token));
-                    history.push("/");
+                    dispatch(categoryFetchRequestSuccess(response.data));
+                    // history.push("/");
                 }
             })
             .catch(error => dispatch(categoryFetchRequestFailure(error.response)));

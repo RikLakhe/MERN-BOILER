@@ -4,9 +4,11 @@
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="192102" />
+    <option name="totalTimeSeconds" value="201225" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -170,7 +172,11 @@
       <workItem from="1582019684784" duration="7332000" />
       <workItem from="1582084380972" duration="6185000" />
       <workItem from="1582107719242" duration="2821000" />
-      <workItem from="1582174745011" duration="4241000" />
+      <workItem from="1582174745011" duration="11330000" />
+      <workItem from="1582197458028" duration="528000" />
+      <workItem from="1582198285694" duration="1553000" />
+      <workItem from="1582213098040" duration="4373000" />
+      <workItem from="1582311265874" duration="3230000" />
     </task>
     <servers />
   </component>
@@ -301,9 +307,10 @@
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
     <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582084597085" />
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1582017660944">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="684" y="169" width="672" height="483" key="search.everywhere.popup" timestamp="1582314486532">
+      <screen x="357" y="0" width="1009" height="768" />
     </state>
+    <state x="684" y="169" width="672" height="483" key="search.everywhere.popup/0.768.1366.768/357.0.1009.768@357.0.1009.768" timestamp="1582314486532" />
     <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582017660944" />
     <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579779547335">
       <screen x="1366" y="0" width="1920" height="1080" />

@@ -6,8 +6,8 @@ import CategoryList from "./CategoryList";
 const index = props => {
     return (
         <div>
-            <CategoryForm />
-            <CategoryList />
+            <CategoryForm {...props}/>
+            <CategoryList {...props}/>
         </div>
     )
 };
