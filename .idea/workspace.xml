@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="201225" />
+    <option name="totalTimeSeconds" value="202818" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,7 +171,7 @@
       <workItem from="1582197458028" duration="528000" />
       <workItem from="1582198285694" duration="1553000" />
       <workItem from="1582213098040" duration="4373000" />
-      <workItem from="1582311265874" duration="3230000" />
+      <workItem from="1582311265874" duration="5156000" />
     </task>
     <servers />
   </component>
@@ -290,6 +285,10 @@
     </state>
     <state x="432" y="130" width="540" height="540" key="StructurePopup/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1579862992016" />
     <state x="432" y="130" width="654" height="540" key="StructurePopup/41.27.1325.741@41.27.1325.741" timestamp="1581348734329" />
+    <state x="0" y="240" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582316666301">
+      <screen x="357" y="0" width="1009" height="768" />
+    </state>
+    <state x="0" y="240" width="800" height="528" key="Vcs.Push.Dialog.v2/0.768.1366.768/357.0.1009.768@357.0.1009.768" timestamp="1582316666301" />
     <state x="2107" y="194" width="427" height="690" key="VcsDiffUtil.ChangesDialog" timestamp="1581412903795">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
