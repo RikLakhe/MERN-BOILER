@@ -45,6 +45,6 @@ export const AsyncHome = loadable({
 });
 
 export const AsyncCategory = loadable({
-    loader: () => import('../Category/AddCategoryContainer'),
+    loader: () => import('../Category/CategoryContainer'),
     loading: Loading,
 });

@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import {withRouter} from "react-router-dom";
 
 import Loader from "../Layout/Loading/Loader";
 
@@ -19,4 +18,4 @@ const Logout = props => {
     )
 };
 
-export default withRouter(Logout);
+export default Logout;

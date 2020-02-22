@@ -2,7 +2,7 @@ const express = require('express');
 
 const {findUser} = require('../controller/usersController');
 
-const {requestOnlyHandler,requestWithTokenHandler, responseHandler} = require('../middleware/reqrestHandler');
+const {requestOnlyHandler,requestWithTokenHandler, responseHandler} = require('../middleware/requestResponseHandler');
 
 const router = express.Router();
 

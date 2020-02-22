@@ -5,10 +5,11 @@ import "./Form.sass"
 
 const FormItem = Form.Item;
 
-const AddForm = props => {
+const CategoryForm = props => {
     const {
         form,
-        addCategory
+        addCategory,
+        listCategory
     } = props;
 
     const {
@@ -119,4 +120,4 @@ const AddForm = props => {
     )
 };
 
-export default Form.create()(AddForm);
+export default Form.create()(CategoryForm);

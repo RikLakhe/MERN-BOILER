@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/reqrestHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/reqrestHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/categoriesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/categoriesModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="163875" />
+    <option name="totalTimeSeconds" value="203835" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,7 +161,22 @@
       <workItem from="1581348351849" duration="836000" />
       <workItem from="1581349221773" duration="4669000" />
       <workItem from="1581393590342" duration="10982000" />
-      <workItem from="1581416867380" duration="300000" />
+      <workItem from="1581416867380" duration="1386000" />
+      <workItem from="1581480177140" duration="12258000" />
+      <workItem from="1581508879591" duration="599000" />
+      <workItem from="1581652671162" duration="4725000" />
+      <workItem from="1581911652884" duration="4037000" />
+      <workItem from="1581997858928" duration="599000" />
+      <workItem from="1582012790867" duration="4358000" />
+      <workItem from="1582019684784" duration="7332000" />
+      <workItem from="1582084380972" duration="6185000" />
+      <workItem from="1582107719242" duration="2821000" />
+      <workItem from="1582174745011" duration="11330000" />
+      <workItem from="1582197458028" duration="528000" />
+      <workItem from="1582198285694" duration="1553000" />
+      <workItem from="1582213098040" duration="4373000" />
+      <workItem from="1582311265874" duration="5431000" />
+      <workItem from="1582354889691" duration="822000" />
     </task>
     <servers />
   </component>
@@ -213,16 +230,16 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581314581859">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581485255827">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581314581859" />
-    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581313738396">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581485255827" />
+    <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581480660024">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="519" y="225" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579364998823" />
-    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581313738396" />
+    <state x="2059" y="288" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581480660024" />
     <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2" timestamp="1581076195846">
       <screen x="41" y="27" width="1325" height="741" />
     </state>
@@ -273,6 +290,10 @@
     </state>
     <state x="432" y="130" width="540" height="540" key="StructurePopup/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1579862992016" />
     <state x="432" y="130" width="654" height="540" key="StructurePopup/41.27.1325.741@41.27.1325.741" timestamp="1581348734329" />
+    <state x="0" y="240" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1582316666301">
+      <screen x="357" y="0" width="1009" height="768" />
+    </state>
+    <state x="0" y="240" width="800" height="528" key="Vcs.Push.Dialog.v2/0.768.1366.768/357.0.1009.768@357.0.1009.768" timestamp="1582316666301" />
     <state x="2107" y="194" width="427" height="690" key="VcsDiffUtil.ChangesDialog" timestamp="1581412903795">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -285,15 +306,17 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1884" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581400891514" />
-    <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1580986667616">
+    <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1582084597085">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
-    <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580986667616" />
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1580295351205">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582084597085" />
+    <state x="864" y="238" width="1041" height="680" key="search.everywhere.popup" timestamp="1582355703002">
+      <screen x="357" y="0" width="1563" height="1080" />
     </state>
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1580295351205" />
+    <state x="684" y="169" width="672" height="483" key="search.everywhere.popup/0.768.1366.768/357.0.1009.768@357.0.1009.768" timestamp="1582314486532" />
+    <state x="864" y="238" width="1041" height="680" key="search.everywhere.popup/316.1080.1366.768/357.0.1563.1080@357.0.1563.1080" timestamp="1582355703002" />
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582017660944" />
     <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579779547335">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

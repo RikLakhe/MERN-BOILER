@@ -33,9 +33,8 @@ const requestWithTokenHandler = (req, res, next) => {
     console.log('restrict', req.headers['xsrf-token'], req.signedCookies['XSRF-TOKEN'])
     // token and req decryption handling
     if (
-        req.headers['xsrf-token'] &&
-        req.signedCookies['XSRF-TOKEN'] &&
-        req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token']
+        process.env.NODE_ENV === 'production' ?
+            req.headers['xsrf-token'] && req.signedCookies['XSRF-TOKEN'] && req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token'] : req.headers['xsrf-token']
     ) {
 
 
@@ -88,37 +87,23 @@ const requestWithTokenHandler = (req, res, next) => {
 };
 
 const responseHandler = (req, res, next) => {
-    console.log('at last', res.locals.status, res.locals.accessToken, res.locals.newAccessToken);
-
-    if (res.locals.status===200 && res.locals.accessToken && !res.locals.newAccessToken) {
-        console.log("1")
-        res.setHeader('xsrf-token', res.locals.accessToken);
+    console.log('at last', res.locals.status, res.locals.newAccessToken);
+    if (res.locals.status === 200 && !res.locals.accessToken && res.locals.newAccessToken) {
+        console.log('at last 1', res.locals.status, res.locals.newAccessToken);
         return res
             .status(res.locals.status)
-            .cookie('XSRF-TOKEN', res.locals.accessToken, AppConfig.cookieOptionsLogin)
-            .json({
-                data: cryptoUtils.encrypt(res.locals.encryptData)
-            })
-    } else if (res.locals.status===200 && !res.locals.accessToken && res.locals.newAccessToken) {
-        console.log("2")
-        res.setHeader('xsrf-token', res.locals.newAccessToken);
-        return res
-            .status(res.locals.status)
+            .header('XSRF-TOKEN', res.locals.newAccessToken)
             .cookie('XSRF-TOKEN', res.locals.newAccessToken, AppConfig.cookieOptionsLogin)
             .json({
                 data: cryptoUtils.encrypt(res.locals.encryptData)
             })
     } else {
-        console.log("3")
-
         return res
             .status(res.locals.status)
             .json({
                 data: cryptoUtils.encrypt(res.locals.encryptData)
             })
     }
-
-
 };
 
 module.exports = {requestOnlyHandler, requestWithTokenHandler, responseHandler};

@@ -1,12 +1,12 @@
 const express = require('express');
-const AuthHandler = require('../middleware/AuthHandler');
 
-const {requestOnlyHandler,requestWithTokenHandler, responseHandler} = require('../middleware/reqrestHandler');
+const {requestWithTokenHandler, responseHandler} = require('../middleware/requestResponseHandler');
 
-const {addCategory} = require('../controller/categoriesController');
+const {addCategory,listCategory} = require('../controller/categoriesController');
 
 const router = express.Router();
 
 router.post("/", requestWithTokenHandler, addCategory, responseHandler);
+router.post("/list", requestWithTokenHandler, listCategory, responseHandler);
 
 module.exports = router;

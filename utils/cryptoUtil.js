@@ -7,7 +7,11 @@ const cryptoUtils = {
     },
     decrypt: (data) => {
         let here2 = CryptoJS.AES.decrypt(data.toString(), AppConfig.projectKey);
-        return JSON.parse(here2.toString(CryptoJS.enc.Utf8));
+        try {
+            return JSON.parse(here2.toString(CryptoJS.enc.Utf8));
+        } catch (e) {
+            return undefined
+        }
     }
 };
 
