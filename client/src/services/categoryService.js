@@ -31,7 +31,7 @@ export const addCategoryService = formData => {
                     history.push("/");
                 }
             })
-            .catch(error => dispatch(categoryAddRequestFailure(error.response)));
+            .catch(error => dispatch(categoryAddRequestFailure(error)));
     }
 };
 

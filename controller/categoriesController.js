@@ -87,7 +87,6 @@ const listCategory = (req, res, next) => {
                     };
                     next();
                 } else {
-                    console.log('gaga',response.slice(0,6),response.length)
                     if (response.length === 0) {
                         res.locals.status = 200;
                         res.locals.encryptData = {

@@ -13,8 +13,8 @@ const http = () => {
             'XSRF-TOKEN': loadLocalStorage(MERN_TOKEN),
         },
         responseType: 'json',
-        // credentials: "include",
-        // withCredentials: true
+        credentials: process.env.NODE_ENV === 'production' ? "include": "",
+        withCredentials: process.env.NODE_ENV === 'production'
     });
 
     // Add a request interceptor

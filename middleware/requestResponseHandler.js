@@ -33,8 +33,8 @@ const requestWithTokenHandler = (req, res, next) => {
     console.log('restrict', req.headers['xsrf-token'], req.signedCookies['XSRF-TOKEN'])
     // token and req decryption handling
     if (
-        req.headers['xsrf-token']
-        // && req.signedCookies['XSRF-TOKEN'] && req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token']
+        process.env.NODE_ENV === 'production' ?
+            req.headers['xsrf-token'] && req.signedCookies['XSRF-TOKEN'] && req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token'] : req.headers['xsrf-token']
     ) {
 
 
