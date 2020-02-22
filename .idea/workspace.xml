@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="203835" />
+    <option name="totalTimeSeconds" value="204273" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -176,7 +172,7 @@
       <workItem from="1582198285694" duration="1553000" />
       <workItem from="1582213098040" duration="4373000" />
       <workItem from="1582311265874" duration="5431000" />
-      <workItem from="1582354889691" duration="822000" />
+      <workItem from="1582354889691" duration="1695000" />
     </task>
     <servers />
   </component>
