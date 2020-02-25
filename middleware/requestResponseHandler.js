@@ -6,7 +6,6 @@ const requestOnlyHandler = (req, res, next) => {
     // decrypt data from body and pass into next handler
     if (req && req.body) {
         const {data} = req.body;
-
         // no data is sent from front end send error
         if (!data) {
             res.locals.status = 401;
@@ -30,7 +29,6 @@ const requestOnlyHandler = (req, res, next) => {
 };
 
 const requestWithTokenHandler = (req, res, next) => {
-    console.log('restrict', req.headers['xsrf-token'], req.signedCookies['XSRF-TOKEN'])
     // token and req decryption handling
     if (
         process.env.NODE_ENV === 'production' ?
@@ -87,9 +85,7 @@ const requestWithTokenHandler = (req, res, next) => {
 };
 
 const responseHandler = (req, res, next) => {
-    console.log('at last', res.locals.status, res.locals.newAccessToken);
     if (res.locals.status === 200 && !res.locals.accessToken && res.locals.newAccessToken) {
-        console.log('at last 1', res.locals.status, res.locals.newAccessToken);
         return res
             .status(res.locals.status)
             .header('XSRF-TOKEN', res.locals.newAccessToken)

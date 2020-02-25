@@ -32,7 +32,7 @@ app.use("/v1", Routes);
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-    // res.sendFile(path.join(__dirname, "testST", "index.html"));
+    // res.sendFile(path.join(__dirname, "testST", "index.html"));s
 });
 
 const port = process.env.PORT || "3001";
