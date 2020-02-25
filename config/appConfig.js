@@ -1,6 +1,6 @@
 module.exports = {
     name: "Rikesh Lal Shrestha",
-    cookieSecret: 'secret',
+    cookieSecret: process.env.COOKIE_SECRET,
     cookieOptions: {
         maxAge: 60 * 5000,
         // httpOnly: true,
@@ -11,10 +11,10 @@ module.exports = {
         // httpOnly: true,
         signed: true,
     },
-    jwtSecret: 'secretjwt',
-    projectKey:'APPLEPIE',
+    jwtSecret: process.env.JWT_SECRET,
+    projectKey: process.env.ENCODE_SECRET,
     mongoDB: {
-        url: 'mongodb+srv://lakheMern:9849225111@lakhemern-8mon9.mongodb.net/test?retryWrites=true&w=majority',
-        database : 'boilerplate'
+        url: process.env.MONGODB_URL,
+        database: process.env.MONGODB_DB
     }
 };
