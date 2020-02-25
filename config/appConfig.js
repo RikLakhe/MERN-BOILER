@@ -3,7 +3,7 @@ module.exports = {
     cookieSecret: process.env.COOKIE_SECRET,
     cookieOptions: {
         maxAge: 60 * 5000,
-        // httpOnly: true,
+        // httpOnly: true,s
         signed: true,
     },
     cookieOptionsLogin: {
