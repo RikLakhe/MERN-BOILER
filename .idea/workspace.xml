@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Category/CategoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Category/CategoryContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/commonUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/commonUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="209299" />
+    <option name="totalTimeSeconds" value="213772" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -179,7 +181,8 @@
       <workItem from="1582354889691" duration="2714000" />
       <workItem from="1582517109255" duration="6286000" />
       <workItem from="1582602076033" duration="4620000" />
-      <workItem from="1582625759859" duration="4615000" />
+      <workItem from="1582625759859" duration="5218000" />
+      <workItem from="1582692333152" duration="6211000" />
     </task>
     <servers />
   </component>
@@ -247,10 +250,10 @@
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="502" y="27" width="864" height="741" key="CommitChangelistDialog2/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582632186878" />
-    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1581412902513">
+    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog" timestamp="1582709577622">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581412902513" />
+    <state x="1466" y="98" width="1720" height="882" key="DiffContextDialog/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582709577622" />
     <state x="1868" y="319" width="906" height="439" key="EditFileWatcherDialog" timestamp="1580192284324">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

@@ -13,10 +13,19 @@ const useMainTable = props => {
 
         const [page, setPage] = useState(1);
         const [pageSize, setPageSize] = useState(5);
+        const [pageArray, setPageArray] = useState([]);
 
         useEffect(() => {
-            setPage(pagination.pageNumber);
-            setPageSize(pagination.pageSize);
+            if(pagination){
+                console.log('gggg',pagination)
+                setPage(pagination.pageNumber);
+                setPageSize(pagination.pageSize);
+                if(pagination.totalRecords % pagination.pageSize > 0){
+                    setPageArray(Array(Math.floor(pagination.totalRecords / pagination.pageSize + 1)))
+                }else{
+                    setPageArray(Array(Math.floor(pagination.totalRecords / pagination.pageSize)))
+                }
+            }
         }, [pagination]);
 
         // column && column.map((columnData, columnIndex) => {
@@ -28,8 +37,6 @@ const useMainTable = props => {
         //         })
         //     })
         // });
-
-        console.log('ggg', pagination)
 
         // dataSource && dataSource.map((dataSourceData, dataSourceIndex) => {
         //     column && column.map((columnData, columnIndex) => {
@@ -102,7 +109,7 @@ const useMainTable = props => {
                     </tbody>
                 </table>
                 {
-                    pagination &&
+                    pageArray && pageArray.length > 0 &&
                     <div className="table-pagination">
                         {page !== 1 &&
                         <button className={`custom-table-pagination-icon`} onClick={handlePrevious}>
@@ -115,12 +122,12 @@ const useMainTable = props => {
                         </button>}
                         {
                             Array
-                                .from(Array(pagination.totalRecords / pagination.pageSize))
+                                .from(pageArray)
                                 .map((d, i) => <button
                                     className={`custom-table-pagination-pages ${i + 1 === page ? "custom-table-pagination-pages-selected" : ""}`}
                                     disabled={i + 1 === page}>{i + 1}</button>)
                         }
-                        {page !== (pagination.totalRecords / pagination.pageSize) &&
+                        {page !== (pageArray.length) &&
                         <button className="custom-table-pagination-icon" onClick={handleNext}>
                             <svg viewBox="64 64 896 896" data-icon="right"
                                  width="1.6em"
@@ -134,7 +141,7 @@ const useMainTable = props => {
                         <select className="custom-table-pagination-select" defaultValue={pagination.pageSize}
                                 onChange={(e) => handleSizeChange(e.target.value)}>
                             {
-                                pagination.pageSizeOption.map((pageSizeOptionData, pageSizeOptionIndex) => <option
+                                pagination?.pageSizeOption.map((pageSizeOptionData, pageSizeOptionIndex) => <option
                                     key={pageSizeOptionData} value={pageSizeOptionData}>{pageSizeOptionData}</option>)
                             }
                         </select>
