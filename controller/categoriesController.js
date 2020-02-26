@@ -64,11 +64,12 @@ const listCategory = (req, res, next) => {
                         res.locals.status = 200;
                         res.locals.encryptData = {
                             status: 'SUCCESS',
-                            data: response.slice(pageSize || 0,pageNumber || 0),
+                            data: response.slice(pageSize || 0,pageNumber || 5),
                             pagination: {
                                 pageNumber: 1,
                                 pageSize: 5,
-                                totalSize: response.length
+                                totalRecords: response.length,
+                                pageSizeOption: [5,10,15, 'ALL']
                             }
                         };
                         next();
@@ -102,7 +103,8 @@ const listCategory = (req, res, next) => {
                             pagination: {
                                 pageNumber: 1,
                                 pageSize: 5,
-                                totalSize: response.length
+                                totalRecords: response.length,
+                                pageSizeOption: [5,10,15, 'ALL']
                             }
                         };
                         next();

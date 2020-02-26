@@ -51,7 +51,8 @@ const categoryReducer = (state, action) => {
         case CATEGORY_FETCH_REQUEST_SUCCESS:
             return Object.assign({}, state, {
                 loading: false,
-                payload: action.data,
+                payload: action.data.data,
+                pagination: action.data.pagination,
                 errors: {},
             });
 

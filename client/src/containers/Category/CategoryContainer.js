@@ -39,7 +39,11 @@ const CategoryContainer = props => {
 /**
  * Map the state to props.
  */
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+    category: state.category.singlePayload,
+    categories : state.category.payload,
+    categoriesPage : state.category.pagination
+});
 
 /**
  * Map the actions to props.
