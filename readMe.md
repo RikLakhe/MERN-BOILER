@@ -45,7 +45,7 @@ Build from <a href="https://github.com/facebook/create-react-app"><strong> creat
 MERN-BOILER project uses express web framework. Our app sits in index.js
 
 ## Application SECURITY 
-######(MAIN LEARNING PURPOSE)
+###### (MAIN LEARNING PURPOSE)
 Our MERN-BOILER project uses [COOKIES](https://expressjs.com/en/resources/middleware/cookie-parser.html) and [JWT TOKEN](https://jwt.io) for authentication and validation in production build. 
 - When in production mode, we build back-end and front-end communication authentication using JWT TOKEN then COOKIES.
 - When in development mode, we build back-end and front-end communication authentication using only JWT TOKEN for local machine development and testing.
