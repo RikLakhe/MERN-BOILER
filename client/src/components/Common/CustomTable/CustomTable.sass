@@ -2,7 +2,6 @@
 
 .custom-table
   width: 100%
-  //border: 0.1rem red solid
 
   thead
     th
@@ -17,6 +16,18 @@
     td
       text-align: center
       border: 1px solid rgba(0, 0, 0, .1)
+
+    button
+      width: 4rem
+      padding-top: 0.2rem
+      padding-bottom: 0.2rem
+      margin-top: 0.2rem
+      margin-bottom: 0.2rem
+      border: 1px solid rgba(0, 0, 0, .1)
+      border-radius: 20px
+
+    button:hover
+      background-color: $secondary
 
 .table-pagination
   width: 100%
@@ -38,6 +49,9 @@
     padding: 0.5em
     border-radius: 0.3rem
     border: 0.1rem solid rgba(0, 0, 0, .1)
+
+  .custom-table-pagination-pages:hover
+    background-color: $tertiary
 
   .custom-table-pagination-pages-selected
     padding: 0.2em 0.8em 0.2em 0.8em
