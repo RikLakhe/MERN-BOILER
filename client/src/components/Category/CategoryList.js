@@ -19,26 +19,31 @@ const CategoryList = props => {
             dataIndex: 'categoryName',
         }, {
             title: `Active`,
-            render: (record,index)=>{
-                if(record?.isCategoryActive){
+            render: (record, index) => {
+                if (record?.isCategoryActive) {
                     return 'YES'
-                }else{
+                } else {
                     return 'NO'
                 }
             }
-        },{
+        }, {
             title: `Action`,
-            render: (record,index)=>{
-                return <button onClick={()=> console.log('clicked on',record)}>Edit</button>
+            render: (record, index) => {
+                return <div><button onClick={() => console.log('clicked on', record)}>Edit</button><button onClick={() => console.log('clicked on', record)}>Delete</button></div>
             }
         }];
+
+    const handleCategoryTableChange = (pageData) => {
+        listCategory({pageData})
+    };
 
     return (
         <div>
             <CustomTable
                 column={column}
                 dataSource={categories instanceof Array ? categories : []}
-                pagination = {!isEmpty(categoriesPage) && categoriesPage }
+                pagination={!isEmpty(categoriesPage) && categoriesPage}
+                handleTableChange={handleCategoryTableChange}
             />
 
         </div>

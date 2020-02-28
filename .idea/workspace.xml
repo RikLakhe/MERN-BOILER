@@ -4,11 +4,8 @@
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Category/CategoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Category/CategoryContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/commonUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/commonUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="213772" />
+    <option name="totalTimeSeconds" value="219044" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -182,7 +179,8 @@
       <workItem from="1582517109255" duration="6286000" />
       <workItem from="1582602076033" duration="4620000" />
       <workItem from="1582625759859" duration="5218000" />
-      <workItem from="1582692333152" duration="6211000" />
+      <workItem from="1582692333152" duration="7287000" />
+      <workItem from="1582884006467" duration="6036000" />
     </task>
     <servers />
   </component>
@@ -312,15 +310,15 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1983" y="136" width="676" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582628656295" />
-    <state x="1884" y="239" width="884" height="598" key="find.popup" timestamp="1582632424520">
+    <state x="1884" y="239" width="884" height="598" key="find.popup" timestamp="1582890761327">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1884" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582632424520" />
-    <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1582084597085">
+    <state x="1884" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582890761327" />
+    <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1582884511460">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
-    <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582084597085" />
+    <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582884511460" />
     <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1582631259075">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
