@@ -1,4 +1,5 @@
 const Category = require('../model/categoriesModel');
+const {errorHandler} = require('../utils/messageUtils');
 
 // CRUD
 // CREATE
@@ -13,16 +14,18 @@ const addCategory = (req, res, next) => {
             };
             next();
         } else {
-            const category = new Category({categoryCode, categoryName, isCategoryActive});
+            let createDate = Date.now();
+
+            const category = new Category({categoryCode, categoryName, isCategoryActive, createDate});
 
             category.save((error, response) => {
                 if (error) {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: error
+                        message: errorHandler(error)
                     };
-                    next()
+                    next();
                 } else {
                     res.locals.status = 200;
                     res.locals.encryptData = {
@@ -33,8 +36,6 @@ const addCategory = (req, res, next) => {
                 }
             })
         }
-    } else {
-        next();
     }
 };
 
@@ -42,15 +43,15 @@ const addCategory = (req, res, next) => {
 const listCategory = (req, res, next) => {
     if (res.locals.decryptData) {
         const {pageNumber, pageSize} = res.locals.decryptData.pageData;
-        if(pageSize && pageSize === 'ALL'){
+        if (pageNumber && pageSize && pageSize === 'ALL') {
             Category.find()
-                .sort({date: -1})
+                .sort({createDate: -1})
                 .exec((error, response) => {
                     if (error) {
                         res.locals.status = 400;
                         res.locals.encryptData = {
                             status: 'FAIL',
-                            message: error
+                            message: errorHandler(error)
                         };
                         next();
                     } else {
@@ -77,15 +78,15 @@ const listCategory = (req, res, next) => {
                         }
                     }
                 });
-        }else{
+        } else {
             Category.find()
-                .sort({date: -1})
+                .sort({createDate: -1})
                 .exec((error, response) => {
                     if (error) {
                         res.locals.status = 400;
                         res.locals.encryptData = {
                             status: 'FAIL',
-                            message: error
+                            message: errorHandler(error)
                         };
                         next();
                     } else {
@@ -115,13 +116,13 @@ const listCategory = (req, res, next) => {
         }
     } else {
         Category.find()
-            .sort({date: -1})
+            .sort({createDate: -1})
             .exec((error, response) => {
                 if (error) {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: error
+                        message: errorHandler(error)
                     };
                     next();
                 } else {
@@ -151,4 +152,66 @@ const listCategory = (req, res, next) => {
     }
 };
 
-module.exports = {addCategory, listCategory};
+const findCategoryById = (req, res, next) => {
+    if (req.params.category_id.match(/^[0-9a-fA-F]{24}$/)) {
+        Category
+            .find({_id: req.params.category_id})
+            .exec((error, response) => {
+                if (!error) {
+                    res.locals.status = 200;
+                    res.locals.encryptData = {
+                        status: 'SUCCESS',
+                        data: response[0],
+                    };
+                    next();
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        message: errorHandler(error)
+                    };
+                    next();
+                }
+            })
+    } else {
+        res.locals.status = 400;
+        res.locals.encryptData = {
+            status: 'FAIL',
+            message: "Category Code is invalid"
+        };
+        next();
+    }
+};
+
+const deleteCategoryById = (req, res, next) => {
+    if (req.params.category_id.match(/^[0-9a-fA-F]{24}$/)) {
+        Category
+            .deleteOne({_id: req.params.category_id})
+            .exec((error, response) => {
+                if (!error) {
+                    res.locals.status = 200;
+                    res.locals.encryptData = {
+                        status: 'SUCCESS',
+                        data: 'Category deleted successfully.',
+                    };
+                    next();
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        message: errorHandler(error)
+                    };
+                    next();
+                }
+            })
+    } else {
+        res.locals.status = 400;
+        res.locals.encryptData = {
+            status: 'FAIL',
+            message: "Category Code is invalid"
+        };
+        next();
+    }
+};
+
+module.exports = {addCategory, listCategory, findCategoryById, deleteCategoryById};

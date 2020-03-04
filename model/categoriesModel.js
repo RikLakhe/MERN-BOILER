@@ -17,6 +17,10 @@ const categorySchema = new Schema({
             type: Boolean,
             require: [true, 'Category Status is required'],
         },
+    createDate:
+        {
+            type: Date,
+        }
 });
 
 const Categories = model("Categories", categorySchema);

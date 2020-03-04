@@ -2,11 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryList.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomMessage/CustomMessage.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomMessage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomMessage/mainMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTableLoading.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTableLoading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/commonUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/messageUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/rikesh.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/categoryAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/categoryAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Category/CategoryForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/CategoryList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/CustomTable.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Common/CustomTable/mainTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/Category/CategoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Category/CategoryContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/categoryReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/commonUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/commonUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/categoriesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/categoriesModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/categoriesRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/categoriesRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +36,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="219044" />
+    <option name="totalTimeSeconds" value="238797" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -180,7 +202,15 @@
       <workItem from="1582602076033" duration="4620000" />
       <workItem from="1582625759859" duration="5218000" />
       <workItem from="1582692333152" duration="7287000" />
-      <workItem from="1582884006467" duration="6036000" />
+      <workItem from="1582884006467" duration="7213000" />
+      <workItem from="1583120941328" duration="599000" />
+      <workItem from="1583138462916" duration="2258000" />
+      <workItem from="1583146956487" duration="1832000" />
+      <workItem from="1583208226535" duration="7299000" />
+      <workItem from="1583228454221" duration="7737000" />
+      <workItem from="1583305694015" duration="3399000" />
+      <workItem from="1583312567523" duration="4983000" />
+      <workItem from="1583320233858" duration="3941000" />
     </task>
     <servers />
   </component>
@@ -234,11 +264,11 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581485255827">
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583234803895">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="419" y="193" width="558" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.768.1366.768/41.27.1325.741@41.27.1325.741" timestamp="1579365027401" />
-    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1581485255827" />
+    <state x="1914" y="242" width="658" height="406" key="#com.intellij.fileTypes.FileTypeChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1583234803895" />
     <state x="2059" y="288" width="373" height="345" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581480660024">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -310,21 +340,25 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1983" y="136" width="676" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582628656295" />
-    <state x="1884" y="239" width="884" height="598" key="find.popup" timestamp="1582890761327">
+    <state x="516" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583145182123">
+      <screen x="41" y="27" width="1325" height="741" />
+    </state>
+    <state x="516" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1583145182123" />
+    <state x="1884" y="239" width="884" height="638" key="find.popup" timestamp="1583323561548">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1884" y="239" width="884" height="598" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582890761327" />
+    <state x="1884" y="239" width="884" height="638" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1583323561548" />
     <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1582884511460">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="444" y="943" width="672" height="677" key="run.anything.popup/0.768.1366.768/41.0.1325.768@0.768.1366.768" timestamp="1579307855683" />
     <state x="1990" y="246" width="672" height="677" key="run.anything.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582884511460" />
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1582631259075">
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1583322788784">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="684" y="169" width="672" height="483" key="search.everywhere.popup/0.768.1366.768/357.0.1009.768@357.0.1009.768" timestamp="1582314486532" />
     <state x="864" y="238" width="1041" height="680" key="search.everywhere.popup/316.1080.1366.768/357.0.1563.1080@357.0.1563.1080" timestamp="1582355703002" />
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1582631259075" />
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1583322788784" />
     <state x="2051" y="407" width="540" height="264" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1579779547335">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

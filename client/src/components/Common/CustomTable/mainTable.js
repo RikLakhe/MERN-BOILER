@@ -2,13 +2,15 @@ import React, {useEffect, useState} from "react";
 import {Icon} from 'antd'
 
 import "./CustomTable.sass"
+import TableLoading from "./mainTableLoading";
 
 const useMainTable = props => {
         const {
             column,
             dataSource,
             pagination,
-            handleTableChange
+            handleTableChange,
+            loading,
         } = props;
 
         const [page, setPage] = useState(1);
@@ -28,6 +30,8 @@ const useMainTable = props => {
                         setPageArray(Array(Math.floor(pagination.totalRecords / pagination.pageSize)))
                     }
                 }
+            }else{
+                setPageArray([])
             }
         }, [pagination]);
 
@@ -62,27 +66,33 @@ const useMainTable = props => {
                     </thead>
                     <tbody>
                     {
-                        dataSource && dataSource.map((dataSourceData, dataSourceIndex) => {
-                            return (
-                                <tr key={dataSourceIndex}>
-                                    {
-                                        column && column.map((columnData, columnIndex) => {
-                                            let here = column[columnIndex]['dataIndex'];
-                                            if (here) {
-                                                if (dataSourceData[here]) {
-                                                    return <td key={columnIndex}>{dataSourceData[here]}</td>
+                        loading ?
+                            <TableLoading/>
+                            :
+                            (dataSource && dataSource.length > 0) ? dataSource.map((dataSourceData, dataSourceIndex) => {
+                                return (
+                                    <tr key={dataSourceIndex}>
+                                        {
+                                            column && column.map((columnData, columnIndex) => {
+                                                let here = column[columnIndex]['dataIndex'];
+                                                if (here) {
+                                                    if (dataSourceData[here]) {
+                                                        return <td key={columnIndex}>{dataSourceData[here]}</td>
+                                                    } else {
+                                                        return <td key={columnIndex}>-</td>
+                                                    }
                                                 } else {
-                                                    return <td key={columnIndex}>-</td>
+                                                    return <td
+                                                        key={columnIndex}>{column[columnIndex]?.render(dataSourceData, dataSourceIndex)}</td>
                                                 }
-                                            } else {
-                                                return <td
-                                                    key={columnIndex}>{column[columnIndex]?.render(dataSourceData, dataSourceIndex)}</td>
-                                            }
-                                        })
-                                    }
-                                </tr>
-                            )
-                        })
+                                            })
+                                        }
+                                    </tr>
+                                )
+                            }) : <tr>
+                                <td colSpan="100%" className={'custom-table-noData'}>No data to display.</td>
+                            </tr>
+
                     }
                     </tbody>
                 </table>
@@ -106,7 +116,7 @@ const useMainTable = props => {
                                         <button
                                             className={`custom-table-pagination-pages ${i + 1 === page ? "custom-table-pagination-pages-selected" : ""}`}
                                             disabled={i + 1 === page}
-                                            onClick={() => handlePageChange(i+1)}>
+                                            onClick={() => handlePageChange(i + 1)}>
                                             {i + 1}
                                         </button>))
                             }

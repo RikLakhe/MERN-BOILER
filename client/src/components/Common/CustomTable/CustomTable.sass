@@ -2,6 +2,7 @@
 
 .custom-table
   width: 100%
+  border: 1px solid rgba(0, 0, 0, .1)
 
   thead
     th
@@ -14,6 +15,7 @@
 
   tbody
     td
+      word-break: break-all
       text-align: center
       border: 1px solid rgba(0, 0, 0, .1)
 
@@ -25,6 +27,7 @@
       margin-bottom: 0.2rem
       border: 1px solid rgba(0, 0, 0, .1)
       border-radius: 20px
+      background-color: $tertiary
 
     button:hover
       background-color: $secondary
@@ -63,3 +66,10 @@
     padding-right: 0.5rem
     padding-left: 0.5rem
     border: 0.1rem solid rgba(0, 0, 0, .1)
+
+.custom-table-noData
+  height: 100px
+  color: rgba(0, 0, 0, 0.53)
+
+.custom-table-noData:hover
+  cursor: wait
