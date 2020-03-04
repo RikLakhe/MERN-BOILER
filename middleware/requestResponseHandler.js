@@ -13,9 +13,13 @@ const requestOnlyHandler = (req, res, next) => {
                 status: 'FAIL',
                 message: 'Error request'
             };
+
+            responseHandler(req, res, next);
         } else {
             // data is send from front end encrypted, we decrypt and process the req next
             res.locals.decryptData = cryptoUtils.decrypt(data);
+
+            next();
         }
     } else {
         res.locals.status = 401;
@@ -23,9 +27,9 @@ const requestOnlyHandler = (req, res, next) => {
             status: 'FAIL',
             message: 'Error request'
         };
-    }
 
-    next();
+        responseHandler(req, res, next);
+    }
 };
 
 const requestWithTokenHandler = (req, res, next) => {
@@ -53,16 +57,22 @@ const requestWithTokenHandler = (req, res, next) => {
                         status: 'FAIL',
                         message: 'Error request'
                     };
+
+                    responseHandler(req, res, next);
                 } else {
                     // data is send from front end encrypted, we decrypt and process the req next
                     res.locals.decryptData = cryptoUtils.decrypt(data);
+
+                    next();
                 }
             } else {
                 res.locals.status = 400;
-                res.locals.decryptData = {
+                res.locals.encryptData = {
                     status: 'FAIL',
                     message: 'Error request'
                 };
+
+                responseHandler(req, res, next);
             }
         } else {
             res.locals.status = 401;
@@ -70,6 +80,8 @@ const requestWithTokenHandler = (req, res, next) => {
                 status: 'FAIL',
                 message: 'Unauthorized'
             };
+
+            responseHandler(req, res, next);
         }
     } else {
 
@@ -79,9 +91,42 @@ const requestWithTokenHandler = (req, res, next) => {
             status: 'FAIL',
             message: 'Unauthorized'
         };
-    }
 
-    next();
+        responseHandler(req, res, next);
+    }
+};
+
+const requestGETWithTokenHandler = (req, res, next) => {
+    // token and req decryption handling
+    if (
+        process.env.NODE_ENV === 'production' ?
+            req.headers['xsrf-token'] && req.signedCookies['XSRF-TOKEN'] && req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token'] : req.headers['xsrf-token']
+    ) {
+        // token handling check token validation with time
+        let tokenStatus = jwtUtils.isTokenExpired(req.headers['xsrf-token']);
+        if (!tokenStatus) {
+            res.locals.newAccessToken = jwtUtils.freshToken({status: "new token"}, '5 min');
+
+            next();
+        } else {
+            res.locals.status = 401;
+            res.locals.encryptData = {
+                status: 'FAIL',
+                message: 'Unauthorized'
+            };
+
+            responseHandler(req, res, next);
+        }
+    } else {
+        // if no headers and no signed cookies are sent
+        res.locals.status = 401;
+        res.locals.encryptData = {
+            status: 'FAIL',
+            message: 'Unauthorized'
+        };
+
+        responseHandler(req, res, next);
+    }
 };
 
 const responseHandler = (req, res, next) => {
@@ -102,4 +147,4 @@ const responseHandler = (req, res, next) => {
     }
 };
 
-module.exports = {requestOnlyHandler, requestWithTokenHandler, responseHandler};
+module.exports = {requestOnlyHandler, requestWithTokenHandler, responseHandler, requestGETWithTokenHandler};

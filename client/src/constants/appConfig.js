@@ -16,3 +16,5 @@ export const MERN_TOKEN = 'MERN-TOKEN';
 export const MERN_PERMISSION = 'MERN-PERMISSION';
 
 export default appConfig;
+
+export const CODE_REGEX = /^[A-Za-z]{3}$/

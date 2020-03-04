@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 import Category from '../../components/Category'
 
+import * as categoryAction from "../../actions/categoryAction"
 import * as categoryService from "../../services/categoryService"
 
 const CategoryContainer = props => {
@@ -14,7 +15,7 @@ const CategoryContainer = props => {
      *
      */
     const addCategory = formData => {
-        props.actions.addCategoryService(formData)
+        return props.actions.addCategoryService(formData)
     };
 
     /**
@@ -27,10 +28,50 @@ const CategoryContainer = props => {
         props.actions.listCategoryService(formData)
     };
 
+    /**
+     * find single category
+     *
+     * @param {string} id
+     *
+     */
+    const findCategoryByIdentifier = id => {
+        props.actions.findCategoryByIdentifier(id)
+    };
+
+    /**
+     * delete single category
+     *
+     * @param {string} id
+     *
+     */
+    const deleteCategoryByIdentifier = id => {
+        props.actions.deleteCategoryByIdentifier(id)
+    };
+
+    /**
+     * find single category
+     *
+     */
+    const cleanSingleCategory = () => {
+        props.actions.singleCategoryCleanRequest()
+    };
+
+    /**
+     * find single category
+     *
+     */
+    const cleanCategory = () => {
+        props.actions.categoryCleanRequest()
+    };
+
     return (
         <Category
+            cleanSingleCategory={cleanSingleCategory}
+            cleanCategory={cleanCategory}
             addCategory={addCategory}
             listCategory={listCategory}
+            findCategoryByIdentifier={findCategoryByIdentifier}
+            deleteCategoryByIdentifier={deleteCategoryByIdentifier}
             {...props}
         />
     )
@@ -41,8 +82,10 @@ const CategoryContainer = props => {
  */
 const mapStateToProps = state => ({
     category: state.category.singlePayload,
-    categories : state.category.payload,
-    categoriesPage : state.category.pagination
+    categoryError: state.category.singleErrors,
+    categories: state.category.payload,
+    categoriesPage: state.category.pagination,
+    categoriesLoading: state.category.loading
 });
 
 /**
@@ -53,6 +96,7 @@ const mapDispatchToProps = dispatch => {
         actions: bindActionCreators(
             Object.assign(
                 {},
+                categoryAction,
                 categoryService,
             ),
             dispatch

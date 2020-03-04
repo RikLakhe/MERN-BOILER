@@ -2,20 +2,22 @@ import React from 'react'
 import {Form, Button, Input, Checkbox, Row, Col, Switch} from "antd";
 
 import "./Form.sass"
+import {CODE_REGEX} from "../../constants/appConfig";
 
 const FormItem = Form.Item;
 
 const CategoryForm = props => {
     const {
-        form,
+        form: {
+            getFieldDecorator,
+            validateFields,
+            resetFields
+        },
+        category,
         addCategory,
-        listCategory
+        listCategory,
+        cleanSingleCategory,
     } = props;
-
-    const {
-        getFieldDecorator,
-        validateFields
-    } = form;
 
     const formItemLayout = {
         labelCol:
@@ -39,15 +41,26 @@ const CategoryForm = props => {
         e.preventDefault();
         validateFields((err, values) => {
             if (!err) {
-                addCategory(values);
+                values.categoryCode = values.categoryCode.toUpperCase();
+                addCategory(values).then(data => {
+                    resetFields();
+                    listCategory()
+                })
             }
         })
-    }
+    };
+
+    const handleCancel = (e) => {
+        e.preventDefault();
+        resetFields();
+        cleanSingleCategory();
+    };
 
     return (
         <div className={'add-form'}>
             <Form
                 onSubmit={handleSubmit}
+                onReset={handleCancel}
                 className="commission-add-form"
                 layout="horizontal"
                 colon={false}
@@ -60,14 +73,19 @@ const CategoryForm = props => {
                         >
                             {
                                 getFieldDecorator('categoryCode', {
+                                    initialValue: category?.categoryCode ? category?.categoryCode : undefined,
                                     rules: [
                                         {
                                             required: true,
                                             message: "Code is required",
                                         },
+                                        {
+                                            pattern: new RegExp(CODE_REGEX),
+                                            message: "Invalid",
+                                        },
                                     ],
                                 })(
-                                    <Input type="text"/>
+                                    <Input type="text" maxLength={3}/>
                                 )
                             }
                         </FormItem>
@@ -79,6 +97,7 @@ const CategoryForm = props => {
                         >
                             {
                                 getFieldDecorator('categoryName', {
+                                    initialValue: category?.categoryName ? category?.categoryName : undefined,
                                     rules: [
                                         {
                                             required: true,
@@ -98,6 +117,7 @@ const CategoryForm = props => {
                         >
                             {
                                 getFieldDecorator('isCategoryActive', {
+                                    initialValue: category?.isCategoryActive ? category?.isCategoryActive : undefined,
                                     valuePropName: 'checked',
                                 })(
                                     <Switch/>
@@ -106,13 +126,14 @@ const CategoryForm = props => {
                         </FormItem>
                     </Col>
                     <Col className={'add-form-button'} sm={4} md={4} lg={4}>
-                        <Button htmlType={"submit"} block>Add</Button>
+                        {
+                            category?._id ?
+                                <Button block>Update</Button> :
+                                <Button htmlType={"submit"} block>Add</Button>
+                        }
                     </Col>
-                    <Col className={'add-form-button'} sm={4} md={2} lg={2}>
-                        <Button type={'danger'} htmlType={"submit"} block>Delete</Button>
-                    </Col>
-                    <Col className={'add-form-button'} sm={4} md={2} lg={2}>
-                        <Button type={'ghost'} htmlType={"submit"} block>Cancel</Button>
+                    <Col className={'add-form-button'} sm={4} md={4} lg={4}>
+                        <Button type={'ghost'} htmlType={"reset"} block>Cancel</Button>
                     </Col>
                 </Row>
             </Form>
