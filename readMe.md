@@ -1,5 +1,7 @@
 ## MERN - BOILER
 ##### Heroku website: [LAKHE-MERN](https://lakhe-mern.herokuapp.com/) (LEARNING PURPOSE)
+###### username: admin
+###### password: admin
 
 A MERN boilerplate with basic CRUD operations. Using :
 - MongoDB (DATABASE)
