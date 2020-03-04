@@ -1,9 +1,42 @@
 const Users = require('../model/usersModel');
-const jwtUtils = require('../utils/jwtUtils');
+const {freshToken} = require('../utils/jwtUtils');
+const {errorHandler} = require('../utils/messageUtils');
 
 // CRUD
-const creatUser = () => {
-}
+const creatUser = (req, res, next) => {
+    if (res.locals.decryptData) {
+        const {userName, password, permission} = res.locals.decryptData;
+        if (!userName || !password || !permission) {
+            res.locals.status = 400;
+            res.locals.encryptData = {
+                status: 'ERROR',
+                message: 'All fields are required'
+            };
+            next();
+        } else {
+            let isUserVerified = false;
+            const users = new Users({userName, password, permission, isUserVerified});
+
+            users.save((error, response) => {
+                if (!error) {
+                    res.locals.status = 200;
+                    res.locals.encryptData = {
+                        status: 'SUCCESS',
+                        data: response
+                    };
+                    next();
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        message: errorHandler(error)
+                    };
+                    next();
+                }
+            })
+        }
+    }
+};
 
 // READ
 const findUser = (req, res, next) => {
@@ -15,11 +48,14 @@ const findUser = (req, res, next) => {
                 status: 'FAIL',
                 message: 'All field are required'
             };
+            next();
         } else {
-            Users.find({
+            Users
+                .find({
                 userName,
                 password
-            }).exec((error, response) => {
+            })
+                .exec((error, response) => {
                 if (!error) {
                     if (response.length === 0) {
                         res.locals.status = 400;
@@ -30,7 +66,7 @@ const findUser = (req, res, next) => {
                         next();
                     } else {
                         res.locals.status = 200;
-                        res.locals.newAccessToken = jwtUtils.freshToken({name: userName, type: 'ADMIN'}, '1 min');
+                        res.locals.newAccessToken = freshToken({name: userName, type: 'ADMIN'}, '1 min');
                         res.locals.encryptData = {
                             status: 'SUCCESS',
                             token: res.locals.newAccessToken,

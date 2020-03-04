@@ -4,6 +4,8 @@ import {Button, Icon, Form, Input} from "antd";
 import "./Login.sass"
 
 import LogoImage from "../../assets/lakhemern.png"
+import {isEmpty} from "../../utils/commonUtils";
+import MainMessage from "../Common/CustomMessage";
 
 const FormItem = Form.Item;
 
@@ -12,13 +14,12 @@ const LoginForm = props => {
         isSignUp,
         setSignUp,
         login,
-        form
-    } = props;
-
-    const {
+        form : {
         getFieldDecorator,
-        validateFields,
-    } = form;
+            validateFields,
+    },
+        authError,
+    } = props;
 
     const loginSubmit = e => {
         e.preventDefault();
@@ -33,6 +34,11 @@ const LoginForm = props => {
                 <img src={LogoImage} alt="Logo"/>
             </div>
             <hr/>
+
+            {
+                !isEmpty(authError) && <MainMessage type={'error'} message={authError} />
+            }
+
             <Form
                 className="login"
                 onSubmit={loginSubmit}

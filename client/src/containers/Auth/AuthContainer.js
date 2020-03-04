@@ -30,7 +30,9 @@ const AuthContainer = props => {
  * Map the state to props.
  */
 const mapStateToProps = state => ({
-
+    auth : state.auth.payload,
+    authError: state.auth.errors,
+    authLoading: state.auth.loading
 });
 
 /**

@@ -6,9 +6,14 @@ import {
     CATEGORY_FETCH_REQUEST,
     CATEGORY_FETCH_REQUEST_SUCCESS,
     CATEGORY_FETCH_REQUEST_FAILURE,
+    SINGLE_CATEGORY_UPDATE_REQUEST,
+    SINGLE_CATEGORY_UPDATE_REQUEST_SUCCESS,
+    SINGLE_CATEGORY_UPDATE_REQUEST_FAILURE,
     SINGLE_CATEGORY_FETCH_REQUEST,
     SINGLE_CATEGORY_FETCH_REQUEST_SUCCESS,
-    SINGLE_CATEGORY_FETCH_REQUEST_FAILURE, SINGLE_CATEGORY_CLEAN_REQUEST, CATEGORY_CLEAN_REQUEST
+    SINGLE_CATEGORY_FETCH_REQUEST_FAILURE,
+    SINGLE_CATEGORY_CLEAN_REQUEST,
+    CATEGORY_CLEAN_REQUEST
 } from '../constants/actionTypes';
 
 const INITIAL_STATE = {
@@ -30,12 +35,14 @@ const categoryReducer = (state, action) => {
     switch (action.type) {
         case SINGLE_CATEGORY_ADD_REQUEST:
         case SINGLE_CATEGORY_FETCH_REQUEST:
+        case SINGLE_CATEGORY_UPDATE_REQUEST:
             return Object.assign({}, state, {
                 singleLoading: true,
             });
 
         case SINGLE_CATEGORY_ADD_REQUEST_SUCCESS:
         case SINGLE_CATEGORY_FETCH_REQUEST_SUCCESS:
+        case SINGLE_CATEGORY_UPDATE_REQUEST_SUCCESS:
             return Object.assign({}, state, {
                 singleLoading: false,
                 singlePayload: action.data,
@@ -44,6 +51,7 @@ const categoryReducer = (state, action) => {
 
         case SINGLE_CATEGORY_ADD_REQUEST_FAILURE:
         case SINGLE_CATEGORY_FETCH_REQUEST_FAILURE:
+        case SINGLE_CATEGORY_UPDATE_REQUEST_FAILURE:
             return Object.assign({}, state, {
                 singleLoading: false,
                 singleErrors: action.error,

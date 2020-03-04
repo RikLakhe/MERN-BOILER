@@ -60,7 +60,7 @@ export const store = (endpoint, data) => {
 
 export const update = (endpoint, data) => {
     return http()
-        .put(`${API_URL}/${endpoint}`, data);
+        .put(`${API_URL}/${endpoint}`, encrypt(data));
 };
 
 export const destroy = (endpoint, id) => {

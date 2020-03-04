@@ -1,6 +1,6 @@
 const AppConfig = require('../config/appConfig');
-const jwtUtils = require('../utils/jwtUtils');
-const cryptoUtils = require('../utils/cryptoUtil');
+const {freshToken,isTokenExpired} = require('../utils/jwtUtils');
+const {decrypt,encrypt} = require('../utils/cryptoUtil');
 
 const requestOnlyHandler = (req, res, next) => {
     // decrypt data from body and pass into next handler
@@ -17,7 +17,7 @@ const requestOnlyHandler = (req, res, next) => {
             responseHandler(req, res, next);
         } else {
             // data is send from front end encrypted, we decrypt and process the req next
-            res.locals.decryptData = cryptoUtils.decrypt(data);
+            res.locals.decryptData = decrypt(data);
 
             next();
         }
@@ -41,10 +41,10 @@ const requestWithTokenHandler = (req, res, next) => {
 
 
         // token handling check token validation with time
-        let tokenStatus = jwtUtils.isTokenExpired(req.headers['xsrf-token']);
+        let tokenStatus = isTokenExpired(req.headers['xsrf-token']);
         if (!tokenStatus) {
 
-            res.locals.newAccessToken = jwtUtils.freshToken({status: "new token"}, '5 min');
+            res.locals.newAccessToken = freshToken({status: "new token"}, '5 min');
 
             // decrypt data from body and pass into next handler
             if (req && req.body) {
@@ -61,7 +61,7 @@ const requestWithTokenHandler = (req, res, next) => {
                     responseHandler(req, res, next);
                 } else {
                     // data is send from front end encrypted, we decrypt and process the req next
-                    res.locals.decryptData = cryptoUtils.decrypt(data);
+                    res.locals.decryptData = decrypt(data);
 
                     next();
                 }
@@ -103,9 +103,9 @@ const requestGETWithTokenHandler = (req, res, next) => {
             req.headers['xsrf-token'] && req.signedCookies['XSRF-TOKEN'] && req.signedCookies['XSRF-TOKEN'] === req.headers['xsrf-token'] : req.headers['xsrf-token']
     ) {
         // token handling check token validation with time
-        let tokenStatus = jwtUtils.isTokenExpired(req.headers['xsrf-token']);
+        let tokenStatus = isTokenExpired(req.headers['xsrf-token']);
         if (!tokenStatus) {
-            res.locals.newAccessToken = jwtUtils.freshToken({status: "new token"}, '5 min');
+            res.locals.newAccessToken = freshToken({status: "new token"}, '5 min');
 
             next();
         } else {
@@ -136,13 +136,13 @@ const responseHandler = (req, res, next) => {
             .header('XSRF-TOKEN', res.locals.newAccessToken)
             .cookie('XSRF-TOKEN', res.locals.newAccessToken, AppConfig.cookieOptionsLogin)
             .json({
-                data: cryptoUtils.encrypt(res.locals.encryptData)
+                data: encrypt(res.locals.encryptData)
             })
     } else {
         return res
             .status(res.locals.status)
             .json({
-                data: cryptoUtils.encrypt(res.locals.encryptData)
+                data: encrypt(res.locals.encryptData)
             })
     }
 };

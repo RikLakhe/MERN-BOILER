@@ -48,6 +48,16 @@ const CategoryContainer = props => {
         props.actions.deleteCategoryByIdentifier(id)
     };
 
+     /**
+     * update single category
+     *
+     * @param {object} formData
+     *
+     */
+    const updateCategory = formData => {
+         return props.actions.updateCategory(formData)
+    };
+
     /**
      * find single category
      *
@@ -71,6 +81,7 @@ const CategoryContainer = props => {
             addCategory={addCategory}
             listCategory={listCategory}
             findCategoryByIdentifier={findCategoryByIdentifier}
+            updateCategory={updateCategory}
             deleteCategoryByIdentifier={deleteCategoryByIdentifier}
             {...props}
         />

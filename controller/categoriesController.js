@@ -19,20 +19,20 @@ const addCategory = (req, res, next) => {
             const category = new Category({categoryCode, categoryName, isCategoryActive, createDate});
 
             category.save((error, response) => {
-                if (error) {
+                if (!error) {
+                    res.locals.status = 200;
+                    res.locals.encryptData = {
+                        status: 'SUCCESS',
+                        data: response
+                    };
+                    next();
+                } else {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
                         message: errorHandler(error)
                     };
                     next();
-                } else {
-                    res.locals.status = 200;
-                    res.locals.encryptData = {
-                        status: 'SUCCESS',
-                        data: response
-                    };
-                    next()
                 }
             })
         }
@@ -47,14 +47,7 @@ const listCategory = (req, res, next) => {
             Category.find()
                 .sort({createDate: -1})
                 .exec((error, response) => {
-                    if (error) {
-                        res.locals.status = 400;
-                        res.locals.encryptData = {
-                            status: 'FAIL',
-                            message: errorHandler(error)
-                        };
-                        next();
-                    } else {
+                    if (!error) {
                         if (response.length === 0) {
                             res.locals.status = 200;
                             res.locals.encryptData = {
@@ -76,20 +69,20 @@ const listCategory = (req, res, next) => {
                             };
                             next();
                         }
-                    }
-                });
-        } else {
-            Category.find()
-                .sort({createDate: -1})
-                .exec((error, response) => {
-                    if (error) {
+                    } else {
                         res.locals.status = 400;
                         res.locals.encryptData = {
                             status: 'FAIL',
                             message: errorHandler(error)
                         };
                         next();
-                    } else {
+                    }
+                });
+        } else {
+            Category.find()
+                .sort({createDate: -1})
+                .exec((error, response) => {
+                    if (!error) {
                         if (response.length === 0) {
                             res.locals.status = 200;
                             res.locals.encryptData = {
@@ -111,6 +104,13 @@ const listCategory = (req, res, next) => {
                             };
                             next();
                         }
+                    } else {
+                        res.locals.status = 400;
+                        res.locals.encryptData = {
+                            status: 'FAIL',
+                            message: errorHandler(error)
+                        };
+                        next();
                     }
                 });
         }
@@ -118,14 +118,7 @@ const listCategory = (req, res, next) => {
         Category.find()
             .sort({createDate: -1})
             .exec((error, response) => {
-                if (error) {
-                    res.locals.status = 400;
-                    res.locals.encryptData = {
-                        status: 'FAIL',
-                        message: errorHandler(error)
-                    };
-                    next();
-                } else {
+                if (!error) {
                     if (response.length === 0) {
                         res.locals.status = 200;
                         res.locals.encryptData = {
@@ -147,6 +140,13 @@ const listCategory = (req, res, next) => {
                         };
                         next();
                     }
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        message: errorHandler(error)
+                    };
+                    next();
                 }
             });
     }
@@ -183,6 +183,57 @@ const findCategoryById = (req, res, next) => {
     }
 };
 
+// Update
+const updateCategory = (req, res, next) => {
+    if (res.locals.decryptData) {
+        const {categoryCode, categoryName, isCategoryActive} = res.locals.decryptData;
+        if (!categoryCode || !categoryName) {
+            res.locals.status = 400;
+            res.locals.encryptData = {
+                status: 'ERROR',
+                message: 'All fields are required'
+            };
+            next();
+        }
+
+        Category
+            .updateOne({_id: req.params.category_id},{
+                _id: req.params.category_id,
+                categoryCode: categoryCode,
+                categoryName: categoryName,
+                isCategoryActive: isCategoryActive,
+            })
+            .exec((error, response) => {
+                if (!error) {
+                    if (response && response.nModified > 0) {
+                        res.locals.status = 200;
+                        res.locals.encryptData = {
+                            status: 'SUCCESS',
+                            data: response
+                        };
+                        next()
+                    } else {
+                        res.locals.status = 400;
+                        res.locals.encryptData = {
+                            status: 'FAIL',
+                            message: errorHandler("Code not found")
+                        };
+                        next();
+                    }
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        message: errorHandler(error)
+                    };
+                    next();
+                }
+            })
+    }
+}
+
+
+// Delete
 const deleteCategoryById = (req, res, next) => {
     if (req.params.category_id.match(/^[0-9a-fA-F]{24}$/)) {
         Category
@@ -214,4 +265,4 @@ const deleteCategoryById = (req, res, next) => {
     }
 };
 
-module.exports = {addCategory, listCategory, findCategoryById, deleteCategoryById};
+module.exports = {addCategory, listCategory, findCategoryById, updateCategory, deleteCategoryById};
