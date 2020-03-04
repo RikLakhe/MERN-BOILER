@@ -16,7 +16,11 @@ const usersSchema = new Schema({
         {
             type: String,
             require: [true, 'Permission is required'],
-        }
+        },
+    isUserVerified:
+        {
+            type: Boolean,
+        },
 });
 
 const Users = model("Users", usersSchema);

@@ -17,6 +17,7 @@ const CategoryForm = props => {
         addCategory,
         listCategory,
         cleanSingleCategory,
+        updateCategory,
     } = props;
 
     const formItemLayout = {
@@ -54,6 +55,20 @@ const CategoryForm = props => {
         e.preventDefault();
         resetFields();
         cleanSingleCategory();
+    };
+
+    const handleUpdate = (e) => {
+        e.preventDefault();
+        validateFields((err, values) => {
+            if (!err) {
+                values._id= category?._id;
+                values.categoryCode = values.categoryCode.toUpperCase();
+                updateCategory(values).then(data => {
+                    resetFields();
+                    listCategory();
+                })
+            }
+        })
     };
 
     return (
@@ -128,7 +143,7 @@ const CategoryForm = props => {
                     <Col className={'add-form-button'} sm={4} md={4} lg={4}>
                         {
                             category?._id ?
-                                <Button block>Update</Button> :
+                                <Button block onClick={handleUpdate}>Update</Button> :
                                 <Button htmlType={"submit"} block>Add</Button>
                         }
                     </Col>

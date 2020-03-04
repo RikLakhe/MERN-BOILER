@@ -1,4 +1,4 @@
-import {store, fetch, destroy} from '../utils/httpsUtil.js'
+import {store, fetch,update, destroy} from '../utils/httpsUtil.js'
 import {
     categoryAddRequest,
     categoryAddRequestSuccess,
@@ -9,6 +9,9 @@ import {
     singleCategoryFetchRequest,
     singleCategoryFetchRequestSuccess,
     singleCategoryFetchRequestFailure,
+    categoryUpdateRequest,
+    categoryUpdateRequestSuccess,
+    categoryUpdateRequestFailure,
     categoryDeleteRequest,
     categoryDeleteRequestSuccess,
     categoryDeleteRequestFailure
@@ -16,7 +19,7 @@ import {
 
 import history from "../utils/history";
 
-export const addCategoryService = formData => {
+export const addCategoryService = (formData={}) => {
 
     return dispatch => {
         dispatch(categoryAddRequest());
@@ -40,8 +43,6 @@ export const listCategoryService = (formData) => {
             .then(response => {
                 if (response.status === 'SUCCESS') {
                     dispatch(categoryFetchRequestSuccess(response));
-
-                    // history.push("/");
                 }
             })
             .catch(error => dispatch(categoryFetchRequestFailure(error.message)));
@@ -57,11 +58,24 @@ export const findCategoryByIdentifier = id => {
             .then(response => {
                 if (response.status === 'SUCCESS') {
                     dispatch(singleCategoryFetchRequestSuccess(response.data));
-
-                    // history.push("/");
                 }
             })
             .catch(error => dispatch(singleCategoryFetchRequestFailure(error.message)));
+    }
+};
+
+export const updateCategory = (formData={}) => {
+
+    return dispatch => {
+        dispatch(categoryUpdateRequest());
+
+        return update(`v1/category/${formData._id}`, formData)
+            .then(response => {
+                if (response.status === 'SUCCESS') {
+                    dispatch(categoryUpdateRequestSuccess(response.data));
+                }
+            })
+            .catch(error => dispatch(categoryUpdateRequestFailure(error.message)));
     }
 };
 
@@ -74,10 +88,8 @@ export const deleteCategoryByIdentifier = id => {
             .then(response => {
                 if (response.status === 'SUCCESS') {
                     dispatch(categoryDeleteRequestSuccess(response.data));
-
-                    // history.push("/");
                 }
             })
             .catch(error => dispatch(categoryDeleteRequestFailure(error.message)));
     }
-}
+};

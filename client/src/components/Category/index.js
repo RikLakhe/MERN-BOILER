@@ -21,7 +21,7 @@ const useIndex = props => {
     return (
         <div>
             {
-                !isEmpty(categoryError) ? <MainMessage type={'error'} message={categoryError} /> : undefined
+                !isEmpty(categoryError) && <MainMessage type={'error'} message={categoryError} />
             }
             <CategoryForm {...props}/>
             <CategoryList {...props}/>

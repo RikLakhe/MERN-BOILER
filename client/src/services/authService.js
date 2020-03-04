@@ -12,15 +12,7 @@ import {
 } from '../actions/authAction'
 
 export const loginService = formData => {
-    // return store('v1/auth/login', formData)
-    //     .then(response => {
-    //         saveLocalStorage(MERN_TOKEN, response.token);
-    //         saveLocalStorage(MERN_PERMISSION, response.permission);
-    //         history.push("/");
-    //     })
-    //     .catch(error => {
-    //         console.log('fail', error);
-    //     })
+
     return dispatch => {
         dispatch(loginRequest());
 
@@ -33,19 +25,11 @@ export const loginService = formData => {
                     history.push("/");
                 }
             })
-            .catch(error => dispatch(loginRequestFailure(error.response)));
+            .catch(error => dispatch(loginRequestFailure(error.message)));
     }
 };
 
 export const logoutService = () => {
-    // return store('v1/auth/logout')
-    //     .then(response => {
-    //         cleanLocalStorage();
-    //         history.push("/");
-    //     })
-    //     .catch(error => {
-    //         console.log('fail', error);
-    //     })
 
     return dispatch => {
         dispatch(logoutRequest());
@@ -56,6 +40,6 @@ export const logoutService = () => {
                 cleanLocalStorage();
                 history.push("/");
             })
-            .catch(error => dispatch(logoutRequestSuccess(error.response)));
+            .catch(error => dispatch(logoutRequestSuccess(error.message)));
     }
 };

@@ -9,11 +9,14 @@ import {
     SINGLE_CATEGORY_FETCH_REQUEST,
     SINGLE_CATEGORY_FETCH_REQUEST_SUCCESS,
     SINGLE_CATEGORY_FETCH_REQUEST_FAILURE,
-    CATEGORY_CLEAN_REQUEST,
-    SINGLE_CATEGORY_CLEAN_REQUEST,
+    SINGLE_CATEGORY_UPDATE_REQUEST,
+    SINGLE_CATEGORY_UPDATE_REQUEST_SUCCESS,
+    SINGLE_CATEGORY_UPDATE_REQUEST_FAILURE,
     CATEGORY_DELETE_REQUEST,
     CATEGORY_DELETE_REQUEST_FAILURE,
     CATEGORY_DELETE_REQUEST_SUCCESS,
+    CATEGORY_CLEAN_REQUEST,
+    SINGLE_CATEGORY_CLEAN_REQUEST,
 } from '../constants/actionTypes';
 
 export const categoryAddRequest = () => {
@@ -52,6 +55,26 @@ export const categoryFetchRequestSuccess = data => {
 export const categoryFetchRequestFailure = error => {
     return {
         type: CATEGORY_FETCH_REQUEST_FAILURE,
+        error,
+    }
+};
+
+export const categoryUpdateRequest = () => {
+    return {
+        type: SINGLE_CATEGORY_UPDATE_REQUEST
+    }
+};
+
+export const categoryUpdateRequestSuccess = data => {
+    return {
+        type: SINGLE_CATEGORY_UPDATE_REQUEST_SUCCESS,
+        data,
+    }
+};
+
+export const categoryUpdateRequestFailure = error => {
+    return {
+        type: SINGLE_CATEGORY_UPDATE_REQUEST_FAILURE,
         error,
     }
 };

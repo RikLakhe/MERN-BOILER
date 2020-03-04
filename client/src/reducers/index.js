@@ -8,7 +8,7 @@ import httpsErrorsReducer from './httpsErrorsReducer';
 
 const appReducer = combineReducers({
     router: connectRouter(history),
-    // auth: authReducer,
+    auth: authReducer,
     category: categoryReducer,
     httpsError: httpsErrorsReducer,
 });
