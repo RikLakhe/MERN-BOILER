@@ -1,30 +1,32 @@
 import React from "react";
 import {Button, Icon, Form, Input} from "antd";
 
-import "./Login.sass"
+import "./LoginForm.sass"
 
 import LogoImage from "../../assets/lakhemern.png"
 import {isEmpty} from "../../utils/commonUtils";
 import MainMessage from "../Common/CustomMessage";
+import history from "../../utils/history";
 
 const FormItem = Form.Item;
 
 const LoginForm = props => {
     const {
-        isSignUp,
-        setSignUp,
         login,
-        form : {
-        getFieldDecorator,
+        form: {
+            getFieldDecorator,
             validateFields,
-    },
+            resetFields,
+        },
         authError,
     } = props;
 
     const loginSubmit = e => {
         e.preventDefault();
         validateFields((err, values) => {
-            login(values);
+            if (!err) {
+                login(values)
+            }
         })
     };
 
@@ -36,7 +38,7 @@ const LoginForm = props => {
             <hr/>
 
             {
-                !isEmpty(authError) && <MainMessage type={'error'} message={authError} />
+                authError && !isEmpty(authError) && <MainMessage type={authError.type} message={authError.message}/>
             }
 
             <Form
@@ -45,7 +47,7 @@ const LoginForm = props => {
             >
                 <FormItem>
                     {getFieldDecorator('userName', {
-                        rules: [{required: true, message: 'Please input your Username'}],
+                        rules: [{required: true, message: 'Please enter your Username'}],
                     })(
                         <Input
                             size="large"
@@ -56,7 +58,7 @@ const LoginForm = props => {
                 </FormItem>
                 <FormItem>
                     {getFieldDecorator('password', {
-                        rules: [{required: true, message: 'Please input your Password'}],
+                        rules: [{required: true, message: 'Please enter your Password'}],
                     })(
                         <Input
                             size="large"
@@ -66,8 +68,16 @@ const LoginForm = props => {
                         />
                     )}
                 </FormItem>
-                <Button type={'link'} onClick={() => setSignUp(!isSignUp)} className={'login-signup-link'}>SIGN UP <Icon
-                    type="edit"/> </Button>
+                <Button
+                    type={'link'}
+                    onClick={() => {
+                        resetFields();
+                        history.push("/sign-up")
+                    }}
+                    className={'login-signup-link'}
+                >
+                    SIGN UP <Icon type="edit"/>
+                </Button>
                 <Button
                     className={'login-button'}
                     size={"large"}

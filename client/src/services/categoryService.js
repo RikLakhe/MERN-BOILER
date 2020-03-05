@@ -30,7 +30,7 @@ export const addCategoryService = (formData={}) => {
                     dispatch(categoryAddRequestSuccess(response.token));
                 }
             })
-            .catch(error => dispatch(categoryAddRequestFailure(error.message)));
+            .catch(error => dispatch(categoryAddRequestFailure(error.data)));
     }
 };
 
@@ -45,7 +45,7 @@ export const listCategoryService = (formData) => {
                     dispatch(categoryFetchRequestSuccess(response));
                 }
             })
-            .catch(error => dispatch(categoryFetchRequestFailure(error.message)));
+            .catch(error => dispatch(categoryFetchRequestFailure(error.data)));
     }
 };
 
@@ -75,7 +75,7 @@ export const updateCategory = (formData={}) => {
                     dispatch(categoryUpdateRequestSuccess(response.data));
                 }
             })
-            .catch(error => dispatch(categoryUpdateRequestFailure(error.message)));
+            .catch(error => dispatch(categoryUpdateRequestFailure(error.data)));
     }
 };
 
@@ -90,6 +90,6 @@ export const deleteCategoryByIdentifier = id => {
                     dispatch(categoryDeleteRequestSuccess(response.data));
                 }
             })
-            .catch(error => dispatch(categoryDeleteRequestFailure(error.message)));
+            .catch(error => dispatch(categoryDeleteRequestFailure(error.data)));
     }
 };

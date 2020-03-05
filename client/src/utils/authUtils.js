@@ -21,5 +21,5 @@ export let isAuthenticated = () => {
 
 export const isAllowed = (itemPermission) => {
     let mernPermission = loadLocalStorage(MERN_PERMISSION);
-    return (itemPermission === mernPermission);
+    return (itemPermission === mernPermission && isAuthenticated());
 };

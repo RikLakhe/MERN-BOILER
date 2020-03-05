@@ -1,6 +1,6 @@
 const AppConfig = require('../config/appConfig');
-const {freshToken,isTokenExpired} = require('../utils/jwtUtils');
-const {decrypt,encrypt} = require('../utils/cryptoUtil');
+const {freshToken, isTokenExpired} = require('../utils/jwtUtils');
+const {decrypt, encrypt} = require('../utils/cryptoUtil');
 
 const requestOnlyHandler = (req, res, next) => {
     // decrypt data from body and pass into next handler
@@ -55,7 +55,7 @@ const requestWithTokenHandler = (req, res, next) => {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: 'Error request'
+                        data: {type:'warning', message: 'Error request'}
                     };
 
                     responseHandler(req, res, next);
@@ -69,7 +69,7 @@ const requestWithTokenHandler = (req, res, next) => {
                 res.locals.status = 400;
                 res.locals.encryptData = {
                     status: 'FAIL',
-                    message: 'Error request'
+                    data: {type:'warning', message: 'Error request'}
                 };
 
                 responseHandler(req, res, next);
@@ -78,7 +78,7 @@ const requestWithTokenHandler = (req, res, next) => {
             res.locals.status = 401;
             res.locals.encryptData = {
                 status: 'FAIL',
-                message: 'Unauthorized'
+                data: {type:'warning', message: 'Unauthorized'}
             };
 
             responseHandler(req, res, next);
@@ -89,7 +89,7 @@ const requestWithTokenHandler = (req, res, next) => {
         res.locals.status = 401;
         res.locals.encryptData = {
             status: 'FAIL',
-            message: 'Unauthorized'
+            data: {type:'warning', message: 'Unauthorized'}
         };
 
         responseHandler(req, res, next);
@@ -112,7 +112,7 @@ const requestGETWithTokenHandler = (req, res, next) => {
             res.locals.status = 401;
             res.locals.encryptData = {
                 status: 'FAIL',
-                message: 'Unauthorized'
+                data: {type:'warning', message: 'Unauthorized'}
             };
 
             responseHandler(req, res, next);
@@ -122,7 +122,7 @@ const requestGETWithTokenHandler = (req, res, next) => {
         res.locals.status = 401;
         res.locals.encryptData = {
             status: 'FAIL',
-            message: 'Unauthorized'
+            data: {type:'warning', message: 'Unauthorized'}
         };
 
         responseHandler(req, res, next);
@@ -130,7 +130,7 @@ const requestGETWithTokenHandler = (req, res, next) => {
 };
 
 const responseHandler = (req, res, next) => {
-    if (res.locals.status === 200 && !res.locals.accessToken && res.locals.newAccessToken) {
+    if (res.locals.status === 200 && res.locals.newAccessToken) {
         return res
             .status(res.locals.status)
             .header('XSRF-TOKEN', res.locals.newAccessToken)

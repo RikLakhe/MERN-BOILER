@@ -7,6 +7,7 @@ import LogoImage from "../../../assets/lakhemern.png"
 
 import menuRoute from "../../../constants/menuRoute";
 import {isAllowed, isAuthenticated} from "../../../utils/authUtils";
+import {isEmpty} from "../../../utils/commonUtils";
 
 const SideNavLeft = props => {
     const {
@@ -41,10 +42,27 @@ const SideNavLeft = props => {
                                                         <Link to={menuItem.route}>
                                                             <Icon
                                                                 type={menuItem.icon}
-                                                                className={'menu-route-icon'
-                                                                }
+                                                                className={'menu-route-icon'}
                                                             />
                                                             {menuItem.menuName}
+                                                            {
+                                                                menuItem?.children && !isEmpty(menuItem.children) &&
+                                                                <ul className={'menu-route-children'}>
+                                                                    {
+                                                                        menuItem.children.map((childMenuItem)=>(
+                                                                            <li key={childMenuItem.menuKey}  className={'menu-route-children-li'}>
+                                                                                <Link to={childMenuItem.route}>
+                                                                                    <Icon
+                                                                                        type={childMenuItem.icon}
+                                                                                        className={'menu-route-icon'}
+                                                                                    />
+                                                                                    {childMenuItem.menuName}
+                                                                                </Link>
+                                                                            </li>
+                                                                        ))
+                                                                    }
+                                                                </ul>
+                                                            }
                                                         </Link>
                                                     </li>
                                                 )
@@ -57,8 +75,7 @@ const SideNavLeft = props => {
                                                     <Link to={menuItem.route}>
                                                         <Icon
                                                             type={menuItem.icon}
-                                                            className={'menu-route-icon'
-                                                            }
+                                                            className={'menu-route-icon'}
                                                         />
                                                         {menuItem.menuName}
                                                     </Link>

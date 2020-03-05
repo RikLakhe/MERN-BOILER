@@ -5,7 +5,7 @@ import {
     LOGIN_REQUEST_FAILURE,
     LOGOUT_REQUEST,
     LOGOUT_REQUEST_SUCCESS,
-    LOGOUT_REQUEST_FAILURE
+    LOGOUT_REQUEST_FAILURE,
 } from '../constants/actionTypes';
 
 export const loginRequest = () =>{

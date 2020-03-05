@@ -4,6 +4,7 @@ import { connectRouter } from 'connected-react-router';
 import history from '../utils/history';
 import authReducer from './authReducer';
 import categoryReducer from './categoryReducer';
+import userReducer from './userReducer';
 import httpsErrorsReducer from './httpsErrorsReducer';
 
 const appReducer = combineReducers({
@@ -11,6 +12,7 @@ const appReducer = combineReducers({
     auth: authReducer,
     category: categoryReducer,
     httpsError: httpsErrorsReducer,
+    user: userReducer,
 });
 
 const rootReducer = (state, action) => {
