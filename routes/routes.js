@@ -7,7 +7,7 @@ const userRoute = require('./userRoute');
 const router = express.Router();
 
 router.use("/auth", authRoute);
-router.use("/users", userRoute);
+router.use("/user", userRoute);
 router.use("/category", categoryRoute);
 
 module.exports = router;

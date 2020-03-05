@@ -2,44 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/actions/pendingAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/actions/userAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Auth/SignUpForm.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/User/Edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/User/PendingList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/Auth/SignUpContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/User/UserContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/User/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/userReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/services/pendingService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/services/userService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/User/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Auth/Login.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Auth/LoginForm.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Auth/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Auth/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Auth/SignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Auth/SignUpForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Auth/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Category/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/LeftNav.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Layout/SideNavLeft/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/appConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/appConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/menuRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/menuRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/authAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/authAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/userAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/userAction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/Auth/AuthContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/Auth/LoginContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/categoryService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/normalization.sass" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/normalization.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/authUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/authUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/httpsUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/categoriesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/categoriesController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/User/UserContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/User/UserContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/User/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/User/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/userReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/userService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/requestResponseHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/requestResponseHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/categoriesModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/categoriesModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/usersModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/usersModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/messageUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/messageUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="252894" />
+    <option name="totalTimeSeconds" value="255003" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -232,7 +208,7 @@
       <workItem from="1583337360752" duration="786000" />
       <workItem from="1583338212886" duration="5515000" />
       <workItem from="1583395188176" duration="40000" />
-      <workItem from="1583395241392" duration="9902000" />
+      <workItem from="1583395241392" duration="12272000" />
     </task>
     <servers />
   </component>
@@ -388,10 +364,10 @@
       <screen x="41" y="27" width="1325" height="741" />
     </state>
     <state x="516" y="322" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/41.27.1325.741/1366.0.1920.1080@41.27.1325.741" timestamp="1583145182123" />
-    <state x="1884" y="239" width="884" height="638" key="find.popup" timestamp="1583387750596">
+    <state x="1884" y="239" width="884" height="638" key="find.popup" timestamp="1583409150576">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1884" y="239" width="884" height="638" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1583387750596" />
+    <state x="1884" y="239" width="884" height="638" key="find.popup/41.27.1325.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1583409150576" />
     <state x="1990" y="246" width="672" height="677" key="run.anything.popup" timestamp="1582884511460">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

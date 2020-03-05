@@ -55,3 +55,9 @@ export const AsyncCategory = loadable({
     loader: () => import('../Category/CategoryContainer'),
     loading: Loading,
 });
+
+// User containers
+export const AsyncUser = loadable({
+    loader: () => import('../User'),
+    loading: Loading,
+});

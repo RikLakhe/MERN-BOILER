@@ -9,7 +9,7 @@ const index = ({match}) => (
         <Switch>
             <Route
                 exact
-                path={`${match.url}/list`}
+                path={`${match.url}/`}
                 component={UserContainer}
             />
             <Route

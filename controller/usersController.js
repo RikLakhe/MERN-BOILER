@@ -172,6 +172,119 @@ const findPendingUserById = (req, res, next) => {
     }
 };
 
+const listUsers = (req, res, next) => {
+    if (res.locals.decryptData) {
+        const {pageNumber, pageSize} = res.locals.decryptData.pageData;
+        if (pageNumber && pageSize && pageSize === 'ALL') {
+            Users.find({isUserVerified: true})
+                .sort({createDate: -1})
+                .exec((error, response) => {
+                    if (!error) {
+                        if (response.length === 0) {
+
+                            res.locals.status = 200;
+                            res.locals.encryptData = {
+                                status: 'SUCCESS',
+                                data: {}
+                            };
+                            next();
+                        } else {
+                            res.locals.status = 200;
+                            res.locals.encryptData = {
+                                status: 'SUCCESS',
+                                data: response,
+                                pagination: {
+                                    pageNumber: pageNumber,
+                                    pageSize: pageSize,
+                                    totalRecords: response.length,
+                                    pageSizeOption: [5, 10, 15, 'ALL']
+                                }
+                            };
+                            next();
+                        }
+                    } else {
+                        res.locals.status = 400;
+                        res.locals.encryptData = {
+                            status: 'FAIL',
+                            data: errorHandler(error)
+                        };
+                        next();
+                    }
+                });
+        } else {
+            Users.find({isUserVerified: true})
+                .sort({createDate: -1})
+                .exec((error, response) => {
+                    if (!error) {
+                        if (response.length === 0) {
+                            res.locals.status = 200;
+                            res.locals.encryptData = {
+                                status: 'SUCCESS',
+                                data: {}
+                            };
+                            next();
+                        } else {
+                            res.locals.status = 200;
+                            res.locals.encryptData = {
+                                status: 'SUCCESS',
+                                data: response.slice((pageNumber - 1) * pageSize || 0, pageSize * pageNumber || 5),
+                                pagination: {
+                                    pageNumber: pageNumber,
+                                    pageSize: pageSize,
+                                    totalRecords: response.length,
+                                    pageSizeOption: [5, 10, 15, 'ALL']
+                                }
+                            };
+                            next();
+                        }
+                    } else {
+                        res.locals.status = 400;
+                        res.locals.encryptData = {
+                            status: 'FAIL',
+                            data: errorHandler(error)
+                        };
+                        next();
+                    }
+                });
+        }
+    } else {
+        Users.find({isUserVerified: true})
+            .sort({createDate: -1})
+            .exec((error, response) => {
+                if (!error) {
+                    if (response.length === 0) {
+                        res.locals.status = 200;
+                        res.locals.encryptData = {
+                            status: 'SUCCESS',
+                            data: {}
+                        };
+                        next();
+                    } else {
+                        res.locals.status = 200;
+                        res.locals.encryptData = {
+                            status: 'SUCCESS',
+                            data: response.slice(0, 5),
+                            pagination: {
+                                pageNumber: 1,
+                                pageSize: 5,
+                                totalRecords: response.length,
+                                pageSizeOption: [5, 10, 15, 'ALL']
+                            }
+                        };
+                        next();
+                    }
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        data: errorHandler(error)
+                    };
+                    next();
+                }
+            });
+    }
+};
+
 const findPendingUsers = (req, res, next) => {
     if (res.locals.decryptData) {
         const {pageNumber, pageSize} = res.locals.decryptData.pageData;
@@ -284,4 +397,4 @@ const findPendingUsers = (req, res, next) => {
     }
 }
 
-module.exports = {creatUser, findUser,findUserById, findPendingUserById, findPendingUsers};
+module.exports = {creatUser, findUser,listUsers, findUserById, findPendingUserById, findPendingUsers};

@@ -14,7 +14,8 @@ import {
     AsyncLogout,
     AsyncSignUp,
     AsyncHome,
-    AsyncCategory
+    AsyncCategory,
+    AsyncUser
 } from './AsyncComponents'
 
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
             <PublicRoute exact path="/sign-up" layout={(AsyncStaticAppLayout)} component={(AsyncSignUp)}/>
 
             <PrivateRoute exact path="/category" layout={(AsyncAppLayout)} component={(AsyncCategory)}/>
+            <PrivateRoute exact path="/users" layout={(AsyncAppLayout)} component={(AsyncUser)}/>
 
             <PublicRoute exact path="/product" layout={(AsyncStaticAppLayout)} component={(AsyncLogin)}/>
             <PublicRoute exact path="/checkout" layout={(AsyncStaticAppLayout)} component={(AsyncLogin)}/>
