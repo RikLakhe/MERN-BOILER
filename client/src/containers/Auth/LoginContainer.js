@@ -2,13 +2,13 @@ import React from "react";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 
-import Auth from "../../components/Auth";
+import LoginForm from "../../components/Auth/LoginForm";
 
 import * as authService from "../../services/authService";
 
-const AuthContainer = props => {
+const LoginContainer = props => {
     /**
-     * Call Login service
+     * Login
      *
      * @param {object} formData
      *
@@ -19,7 +19,7 @@ const AuthContainer = props => {
     };
 
     return (
-        <Auth
+        <LoginForm
             login={login}
             {...props}
         />
@@ -30,7 +30,7 @@ const AuthContainer = props => {
  * Map the state to props.
  */
 const mapStateToProps = state => ({
-    auth : state.auth.payload,
+    auth: state.auth.payload,
     authError: state.auth.errors,
     authLoading: state.auth.loading
 });
@@ -50,4 +50,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);

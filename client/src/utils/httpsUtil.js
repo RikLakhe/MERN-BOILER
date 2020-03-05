@@ -24,21 +24,20 @@ const http = () => {
         response => {
             if (response && response.headers && response.headers['xsrf-token']) {
                 saveLocalStorage(MERN_TOKEN, response.headers['xsrf-token']);
-                if (response && response.data && response.data.data) {
-                    return decrypt(response.data.data);
-                } else {
-                    return undefined;
-                }
             }
-
+            if (response && response.data && response.data.data) {
+                return decrypt(response.data.data);
+            } else {
+                return undefined;
+            }
         },
         error => {
             if (error.response.status === 401) {
                 cleanLocalStorage();
                 history.push('/login')
-            }else if(error.response.status === 403){
+            } else if (error.response.status === 403) {
                 history.push('/403')
-            }else if(error.response.status === 500){
+            } else if (error.response.status === 500) {
                 history.push('/500')
             }
             return Promise.reject(decrypt(error.response.data.data));

@@ -25,7 +25,7 @@ export const loginService = formData => {
                     history.push("/");
                 }
             })
-            .catch(error => dispatch(loginRequestFailure(error.message)));
+            .catch(error => dispatch(loginRequestFailure(error.data)));
     }
 };
 
@@ -36,10 +36,25 @@ export const logoutService = () => {
 
         return store('v1/auth/logout')
             .then(response => {
-                dispatch(logoutRequestFailure(response));
+                dispatch(logoutRequestSuccess(response));
                 cleanLocalStorage();
                 history.push("/");
             })
-            .catch(error => dispatch(logoutRequestSuccess(error.message)));
+            .catch(error => dispatch(logoutRequestFailure(error.data)));
+    }
+};
+
+export const signUpService = formData => {
+    return dispatch => {
+        dispatch(loginRequest());
+
+        return store('v1/auth/sign-up', formData)
+            .then(response => {
+                if (response.status === 'SUCCESS') {
+                    dispatch(loginRequestSuccess(response));
+                    history.push("/login");
+                }
+            })
+            .catch(error => dispatch(loginRequestFailure(error.data)));
     }
 };

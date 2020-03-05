@@ -9,8 +9,8 @@ const addCategory = (req, res, next) => {
         if (!categoryCode || !categoryName) {
             res.locals.status = 400;
             res.locals.encryptData = {
-                status: 'ERROR',
-                message: 'All fields are required'
+                status: 'FAIL',
+                data:{type:'warning', message: 'All fields are required'}
             };
             next();
         } else {
@@ -30,7 +30,7 @@ const addCategory = (req, res, next) => {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: errorHandler(error)
+                        data: errorHandler(error)
                     };
                     next();
                 }
@@ -73,7 +73,7 @@ const listCategory = (req, res, next) => {
                         res.locals.status = 400;
                         res.locals.encryptData = {
                             status: 'FAIL',
-                            message: errorHandler(error)
+                            data: errorHandler(error)
                         };
                         next();
                     }
@@ -108,7 +108,7 @@ const listCategory = (req, res, next) => {
                         res.locals.status = 400;
                         res.locals.encryptData = {
                             status: 'FAIL',
-                            message: errorHandler(error)
+                            data: errorHandler(error)
                         };
                         next();
                     }
@@ -144,7 +144,7 @@ const listCategory = (req, res, next) => {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: errorHandler(error)
+                        data: errorHandler(error)
                     };
                     next();
                 }
@@ -168,7 +168,7 @@ const findCategoryById = (req, res, next) => {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: errorHandler(error)
+                        data: errorHandler(error)
                     };
                     next();
                 }
@@ -177,7 +177,7 @@ const findCategoryById = (req, res, next) => {
         res.locals.status = 400;
         res.locals.encryptData = {
             status: 'FAIL',
-            message: "Category Code is invalid"
+            data:{type:'error', message: "Category Code is invalid"}
         };
         next();
     }
@@ -190,8 +190,8 @@ const updateCategory = (req, res, next) => {
         if (!categoryCode || !categoryName) {
             res.locals.status = 400;
             res.locals.encryptData = {
-                status: 'ERROR',
-                message: 'All fields are required'
+                status: 'FAIL',
+                data:{type:'warning', message: "All fields are required"}
             };
             next();
         }
@@ -216,7 +216,7 @@ const updateCategory = (req, res, next) => {
                         res.locals.status = 400;
                         res.locals.encryptData = {
                             status: 'FAIL',
-                            message: errorHandler("Code not found")
+                            data: errorHandler("Code not found")
                         };
                         next();
                     }
@@ -224,7 +224,7 @@ const updateCategory = (req, res, next) => {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: errorHandler(error)
+                        data: errorHandler(error)
                     };
                     next();
                 }
@@ -250,7 +250,7 @@ const deleteCategoryById = (req, res, next) => {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: errorHandler(error)
+                        data: errorHandler(error)
                     };
                     next();
                 }
@@ -259,7 +259,7 @@ const deleteCategoryById = (req, res, next) => {
         res.locals.status = 400;
         res.locals.encryptData = {
             status: 'FAIL',
-            message: "Category Code is invalid"
+            data:{type:'warning', message: "Category Code is invalid"}
         };
         next();
     }

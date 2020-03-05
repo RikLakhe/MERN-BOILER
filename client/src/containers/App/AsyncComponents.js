@@ -1,6 +1,7 @@
 import loadable from 'react-loadable';
 import Loading from "../../components/Layout/Loading";
 
+// Layout containers
 export const AsyncAppLayout = loadable({
     loader: () => import('../Layout/AppLayoutContainer'),
     loading: Loading,
@@ -11,8 +12,7 @@ export const AsyncStaticAppLayout = loadable({
     loading: Loading,
 });
 
-
-// Exception
+// Exceptions
 export const AsyncForbidden = loadable({
     loader: () => import('../Exception/ForbiddenContainer'),
     loading: Loading,
@@ -27,10 +27,10 @@ export const AsyncNotFound = loadable({
     loader: () => import('../Exception/NotFoundContainer'),
     loading: Loading,
 });
-//
 
-export const AsyncAuth = loadable({
-    loader: () => import('../Auth/AuthContainer'),
+//Auth containers
+export const AsyncLogin = loadable({
+    loader: () => import('../Auth/LoginContainer'),
     loading: Loading,
 });
 
@@ -39,11 +39,18 @@ export const AsyncLogout = loadable({
     loading: Loading,
 });
 
+export const AsyncSignUp = loadable({
+    loader: () => import('../Auth/SignUpContainer'),
+    loading: Loading,
+});
+
+// Home containers
 export const AsyncHome = loadable({
     loader: () => import('../Home/HomeContainer'),
     loading: Loading,
 });
 
+// Category containers
 export const AsyncCategory = loadable({
     loader: () => import('../Category/CategoryContainer'),
     loading: Loading,

@@ -10,8 +10,9 @@ import {
     AsyncNotFound,
     AsyncForbidden,
     AsyncInternalServer,
-    AsyncAuth,
+    AsyncLogin,
     AsyncLogout,
+    AsyncSignUp,
     AsyncHome,
     AsyncCategory
 } from './AsyncComponents'
@@ -20,14 +21,15 @@ const App = () => (
     <Fragment>
         <Switch>
             <PublicRoute exact path="/" layout={(AsyncAppLayout)} component={(AsyncHome)}/>
-            <PublicRoute exact path="/login" layout={(AsyncStaticAppLayout)} component={(AsyncAuth)}/>
+            <PublicRoute exact path="/login" layout={(AsyncStaticAppLayout)} component={(AsyncLogin)}/>
             <PublicRoute exact path="/logout" layout={(AsyncStaticAppLayout)} component={(AsyncLogout)}/>
+            <PublicRoute exact path="/sign-up" layout={(AsyncStaticAppLayout)} component={(AsyncSignUp)}/>
 
             <PrivateRoute exact path="/category" layout={(AsyncAppLayout)} component={(AsyncCategory)}/>
 
-            <PublicRoute exact path="/product" layout={(AsyncStaticAppLayout)} component={(AsyncAuth)}/>
-            <PublicRoute exact path="/checkout" layout={(AsyncStaticAppLayout)} component={(AsyncAuth)}/>
-            <PublicRoute exact path="/profile" layout={(AsyncStaticAppLayout)} component={(AsyncAuth)}/>
+            <PublicRoute exact path="/product" layout={(AsyncStaticAppLayout)} component={(AsyncLogin)}/>
+            <PublicRoute exact path="/checkout" layout={(AsyncStaticAppLayout)} component={(AsyncLogin)}/>
+            <PublicRoute exact path="/profile" layout={(AsyncStaticAppLayout)} component={(AsyncLogin)}/>
 
             <PublicRoute path={"/403"} layout={(AsyncStaticAppLayout)} component={(AsyncForbidden)}/>
             <PublicRoute path={"/500"} layout={(AsyncStaticAppLayout)} component={(AsyncInternalServer)}/>

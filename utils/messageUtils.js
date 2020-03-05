@@ -13,7 +13,7 @@ const errorHandler = error => {
             message = 'Something went wrong';
     }
 
-    return message;
+    return {type: 'error', message: message};
 };
 
 /**

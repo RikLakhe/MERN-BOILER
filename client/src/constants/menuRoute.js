@@ -10,7 +10,7 @@ export default [
         icon: 'tags',
         route: '/category',
         permission: 'ADMIN'
-    },{
+    }, {
         menuName: 'Products',
         menuKey: 'products',
         icon: 'tags',
@@ -22,9 +22,10 @@ export default [
         icon: 'calculator',
         route: '/calculator',
     }, {
-        menuName: 'Profile',
-        menuKey: 'profile',
+        menuName: 'Users',
+        menuKey: 'user',
         icon: 'profile',
-        route: '/user',
+        route: '/users',
+        permission: 'ADMIN',
     }
 ]
