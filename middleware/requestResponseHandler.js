@@ -1,11 +1,11 @@
 const AppConfig = require('../config/appConfig');
-const {freshToken, isTokenExpired} = require('../utils/jwtUtils');
-const {decrypt, encrypt} = require('../utils/cryptoUtil');
+const { freshToken, isTokenExpired } = require('../utils/jwtUtils');
+const { decrypt, encrypt } = require('../utils/cryptoUtil');
 
 const requestOnlyHandler = (req, res, next) => {
     // decrypt data from body and pass into next handler
     if (req && req.body) {
-        const {data} = req.body;
+        const { data } = req.body;
         // no data is sent from front end send error
         if (!data) {
             res.locals.status = 401;
@@ -44,18 +44,18 @@ const requestWithTokenHandler = (req, res, next) => {
         let tokenStatus = isTokenExpired(req.headers['xsrf-token']);
         if (!tokenStatus) {
 
-            res.locals.newAccessToken = freshToken({status: "new token"}, '5 min');
+            res.locals.newAccessToken = freshToken({ status: "new token" }, '5 min');
 
             // decrypt data from body and pass into next handler
             if (req && req.body) {
-                const {data} = req.body;
+                const { data } = req.body;
 
                 // no data is sent from front end send error
                 if (!data) {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        data: {type:'warning', message: 'Error request'}
+                        data: { type: 'warning', message: 'Error request' }
                     };
 
                     responseHandler(req, res, next);
@@ -69,7 +69,7 @@ const requestWithTokenHandler = (req, res, next) => {
                 res.locals.status = 400;
                 res.locals.encryptData = {
                     status: 'FAIL',
-                    data: {type:'warning', message: 'Error request'}
+                    data: { type: 'warning', message: 'Error request' }
                 };
 
                 responseHandler(req, res, next);
@@ -78,7 +78,7 @@ const requestWithTokenHandler = (req, res, next) => {
             res.locals.status = 401;
             res.locals.encryptData = {
                 status: 'FAIL',
-                data: {type:'warning', message: 'Unauthorized'}
+                data: { type: 'warning', message: 'Unauthorized' }
             };
 
             responseHandler(req, res, next);
@@ -89,7 +89,7 @@ const requestWithTokenHandler = (req, res, next) => {
         res.locals.status = 401;
         res.locals.encryptData = {
             status: 'FAIL',
-            data: {type:'warning', message: 'Unauthorized'}
+            data: { type: 'warning', message: 'Unauthorized' }
         };
 
         responseHandler(req, res, next);
@@ -105,14 +105,14 @@ const requestGETWithTokenHandler = (req, res, next) => {
         // token handling check token validation with time
         let tokenStatus = isTokenExpired(req.headers['xsrf-token']);
         if (!tokenStatus) {
-            res.locals.newAccessToken = freshToken({status: "new token"}, '5 min');
+            res.locals.newAccessToken = freshToken({ status: "new token" }, '5 min');
 
             next();
         } else {
             res.locals.status = 401;
             res.locals.encryptData = {
                 status: 'FAIL',
-                data: {type:'warning', message: 'Unauthorized'}
+                data: { type: 'warning', message: 'Unauthorized' }
             };
 
             responseHandler(req, res, next);
@@ -122,7 +122,7 @@ const requestGETWithTokenHandler = (req, res, next) => {
         res.locals.status = 401;
         res.locals.encryptData = {
             status: 'FAIL',
-            data: {type:'warning', message: 'Unauthorized'}
+            data: { type: 'warning', message: 'Unauthorized' }
         };
 
         responseHandler(req, res, next);
@@ -147,4 +147,4 @@ const responseHandler = (req, res, next) => {
     }
 };
 
-module.exports = {requestOnlyHandler, requestWithTokenHandler, responseHandler, requestGETWithTokenHandler};
+module.exports = { requestOnlyHandler, requestWithTokenHandler, responseHandler, requestGETWithTokenHandler };

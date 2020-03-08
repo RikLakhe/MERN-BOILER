@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/User/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/authAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/authAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/userAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/userAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/App/AsyncComponents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/User/UserContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/User/UserContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/User/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/User/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/userReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/userService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/userRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="255003" />
+    <option name="totalTimeSeconds" value="255250" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -208,7 +195,7 @@
       <workItem from="1583337360752" duration="786000" />
       <workItem from="1583338212886" duration="5515000" />
       <workItem from="1583395188176" duration="40000" />
-      <workItem from="1583395241392" duration="12272000" />
+      <workItem from="1583395241392" duration="12519000" />
     </task>
     <servers />
   </component>

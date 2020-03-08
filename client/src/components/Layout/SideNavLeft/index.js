@@ -1,18 +1,18 @@
 import React from "react";
-import {Icon} from 'antd'
-import {Link} from "react-router-dom";
+import { Icon } from 'antd'
+import { Link } from "react-router-dom";
 
 import './LeftNav.sass';
 import LogoImage from "../../../assets/lakhemern.png"
 
 import menuRoute from "../../../constants/menuRoute";
-import {isAllowed, isAuthenticated} from "../../../utils/authUtils";
-import {isEmpty} from "../../../utils/commonUtils";
+import { isAllowed, isAuthenticated } from "../../../utils/authUtils";
+import { isEmpty } from "../../../utils/commonUtils";
 
 const SideNavLeft = props => {
     const {
         displayMenu,
-        setDisplayMenu
+        handleMenuSelect
     } = props;
 
     return (
@@ -21,15 +21,15 @@ const SideNavLeft = props => {
                 displayMenu ?
                     <div className="nav-item-active">
                         <div className="menu-icon">
-                            <img src={LogoImage} alt="Logo"/>
+                            <img src={LogoImage} alt="Logo" />
                             <Icon
                                 className={'nav-icon'}
-                                type="close" style={{color: 'white'}}
+                                type="close" style={{ color: 'white' }}
                                 onClick={() => {
-                                    setDisplayMenu(!displayMenu)
-                                }}/>
+                                    handleMenuSelect(false)
+                                }} />
                         </div>
-                        <hr/>
+                        <hr />
                         <ul>
                             {
                                 menuRoute &&
@@ -39,30 +39,13 @@ const SideNavLeft = props => {
                                             if (isAllowed(menuItem.permission)) {
                                                 return (
                                                     <li key={menuItem.menuKey}>
-                                                        <Link to={menuItem.route}>
+                                                        <Link to={menuItem.route} onClick={handleMenuSelect}>
                                                             <Icon
                                                                 type={menuItem.icon}
                                                                 className={'menu-route-icon'}
                                                             />
                                                             {menuItem.menuName}
-                                                            {
-                                                                menuItem?.children && !isEmpty(menuItem.children) &&
-                                                                <ul className={'menu-route-children'}>
-                                                                    {
-                                                                        menuItem.children.map((childMenuItem)=>(
-                                                                            <li key={childMenuItem.menuKey}  className={'menu-route-children-li'}>
-                                                                                <Link to={childMenuItem.route}>
-                                                                                    <Icon
-                                                                                        type={childMenuItem.icon}
-                                                                                        className={'menu-route-icon'}
-                                                                                    />
-                                                                                    {childMenuItem.menuName}
-                                                                                </Link>
-                                                                            </li>
-                                                                        ))
-                                                                    }
-                                                                </ul>
-                                                            }
+
                                                         </Link>
                                                     </li>
                                                 )
@@ -72,7 +55,7 @@ const SideNavLeft = props => {
                                         } else {
                                             return (
                                                 <li key={menuItem.menuKey}>
-                                                    <Link to={menuItem.route}>
+                                                    <Link to={menuItem.route} onClick={handleMenuSelect}>
                                                         <Icon
                                                             type={menuItem.icon}
                                                             className={'menu-route-icon'}
@@ -109,13 +92,13 @@ const SideNavLeft = props => {
                                     </li>
                             }
                         </ul>
-                        <hr/>
+                        <hr />
                     </div>
                     :
                     <div className="nav-item" onClick={() => {
-                        setDisplayMenu(!displayMenu)
+                        handleMenuSelect(!displayMenu)
                     }}>
-                        <Icon className={'nav-icon'} type="menu" style={{color: 'white'}}/>
+                        <Icon className={'nav-icon'} type="menu" style={{ color: 'white' }} />
                         MENU
                     </div>
             }

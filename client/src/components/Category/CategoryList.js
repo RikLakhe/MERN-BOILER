@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 import "./CategoryList.sass"
 
 import CustomTable from './../Common/CustomTable'
-import {isEmpty} from "../../utils/commonUtils";
+import { isEmpty } from "../../utils/commonUtils";
 
 const CategoryList = props => {
     const {
@@ -47,7 +47,7 @@ const CategoryList = props => {
         }];
 
     const handleCategoryTableChange = (pageData) => {
-        listCategory({pageData})
+        listCategory({ pageData })
     };
 
     const handleCategoryDelete = (id) => {
