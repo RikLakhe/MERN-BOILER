@@ -1,22 +1,22 @@
 const Users = require('../model/usersModel');
-const {freshToken} = require('../utils/jwtUtils');
-const {errorHandler} = require('../utils/messageUtils');
+const { freshToken } = require('../utils/jwtUtils');
+const { errorHandler } = require('../utils/messageUtils');
 
 // CRUD
 const creatUser = (req, res, next) => {
     if (res.locals.decryptData) {
-        const {fullName, userName, email, password, sex, permission} = res.locals.decryptData;
+        const { fullName, userName, email, password, sex, permission } = res.locals.decryptData;
         if (!fullName || !userName || !email || !password || !sex || !permission) {
             res.locals.status = 400;
             res.locals.encryptData = {
                 status: 'FAIL',
-                message: {type: 'warning', data: 'All fields are required'}
+                data: { type: 'warning', message: 'All fields are required' }
             };
             next();
         } else {
             let isUserVerified = false;
             let createDate = Date.now();
-            const users = new Users({fullName, userName, email, password, sex, permission, isUserVerified, createDate});
+            const users = new Users({ fullName, userName, email, password, sex, permission, isUserVerified, createDate });
 
             users.save((error, response) => {
                 if (!error) {
@@ -30,7 +30,7 @@ const creatUser = (req, res, next) => {
                     res.locals.status = 400;
                     res.locals.encryptData = {
                         status: 'FAIL',
-                        message: errorHandler(error)
+                        data: errorHandler(error)
                     };
                     next();
                 }
@@ -42,12 +42,12 @@ const creatUser = (req, res, next) => {
 // READ
 const findUser = (req, res, next) => {
     if (res.locals.decryptData) {
-        const {userName, password} = res.locals.decryptData;
+        const { userName, password } = res.locals.decryptData;
         if (!userName || !password) {
             res.locals.status = 400;
             res.locals.encryptData = {
                 status: 'FAIL',
-                data: {type: 'warning', message: 'All field are required'}
+                data: { type: 'warning', message: 'All field are required' }
             };
             next();
         } else {
@@ -62,7 +62,7 @@ const findUser = (req, res, next) => {
                             res.locals.status = 400;
                             res.locals.encryptData = {
                                 status: 'FAIL',
-                                data: {type: 'error', message: 'User not found'}
+                                data: { type: 'error', message: 'User not found' }
                             };
                             next();
                         } else {
@@ -82,7 +82,7 @@ const findUser = (req, res, next) => {
                                 res.locals.status = 400;
                                 res.locals.encryptData = {
                                     status: 'FAIL',
-                                    data: {type: 'warning', message: 'User not verified'}
+                                    data: { type: 'warning', message: 'User not verified' }
                                 };
                                 next();
                             }
@@ -91,7 +91,7 @@ const findUser = (req, res, next) => {
                         res.locals.status = 400;
                         res.locals.encryptData = {
                             status: 'FAIL',
-                            data: {type: 'warning', message: 'User not found'}
+                            data: { type: 'warning', message: 'User not found' }
                         };
                         next();
                     }
@@ -101,7 +101,7 @@ const findUser = (req, res, next) => {
         res.locals.status = 400;
         res.locals.encryptData = {
             status: 'FAIL',
-            data: {type: 'error', message: 'Login Fail'}
+            data: { type: 'error', message: 'Login Fail' }
         };
         next();
     }
@@ -110,7 +110,7 @@ const findUser = (req, res, next) => {
 const findUserById = (req, res, next) => {
     if (req.params.user_id.match(/^[0-9a-fA-F]{24}$/)) {
         Users
-            .find({_id: req.params.user_id})
+            .find({ _id: req.params.user_id })
             .exec((error, response) => {
                 if (!error) {
                     res.locals.status = 200;
@@ -132,7 +132,7 @@ const findUserById = (req, res, next) => {
         res.locals.status = 400;
         res.locals.encryptData = {
             status: 'FAIL',
-            data: {type: 'error', message: "User Code is invalid"}
+            data: { type: 'error', message: "User Code is invalid" }
         };
         next();
     }
@@ -166,7 +166,7 @@ const findPendingUserById = (req, res, next) => {
         res.locals.status = 400;
         res.locals.encryptData = {
             status: 'FAIL',
-            data: {type: 'error', message: "User Code is invalid"}
+            data: { type: 'error', message: "User Code is invalid" }
         };
         next();
     }
@@ -174,10 +174,10 @@ const findPendingUserById = (req, res, next) => {
 
 const listUsers = (req, res, next) => {
     if (res.locals.decryptData) {
-        const {pageNumber, pageSize} = res.locals.decryptData.pageData;
+        const { pageNumber, pageSize } = res.locals.decryptData.pageData;
         if (pageNumber && pageSize && pageSize === 'ALL') {
-            Users.find({isUserVerified: true})
-                .sort({createDate: -1})
+            Users.find({ isUserVerified: true })
+                .sort({ createDate: -1 })
                 .exec((error, response) => {
                     if (!error) {
                         if (response.length === 0) {
@@ -212,8 +212,8 @@ const listUsers = (req, res, next) => {
                     }
                 });
         } else {
-            Users.find({isUserVerified: true})
-                .sort({createDate: -1})
+            Users.find({ isUserVerified: true })
+                .sort({ createDate: -1 })
                 .exec((error, response) => {
                     if (!error) {
                         if (response.length === 0) {
@@ -248,8 +248,8 @@ const listUsers = (req, res, next) => {
                 });
         }
     } else {
-        Users.find({isUserVerified: true})
-            .sort({createDate: -1})
+        Users.find({ isUserVerified: true })
+            .sort({ createDate: -1 })
             .exec((error, response) => {
                 if (!error) {
                     if (response.length === 0) {
@@ -287,10 +287,10 @@ const listUsers = (req, res, next) => {
 
 const findPendingUsers = (req, res, next) => {
     if (res.locals.decryptData) {
-        const {pageNumber, pageSize} = res.locals.decryptData.pageData;
+        const { pageNumber, pageSize } = res.locals.decryptData.pageData;
         if (pageNumber && pageSize && pageSize === 'ALL') {
-            Users.find({isUserVerified: false})
-                .sort({createDate: -1})
+            Users.find({ isUserVerified: false })
+                .sort({ createDate: -1 })
                 .exec((error, response) => {
                     if (!error) {
                         if (response.length === 0) {
@@ -324,8 +324,8 @@ const findPendingUsers = (req, res, next) => {
                     }
                 });
         } else {
-            Users.find({isUserVerified: false})
-                .sort({createDate: -1})
+            Users.find({ isUserVerified: false })
+                .sort({ createDate: -1 })
                 .exec((error, response) => {
                     if (!error) {
                         if (response.length === 0) {
@@ -360,8 +360,8 @@ const findPendingUsers = (req, res, next) => {
                 });
         }
     } else {
-        Users.find({isUserVerified: false})
-            .sort({createDate: -1})
+        Users.find({ isUserVerified: false })
+            .sort({ createDate: -1 })
             .exec((error, response) => {
                 if (!error) {
                     if (response.length === 0) {
@@ -397,4 +397,4 @@ const findPendingUsers = (req, res, next) => {
     }
 }
 
-module.exports = {creatUser, findUser,listUsers, findUserById, findPendingUserById, findPendingUsers};
+module.exports = { creatUser, findUser, listUsers, findUserById, findPendingUserById, findPendingUsers };

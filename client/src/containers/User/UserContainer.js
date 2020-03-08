@@ -1,6 +1,6 @@
 import React from "react";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 import List from "../../components/User/List";
 
@@ -31,6 +31,7 @@ const UserContainer = props => {
  */
 const mapStateToProps = state => ({
     users: state.user.payload,
+    usersPagination: state.user.pagination,
     usersError: state.user.errors,
     usersLoading: state.user.loading
 });

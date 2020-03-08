@@ -17,7 +17,7 @@ const INITIAL_STATE = {
 /**
  * A reducer takes two arguments, the current state and an action.
  */
-const authReducer = (state, action) => {
+const userReducer = (state, action) => {
     state = state || INITIAL_STATE;
 
     switch (action.type) {
@@ -29,7 +29,8 @@ const authReducer = (state, action) => {
         case USER_FETCH_REQUEST_SUCCESS:
             return Object.assign({}, state, {
                 loading: false,
-                payload: action.data,
+                payload: action.data.data,
+                pagination: action.data.pagination,
                 errors: {},
             });
 
@@ -44,4 +45,4 @@ const authReducer = (state, action) => {
     }
 };
 
-export default authReducer;
+export default userReducer;

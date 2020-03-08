@@ -1,49 +1,33 @@
 // Import actionType constants
 import {
-    LOGIN_REQUEST,
-    LOGIN_REQUEST_SUCCESS,
-    LOGIN_REQUEST_FAILURE,
-    LOGOUT_REQUEST,
-    LOGOUT_REQUEST_SUCCESS,
-    LOGOUT_REQUEST_FAILURE,
+    AUTH_REQUEST,
+    AUTH_REQUEST_SUCCESS,
+    AUTH_REQUEST_FAILURE,
+    AUTH_CLEAN_REQUEST
 } from '../constants/actionTypes';
 
-export const loginRequest = () =>{
+export const authRequest = () => {
     return {
-        type: LOGIN_REQUEST
+        type: AUTH_REQUEST
     }
 };
 
-export const loginRequestSuccess = data =>{
+export const authRequestSuccess = data => {
     return {
-        type: LOGIN_REQUEST_SUCCESS,
+        type: AUTH_REQUEST_SUCCESS,
         data,
     }
 };
 
-export const loginRequestFailure = error =>{
+export const authRequestFailure = error => {
     return {
-        type: LOGIN_REQUEST_FAILURE,
+        type: AUTH_REQUEST_FAILURE,
         error,
     }
 };
 
-export const logoutRequest = () =>{
+export const authCleanRequest = () => {
     return {
-        type: LOGOUT_REQUEST
-    }
-};
-
-export const logoutRequestSuccess = data =>{
-    return {
-        type: LOGOUT_REQUEST_SUCCESS,
-        data,
-    }
-};
-
-export const logoutRequestFailure = error =>{
-    return {
-        type: LOGOUT_REQUEST_FAILURE,
-        error,
+        type: AUTH_CLEAN_REQUEST
     }
 };

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import "./layout.sass";
 
@@ -16,9 +16,13 @@ const AppLayout = props => {
         staticPage
     } = props;
 
+    const handleMenuSelect = () => {
+        setDisplayMenu(!displayMenu)
+    }
+
     return (
         <div className="container-fluid wrapper">
-            <Header displayMenu={displayMenu}/>
+            <Header displayMenu={displayMenu} />
             {
                 staticPage ?
                     <div className={'app-body'}>
@@ -28,14 +32,14 @@ const AppLayout = props => {
                     </div>
                     :
                     <div className={'app-body'}>
-                        <SideNavLeft displayMenu={displayMenu} setDisplayMenu={setDisplayMenu}/>
+                        <SideNavLeft displayMenu={displayMenu} handleMenuSelect={handleMenuSelect} />
                         <Main displayMenu={displayMenu}>
                             {props.children}
                         </Main>
-                        <SideNavRight displayMenu={displayMenu} setDisplayMenu={setDisplayMenu}/>
+                        <SideNavRight displayMenu={displayMenu} handleMenuSelect={handleMenuSelect} />
                     </div>
             }
-            <Footer displayMenu={displayMenu}/>
+            <Footer displayMenu={displayMenu} />
         </div>)
 };
 
