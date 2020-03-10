@@ -49,7 +49,22 @@ export const signUpService = formData => {
             .then(response => {
                 if (response.status === 'SUCCESS') {
                     dispatch(authRequestSuccess(response));
-                    history.push("/login");
+                    history.push("/auth/success");
+                }
+            })
+            .catch(error => dispatch(authRequestFailure(error.data)));
+    }
+};
+
+export const verifyService = formData => {
+    return dispatch => {
+        dispatch(authRequest());
+
+        return store('v1/auth/verify', formData)
+            .then(response => {
+                if (response.status === 'SUCCESS') {
+                    dispatch(authRequestSuccess(response));
+                    history.push("/auth/success");
                 }
             })
             .catch(error => dispatch(authRequestFailure(error.data)));

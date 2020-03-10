@@ -1,10 +1,10 @@
 import React from "react";
-import {Button, Icon, Form, Input} from "antd";
+import { Button, Icon, Form, Input } from "antd";
 
 import "./LoginForm.sass"
 
 import LogoImage from "../../assets/lakhemern.png"
-import {isEmpty} from "../../utils/commonUtils";
+import { isEmpty } from "../../utils/commonUtils";
 import MainMessage from "../Common/CustomMessage";
 import history from "../../utils/history";
 
@@ -33,12 +33,12 @@ const LoginForm = props => {
     return (
         <div className={"login-form"}>
             <div className="logo">
-                <img src={LogoImage} alt="Logo"/>
+                <img src={LogoImage} alt="Logo" />
             </div>
-            <hr/>
+            <hr />
 
             {
-                authError && !isEmpty(authError) && <MainMessage type={authError.type} message={authError.message}/>
+                authError && !isEmpty(authError) && <MainMessage type={authError.type} message={authError.message} />
             }
 
             <Form
@@ -47,22 +47,22 @@ const LoginForm = props => {
             >
                 <FormItem>
                     {getFieldDecorator('userName', {
-                        rules: [{required: true, message: 'Please enter your Username'}],
+                        rules: [{ required: true, message: 'Please enter your Username' }],
                     })(
                         <Input
                             size="large"
-                            prefix={<Icon type="user" style={{fontSize: 13}}/>}
+                            prefix={<Icon type="user" style={{ fontSize: 13 }} />}
                             placeholder="Username"
                         />
                     )}
                 </FormItem>
                 <FormItem>
                     {getFieldDecorator('password', {
-                        rules: [{required: true, message: 'Please enter your Password'}],
+                        rules: [{ required: true, message: 'Please enter your Password' }],
                     })(
                         <Input
                             size="large"
-                            prefix={<Icon type="lock" style={{fontSize: 13}}/>}
+                            prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
                             type="password"
                             placeholder="Password"
                         />
@@ -72,11 +72,11 @@ const LoginForm = props => {
                     type={'link'}
                     onClick={() => {
                         resetFields();
-                        history.push("/sign-up")
+                        history.push("/auth/sign-up")
                     }}
                     className={'login-signup-link'}
                 >
-                    SIGN UP <Icon type="edit"/>
+                    SIGN UP <Icon type="edit" />
                 </Button>
                 <Button
                     className={'login-button'}
@@ -84,7 +84,7 @@ const LoginForm = props => {
                     htmlType={'submit'}
                     block
                 >
-                    LOGIN<Icon type="arrow-right"/>
+                    LOGIN<Icon type="arrow-right" />
                 </Button>
             </Form>
         </div>

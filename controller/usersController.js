@@ -1,6 +1,7 @@
 const Users = require('../model/usersModel');
 const { freshToken } = require('../utils/jwtUtils');
 const { errorHandler } = require('../utils/messageUtils');
+const { sendMail } = require('../utils/mailUtils')
 
 // CRUD
 const creatUser = (req, res, next) => {
@@ -20,10 +21,12 @@ const creatUser = (req, res, next) => {
 
             users.save((error, response) => {
                 if (!error) {
+
+                    sendMail({ email, userName }, 'New account', 'verify')
                     res.locals.status = 200;
                     res.locals.encryptData = {
                         status: 'SUCCESS',
-                        data: 'User sent for verification'
+                        data: { email, userName }
                     };
                     next();
                 } else {
@@ -394,6 +397,41 @@ const findPendingUsers = (req, res, next) => {
                     next();
                 }
             });
+    }
+}
+
+// Update
+const verifyUser = (req, res, next) => {
+    if (req.params.token.match(/^[0-9a-fA-F]{24}$/)) {
+        Users
+            .find({
+                _id: req.params.user_id,
+                isUserVerified: false
+            })
+            .exec((error, response) => {
+                if (!error) {
+                    res.locals.status = 200;
+                    res.locals.encryptData = {
+                        status: 'SUCCESS',
+                        data: response[0],
+                    };
+                    next();
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        data: errorHandler(error)
+                    };
+                    next();
+                }
+            })
+    } else {
+        res.locals.status = 400;
+        res.locals.encryptData = {
+            status: 'FAIL',
+            data: { type: 'error', message: "User Code is invalid" }
+        };
+        next();
     }
 }
 
