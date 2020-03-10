@@ -1,12 +1,12 @@
 import React from "react";
-import {Button, Form, Icon, Input, Select} from "antd";
+import { Button, Form, Icon, Input, Select } from "antd";
 
 import "./SignUpForm.sass"
 
 import history from "../../utils/history";
-import {isEmpty} from "../../utils/commonUtils";
+import { isEmpty } from "../../utils/commonUtils";
 import MainMessage from "../Common/CustomMessage";
-import {femaleIcon, maleIcon} from "../../constants/appConfig";
+import { femaleIcon, maleIcon } from "../../constants/appConfig";
 
 const FormItem = Form.Item;
 const Option = Select.Option;
@@ -24,8 +24,8 @@ const SignUpForm = props => {
     } = props;
 
     const formItemLayout = {
-        labelCol: {ls: {span: 8}, md: {span: 8}, sm: {span: 10}, xs: {span: 6}},
-        wrapperCol: {ls: {span: 16}, md: {span: 16}, sm: {span: 14}, xs: {span: 18}},
+        labelCol: { ls: { span: 8 }, md: { span: 8 }, sm: { span: 10 }, xs: { span: 6 } },
+        wrapperCol: { ls: { span: 16 }, md: { span: 16 }, sm: { span: 14 }, xs: { span: 18 } },
         labelAlign: 'left',
     };
 
@@ -54,7 +54,7 @@ const SignUpForm = props => {
     return (
         <div>
             {
-                authError && !isEmpty(authError) && <MainMessage type={authError.type} message={authError.message}/>
+                authError && !isEmpty(authError) && <MainMessage type={authError.type} message={authError.message} />
             }
 
             <Form
@@ -65,7 +65,7 @@ const SignUpForm = props => {
             >
                 <FormItem {...formItemLayout} label={'First Name'}>
                     {getFieldDecorator('fullName', {
-                        rules: [{required: true, message: 'Please enter your name'}],
+                        rules: [{ required: true, message: 'Please enter your name' }],
                     })(
                         <Input
                             size="large"
@@ -75,7 +75,7 @@ const SignUpForm = props => {
                 </FormItem>
                 <FormItem {...formItemLayout} label={'User Name'}>
                     {getFieldDecorator('userName', {
-                        rules: [{required: true, message: 'Please enter your user name'}],
+                        rules: [{ required: true, message: 'Please enter your user name' }],
                     })(
                         <Input
                             size="large"
@@ -85,7 +85,7 @@ const SignUpForm = props => {
                 </FormItem>
                 <FormItem {...formItemLayout} label={'Email address'}>
                     {getFieldDecorator('email', {
-                        rules: [{required: true, message: 'Please enter your email'}],
+                        rules: [{ required: true, message: 'Please enter your email' }],
                     })(
                         <Input
                             size="large"
@@ -95,14 +95,14 @@ const SignUpForm = props => {
                 </FormItem>
                 <FormItem {...formItemLayout} label={'Password'}>
                     {getFieldDecorator('password', {
-                        rules: [{required: true, message: 'Please enter your password'}],
+                        rules: [{ required: true, message: 'Please enter your password' }],
                     })(
                         <Input
                             size="large"
                             placeholder="Password"
                             onBlur={() => {
                                 if (getFieldValue('confirmPassword')) {
-                                    validateFields([`confirmPassword`], {force: true})
+                                    validateFields([`confirmPassword`], { force: true })
                                 }
                             }}
                         />
@@ -111,7 +111,7 @@ const SignUpForm = props => {
                 <FormItem {...formItemLayout} label={'Confirm Password'}>
                     {getFieldDecorator('confirmPassword', {
                         rules: [
-                            {required: true, message: 'Please enter your password again'},
+                            { required: true, message: 'Please enter your password again' },
                             {
                                 validator: handleConfirmPassword
                             }
@@ -125,23 +125,23 @@ const SignUpForm = props => {
                 </FormItem>
                 <FormItem {...formItemLayout} label={'Sex'}>
                     {getFieldDecorator('sex', {
-                        rules: [{required: true, message: 'Please select your sex'}],
+                        rules: [{ required: true, message: 'Please select your sex' }],
                     })(
                         <Select
                             size="large"
                             placeholder="Sex"
                         >
                             <Option key={'M'} value={'M'}>Male{' '}<img height={17} width={17} src={maleIcon}
-                                                                        alt={'male'}/></Option>
+                                alt={'male'} /></Option>
                             <Option key={'F'} value={'F'}>Female{' '}<img height={20} width={20} src={femaleIcon}
-                                                                          alt={'female'}/></Option>
+                                alt={'female'} /></Option>
                             <Option key={'O'} value={'O'}>Other</Option>
                         </Select>
                     )}
                 </FormItem>
                 <FormItem {...formItemLayout} label={'User Type'}>
                     {getFieldDecorator('permission', {
-                        rules: [{required: true, message: 'Please select your account type'}],
+                        rules: [{ required: true, message: 'Please select your account type' }],
                     })(
                         <Select
                             size="large"
@@ -157,11 +157,11 @@ const SignUpForm = props => {
                     type={'link'}
                     onClick={() => {
                         resetFields();
-                        history.push("/login")
+                        history.push("/auth")
                     }}
                     className={'sign-up-login-link'}
                 >
-                    <Icon type="arrow-left"/> Login
+                    <Icon type="arrow-left" /> Login
                 </Button>
                 <Button
                     className={'sign-up-button'}

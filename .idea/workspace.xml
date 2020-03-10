@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21b7c77d-3f9d-46c3-8c4a-efa0f257220e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/readMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/usersController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/usersController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/authRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testST/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/testST/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +25,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="213" />
-    <option name="y" value="343" />
-    <option name="width" value="1366" />
-    <option name="height" value="737" />
   </component>
   <component name="ProjectId" id="1WTDcVZEftE6mZT3jeuvsOVXOdJ" />
   <component name="ProjectViewState">
@@ -196,6 +194,7 @@
       <workItem from="1583338212886" duration="5515000" />
       <workItem from="1583395188176" duration="40000" />
       <workItem from="1583395241392" duration="12519000" />
+      <workItem from="1583761028377" duration="4000" />
     </task>
     <servers />
   </component>

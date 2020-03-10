@@ -70,7 +70,7 @@ const SideNavLeft = props => {
                             {
                                 isAuthenticated() ?
                                     <li key={'logout'}>
-                                        <Link to={"/logout"}>
+                                        <Link to={"/auth/logout"}>
                                             <Icon
                                                 type={"logout"}
                                                 className={'menu-route-icon'
@@ -81,7 +81,7 @@ const SideNavLeft = props => {
                                     </li>
                                     :
                                     <li key={'login'}>
-                                        <Link to={"/login"}>
+                                        <Link to={"/auth/"}>
                                             <Icon
                                                 type={"login"}
                                                 className={'menu-route-icon'

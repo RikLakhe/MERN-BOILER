@@ -29,18 +29,8 @@ export const AsyncNotFound = loadable({
 });
 
 //Auth containers
-export const AsyncLogin = loadable({
-    loader: () => import('../Auth/LoginContainer'),
-    loading: Loading,
-});
-
-export const AsyncLogout = loadable({
-    loader: () => import('../Auth/LogoutContainer'),
-    loading: Loading,
-});
-
-export const AsyncSignUp = loadable({
-    loader: () => import('../Auth/SignUpContainer'),
+export const AsyncAuth = loadable({
+    loader: () => import('../Auth'),
     loading: Loading,
 });
 
