@@ -14,8 +14,8 @@ const verification = props => {
             <div>
                 <h3>Sign up was successful !</h3>
                 <p>
-                    Do check your email address to verfiy your email address<br />
-                    If your didnot recieve any kind of email please click on the <Button type={'link'}>LINK</Button> to resend.
+                    Login with provided username and password<br />
+                    Please click on the <Button type={'link'} href={"#/auth"}>LINK</Button> to login.
                 </p>
             </div>
         </div>

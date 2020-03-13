@@ -75,7 +75,7 @@ export const verifyResendService = token => {
     return dispatch => {
         dispatch(authRequest());
 
-        return fetch(`v1/auth/verify/resend?TOKEN=${token}`)
+        return fetch(`v1/auth/resend?TOKEN=${token}`)
             .then(response => {
                 if (response.status === 'SUCCESS') {
                     dispatch(authRequestSuccess(response));

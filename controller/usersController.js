@@ -407,14 +407,30 @@ const verifyUser = (req, res, next) => {
     if (req.query.TOKEN && !isTokenExpired(req.query.TOKEN)) {
         let userData = decodeToken(req.query.TOKEN)
         Users
-            .find({
+            .updateOne({
                 userName: userData.user.userName,
                 email: userData.user.email,
+            }, {
+                isUserVerified: true
             })
             .exec((error, response) => {
                 if (!error) {
-                    console.log('tatatat', response[0])
-                    next();
+                    if (response && response.nModified > 0) {
+                        res.locals.status = 200;
+                        res.locals.encryptData = {
+                            status: 'SUCCESS',
+                            data: { message: "User successfully verified." },
+                        };
+                        next();
+                    } else {
+                        res.locals.status = 400;
+                        res.locals.encryptData = {
+                            status: 'FAIL',
+                            data: errorHandler("User not found.")
+                        };
+                        next();
+                    }
+
                 } else {
                     res.locals.status = 400;
                     res.locals.encryptData = {
@@ -424,29 +440,6 @@ const verifyUser = (req, res, next) => {
                     next();
                 }
             })
-
-        //     Users
-        //         .updateOne({ _id: req.params.category_id }, {
-        //             _id: req.params.category_id,
-        //             isUserVerified: true
-        //         })
-        //         .exec((error, response) => {
-        //             if (!error) {
-        //                 res.locals.status = 200;
-        //                 res.locals.encryptData = {
-        //                     status: 'SUCCESS',
-        //                     data: response[0],
-        //                 };
-        //                 next();
-        //             } else {
-        res.locals.status = 400;
-        res.locals.encryptData = {
-            status: 'FAIL',
-            data: errorHandler(error)
-        };
-        next();
-        //             }
-        //         })
     } else {
         res.locals.status = 400;
         res.locals.encryptData = {
@@ -457,4 +450,45 @@ const verifyUser = (req, res, next) => {
     }
 }
 
-module.exports = { creatUser, findUser, listUsers, findUserById, findPendingUserById, findPendingUsers, verifyUser };
+// utils
+const resendMailUser = (req, res, next) => {
+    if (req.query.TOKEN && isTokenExpired(req.query.TOKEN)) {
+        let userData = decodeToken(req.query.TOKEN)
+        console.log('ggggg', userData)
+        Users
+            .find({
+                userName: userData.user.userName,
+                email: userData.user.email,
+            })
+            .exec((error, response) => {
+                if (!error) {
+                    sendMail({
+                        userName: userData.user.userName,
+                        email: userData.user.email,
+                    }, 'New account', 'verify')
+                    res.locals.status = 200;
+                    res.locals.encryptData = {
+                        status: 'SUCCESS',
+                        data: "Mail send for verification",
+                    };
+                    next();
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        data: errorHandler(error)
+                    };
+                    next();
+                }
+            })
+    } else {
+        res.locals.status = 400;
+        res.locals.encryptData = {
+            status: 'FAIL',
+            data: { type: 'error', message: "Token Expired" }
+        };
+        next();
+    }
+}
+
+module.exports = { creatUser, findUser, listUsers, findUserById, findPendingUserById, findPendingUsers, verifyUser, resendMailUser };
