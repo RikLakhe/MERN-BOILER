@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import {API_URL, MERN_TOKEN} from '../constants/appConfig'
-import {loadLocalStorage, saveLocalStorage, cleanLocalStorage} from "./commonUtils";
-import {encrypt, decrypt} from "./cryptoUtil"
+import { API_URL, MERN_TOKEN } from '../constants/appConfig'
+import { loadLocalStorage, saveLocalStorage, cleanLocalStorage } from "./commonUtils";
+import { encrypt, decrypt } from "./cryptoUtil"
 
 import history from "../utils/history";
 
@@ -34,7 +34,7 @@ const http = () => {
         error => {
             if (error.response.status === 401) {
                 cleanLocalStorage();
-                history.push('/login')
+                history.push('/auth')
             } else if (error.response.status === 403) {
                 history.push('/403')
             } else if (error.response.status === 500) {
@@ -47,9 +47,14 @@ const http = () => {
     return api;
 };
 
-export const fetch = (endpoint, params) => {
-    return http()
-        .get(`${API_URL}/${endpoint}/${params}`);
+export const fetch = (endpoint, params = undefined) => {
+    if (params) {
+        return http()
+            .get(`${API_URL}/${endpoint}/${params}`)
+    } else {
+        return http()
+            .get(`${API_URL}/${endpoint}`)
+    }
 };
 
 export const store = (endpoint, data) => {

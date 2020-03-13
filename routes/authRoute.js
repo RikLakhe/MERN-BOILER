@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { creatUser, findUser } = require('../controller/usersController');
+const { creatUser, findUser, verifyUser } = require('../controller/usersController');
 
 const { requestOnlyHandler, requestWithTokenHandler, responseHandler } = require('../middleware/requestResponseHandler');
 
@@ -14,7 +14,8 @@ router.post("/logout", (req, res, next) => {
 });
 
 router.post("/sign-up", requestOnlyHandler, creatUser, responseHandler);
-router.post("/user/verify", creatUser, responseHandler);
+router.get("/verify", verifyUser, responseHandler);
+router.get("/verify/resend", verifyUser, responseHandler);
 
 router.post("/restrict", requestWithTokenHandler, (req, res, next) => {
     return res.json({ status: "testinggg" })

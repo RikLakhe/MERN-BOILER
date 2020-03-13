@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "npm install && cd client && npm install && npm run build",
-    "server": "nodemon index.js"
+    "server": "concurrently \"nodemon index.js\" \"cd client && npm start\""
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "mongoose": "^5.8.9",
     "morgan": "^1.9.1",
     "nodemailer": "^6.4.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "concurrently": "^5.1.0"
   }
 }

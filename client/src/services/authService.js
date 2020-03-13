@@ -1,4 +1,4 @@
-import { store } from '../utils/httpsUtil.js'
+import { store, fetch } from '../utils/httpsUtil.js'
 import history from "../utils/history";
 import { cleanLocalStorage, saveLocalStorage } from "../utils/commonUtils";
 import { MERN_PERMISSION, MERN_TOKEN } from "../constants/appConfig";
@@ -56,15 +56,30 @@ export const signUpService = formData => {
     }
 };
 
-export const verifyService = formData => {
+export const verifyService = token => {
     return dispatch => {
         dispatch(authRequest());
 
-        return store('v1/auth/verify', formData)
+        return fetch(`v1/auth/verify?TOKEN=${token}`)
             .then(response => {
                 if (response.status === 'SUCCESS') {
                     dispatch(authRequestSuccess(response));
-                    history.push("/auth/success");
+                    history.push("/auth/sign-up/success");
+                }
+            })
+            .catch(error => dispatch(authRequestFailure(error.data)));
+    }
+};
+
+export const verifyResendService = token => {
+    return dispatch => {
+        dispatch(authRequest());
+
+        return fetch(`v1/auth/verify/resend?TOKEN=${token}`)
+            .then(response => {
+                if (response.status === 'SUCCESS') {
+                    dispatch(authRequestSuccess(response));
+                    history.push("/auth/sign-up/success");
                 }
             })
             .catch(error => dispatch(authRequestFailure(error.data)));

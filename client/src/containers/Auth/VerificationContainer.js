@@ -7,9 +7,30 @@ import Verification from "../../components/Auth/Verification";
 import * as authService from "../../services/authService";
 
 const VerificationContainer = props => {
+    /**
+        * Verify
+        *
+        * @param {string} token
+        *
+        */
+    const verify = (token) => {
+        props.actions.verifyService(token)
+    };
+
+    /**
+        * Verify
+        *
+        * @param {string} token
+        *
+        */
+    const verifyResend = (token) => {
+        props.actions.verifyResendService(token)
+    };
 
     return (
         <Verification
+            verify={verify}
+            verifyResend={verifyResend}
             {...props}
         />
     )

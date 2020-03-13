@@ -5,7 +5,7 @@ import "./LoginForm.sass"
 
 import LogoImage from "../../assets/lakhemern.png"
 import { isEmpty } from "../../utils/commonUtils";
-import MainMessage from "../Common/CustomMessage";
+import CustomMessage from "../Common/CustomMessage";
 import history from "../../utils/history";
 
 const FormItem = Form.Item;
@@ -38,7 +38,7 @@ const LoginForm = props => {
             <hr />
 
             {
-                authError && !isEmpty(authError) && <MainMessage type={authError.type} message={authError.message} />
+                authError && !isEmpty(authError) && <CustomMessage type={authError.type} message={authError.message} />
             }
 
             <Form
