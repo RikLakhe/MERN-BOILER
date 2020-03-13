@@ -1,5 +1,5 @@
 const Users = require('../model/usersModel');
-const { freshToken } = require('../utils/jwtUtils');
+const { freshToken, isTokenExpired, decodeToken } = require('../utils/jwtUtils');
 const { errorHandler } = require('../utils/messageUtils');
 const { sendMail } = require('../utils/mailUtils')
 
@@ -402,18 +402,74 @@ const findPendingUsers = (req, res, next) => {
 
 // Update
 const verifyUser = (req, res, next) => {
-    if (req.params.token.match(/^[0-9a-fA-F]{24}$/)) {
+    // TODO
+
+    if (req.query.TOKEN && !isTokenExpired(req.query.TOKEN)) {
+        let userData = decodeToken(req.query.TOKEN)
         Users
-            .find({
-                _id: req.params.user_id,
-                isUserVerified: false
+            .updateOne({
+                userName: userData.user.userName,
+                email: userData.user.email,
+            }, {
+                isUserVerified: true
             })
             .exec((error, response) => {
                 if (!error) {
+                    if (response && response.nModified > 0) {
+                        res.locals.status = 200;
+                        res.locals.encryptData = {
+                            status: 'SUCCESS',
+                            data: { message: "User successfully verified." },
+                        };
+                        next();
+                    } else {
+                        res.locals.status = 400;
+                        res.locals.encryptData = {
+                            status: 'FAIL',
+                            data: errorHandler("User not found.")
+                        };
+                        next();
+                    }
+
+                } else {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        data: errorHandler(error)
+                    };
+                    next();
+                }
+            })
+    } else {
+        res.locals.status = 400;
+        res.locals.encryptData = {
+            status: 'FAIL',
+            data: { type: 'error', message: "Token Expired" }
+        };
+        next();
+    }
+}
+
+// utils
+const resendMailUser = (req, res, next) => {
+    if (req.query.TOKEN && isTokenExpired(req.query.TOKEN)) {
+        let userData = decodeToken(req.query.TOKEN)
+        console.log('ggggg', userData)
+        Users
+            .find({
+                userName: userData.user.userName,
+                email: userData.user.email,
+            })
+            .exec((error, response) => {
+                if (!error) {
+                    sendMail({
+                        userName: userData.user.userName,
+                        email: userData.user.email,
+                    }, 'New account', 'verify')
                     res.locals.status = 200;
                     res.locals.encryptData = {
                         status: 'SUCCESS',
-                        data: response[0],
+                        data: "Mail send for verification",
                     };
                     next();
                 } else {
@@ -429,10 +485,10 @@ const verifyUser = (req, res, next) => {
         res.locals.status = 400;
         res.locals.encryptData = {
             status: 'FAIL',
-            data: { type: 'error', message: "User Code is invalid" }
+            data: { type: 'error', message: "Token Expired" }
         };
         next();
     }
 }
 
-module.exports = { creatUser, findUser, listUsers, findUserById, findPendingUserById, findPendingUsers };
+module.exports = { creatUser, findUser, listUsers, findUserById, findPendingUserById, findPendingUsers, verifyUser, resendMailUser };

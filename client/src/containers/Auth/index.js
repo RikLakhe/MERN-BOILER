@@ -33,7 +33,7 @@ const index = ({ match }) => (
             />
             <Route
                 exact
-                path={`${match.url}/verify`}
+                path={`${match.url}/verify/:token`}
                 component={VerificationContainer}
             />
             <Route component={NotFound} />

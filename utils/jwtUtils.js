@@ -2,8 +2,8 @@ const jwt = require('jsonwebtoken');
 
 const AppConfig = require('../config/appConfig');
 
-const decodeToken = (Token, key) => {
-    return jwt.decode(Token, key);
+const decodeToken = (Token) => {
+    return jwt.decode(Token, AppConfig.jwtSecret);
 };
 
 const freshToken = (formData, timeDuration) => {
@@ -25,4 +25,4 @@ const isTokenExpired = (token) => {
     }
 };
 
-module.exports = { freshToken, isTokenExpired };
+module.exports = { freshToken, isTokenExpired, decodeToken };

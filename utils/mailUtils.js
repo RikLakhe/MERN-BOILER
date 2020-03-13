@@ -15,13 +15,13 @@ const sendMail = (to, subject, type) => {
 
     switch (type) {
         case 'verify':
-            mailMock = verificationMailMock(to.userName)
+            mailMock = verificationMailMock(to)
             break;
         case 'forget':
-            mailMock = forgetMailMock(to.userName)
+            mailMock = forgetMailMock(to)
             break;
         default:
-            mailMock = verificationMailMock(to.userName)
+            mailMock = verificationMailMock(to)
             break;
     }
 
@@ -39,16 +39,14 @@ const sendMail = (to, subject, type) => {
 
 }
 
-const verificationMailMock = (userEmail) => {
+const verificationMailMock = (user) => {
     return (
         `<div style="background-color: rgba(13, 138, 138, 0.281); font-size: 9px;">
         <p>
         <h3>Welcome to LakheMern</h3>
-            Dear ${userEmail} ,<br />We are proud to welcome you to our group of individuals. With your innovative help we can change this world, & WE WILL!
+            Dear ${user.email} ,<br />We are proud to welcome you to our group of individuals. With your innovative help we can change this world, & WE WILL!
             <hr style="border: 0.15em solid rgba(0,0,0,.1) ;" />
-            Please follow this <a href="${process.env.NODE_MODULE === 'production' ? `https://lakhe-mern.herokuapp.com/#` : `http://localhost:3000/#`}/auth/verify?TOKEN=${freshToken({
-            name: userEmail,
-        }, '1 hr')}"><strong>LINK</strong></a> to
+            Please follow this <a href="${process.env.NODE_ENV === 'development' ? `http://localhost:3000/#` : `https://lakhe-mern.herokuapp.com/#`}/auth/verify/${freshToken({ user }, '1 hr')}"><strong>LINK</strong></a> to
             complete your verification!<br /><br />
             Yours regards,<br />
             Rikesh Lal Shrestha
@@ -57,16 +55,14 @@ const verificationMailMock = (userEmail) => {
     )
 }
 
-const forgetMailMock = (userEmail) => {
+const forgetMailMock = (user) => {
     return (
         `<div style="background-color: rgba(13, 138, 138, 0.281); font-size: 9px;">
         <p>
         <h3>Welcome to LakheMern</h3>
-            Dear ${userEmail} ,<br />We are proud to welcome you to our group of individuals. With your innovative help we can change this world, & WE WILL!
+            Dear ${user.email}  ,<br />We are proud to welcome you to our group of individuals. With your innovative help we can change this world, & WE WILL!
             <hr style="border: 0.15em solid rgba(0,0,0,.1) ;" />
-            Please follow this <a href="${process.env.NODE_MODULE === 'production' ? `https://lakhe-mern.herokuapp.com/#` : `http://localhost:3000/#`}/auth/verify?TOKEN=${freshToken({
-            name: userEmail,
-        }, '1 hr')}"><strong>LINK</strong></a> to
+            Please follow this <a href="${process.env.NODE_ENV === 'development' ? `http://localhost:3000/#` : `https://lakhe-mern.herokuapp.com/#`}/auth/verify/${freshToken({ user }, '1 hr')}"><strong>LINK</strong></a> to
             change your password!<br /><br />
             Yours regards,<br />
             Rikesh Lal Shrestha
