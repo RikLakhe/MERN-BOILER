@@ -1,8 +1,9 @@
 import React from "react";
+import Card from "../Common/CustomDnd";
 
-const Home = props =>{
+const Home = props => {
     return (
-        <div>home</div>
+        <div><Card /></div>
     )
 };
 

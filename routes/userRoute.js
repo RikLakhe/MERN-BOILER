@@ -1,8 +1,8 @@
 const express = require('express');
 
-const {creatUser, findUser, listUsers, findUserById, findPendingUserById, findPendingUsers} = require('../controller/usersController');
+const { listUsers, findUserById, findPendingUserById, findPendingUsers } = require('../controller/usersController');
 
-const {requestGETWithTokenHandler, requestWithTokenHandler, responseHandler} = require('../middleware/requestResponseHandler');
+const { requestGETWithTokenHandler, requestWithTokenHandler, responseHandler } = require('../middleware/requestResponseHandler');
 
 const router = express.Router();
 

@@ -49,7 +49,7 @@ export const signUpService = formData => {
             .then(response => {
                 if (response.status === 'SUCCESS') {
                     dispatch(authRequestSuccess(response));
-                    history.push("/auth/success");
+                    history.push("/auth/sign-up/success");
                 }
             })
             .catch(error => dispatch(authRequestFailure(error.data)));
