@@ -77,6 +77,14 @@ const login = (req, res, next) => {
                             data: { type: 'warning', message: 'User not verified' }
                         };
                         next();
+                    } else if (response.permission === 'ADMIN') {
+                        sendMail({ email: response.email, userName: response.userName }, 'Access to Administrator', 'auth')
+                        res.locals.status = 400;
+                        res.locals.encryptData = {
+                            status: 'access',
+                            data: { type: 'info', message: 'Check the email and access using the link.' }
+                        };
+                        next();
                     } else {
                         res.locals.status = 200;
                         res.locals.newAccessToken = freshToken({

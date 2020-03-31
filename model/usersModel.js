@@ -48,7 +48,8 @@ const usersSchema = new Schema({
     }
 });
 
-// Virtual fields // !important
+// Virtual fields 
+// !important
 // This is one of expections when we cannot use arrow function, failed countless time due to this issue.
 usersSchema
     .virtual('password')
