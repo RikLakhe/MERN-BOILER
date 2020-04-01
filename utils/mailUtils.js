@@ -81,7 +81,7 @@ const twoWayAuthMailMock = (user) => {
         <h3>Welcome to LakheMern</h3>
             Dear ${user.email}  ,<br />You are going to access the Administrator account. (Be advised your changes will effect the system!). With your innovative help we can change this world, & WE WILL!
             <hr style="border: 0.15em solid rgba(0,0,0,.1) ;" />
-            Please follow this <a href="${process.env.NODE_ENV === 'development' ? `http://localhost:3000/#` : `https://lakhe-mern.herokuapp.com/#`}/auth/twoAuth/${freshToken({ user }, '1 hr')}"><strong>LINK</strong></a> to access system!<br /><br />
+            Please follow this <a href="${process.env.NODE_ENV === 'development' ? `http://localhost:3000/#` : `https://lakhe-mern.herokuapp.com/#`}/auth/admin/${freshToken({ user }, '2 hr')}"><strong>LINK</strong></a> to access system!<br /><br />
             Yours regards,<br />
             Rikesh Lal Shrestha
         </p>

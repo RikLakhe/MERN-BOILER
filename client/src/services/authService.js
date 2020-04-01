@@ -85,3 +85,24 @@ export const verifyResendService = token => {
             .catch(error => dispatch(authRequestFailure(error.data)));
     }
 };
+
+export const verifyAdminService = token => {
+
+    return dispatch => {
+        dispatch(authRequest());
+
+        return fetch(`v1/auth/admin/verify?TOKEN=${token}`)
+            .then(response => {
+                if (response.status === 'SUCCESS') {
+                    saveLocalStorage(MERN_TOKEN, response.token);
+                    saveLocalStorage(MERN_PERMISSION, response.permission);
+                    dispatch(authRequestSuccess(response.token));
+                    history.push("/");
+                }
+            })
+            .catch(error => {
+                dispatch(authRequestFailure(error.data))
+                history.push("/auth");
+            });
+    }
+};

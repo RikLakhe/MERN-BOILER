@@ -159,6 +159,47 @@ const verifyUser = (req, res, next) => {
     }
 }
 
+const verifyAdminUser = (req, res, next) => {
+    // TODO
+
+    if (req.query.TOKEN && !isTokenExpired(req.query.TOKEN)) {
+        let userData = decodeToken(req.query.TOKEN)
+        Users
+            .findOne({
+                userName: userData.user.userName
+            })
+            .exec((error, response) => {
+                if (error || !response) {
+                    res.locals.status = 400;
+                    res.locals.encryptData = {
+                        status: 'FAIL',
+                        data: { type: 'warning', message: 'Error in Login!' }
+                    };
+                    next();
+                }else{
+                    res.locals.status = 200;
+                    res.locals.newAccessToken = freshToken({
+                        name: response.userName,
+                        type: response.permission
+                    }, '1 min');
+                    res.locals.encryptData = {
+                        status: 'SUCCESS',
+                        token: res.locals.newAccessToken,
+                        permission: response.permission
+                    };
+                    next();
+                }
+            })
+    } else {
+        res.locals.status = 400;
+        res.locals.encryptData = {
+            status: 'FAIL',
+            data: { type: 'error', message: "Token Expired" }
+        };
+        next();
+    }
+}
+
 // utils
 const resendMailUser = (req, res, next) => {
     if (req.query.TOKEN && isTokenExpired(req.query.TOKEN)) {
@@ -200,4 +241,4 @@ const resendMailUser = (req, res, next) => {
     }
 }
 
-module.exports = { login, verifyUser, resendMailUser, signUp }
+module.exports = { login, verifyUser, resendMailUser, signUp,verifyAdminUser }
