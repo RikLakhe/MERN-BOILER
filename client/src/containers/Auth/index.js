@@ -6,6 +6,7 @@ import LogoutContainer from "./LogoutContainer"
 import SignUpContainer from "./SignUpContainer"
 import SignUpSuccess from "./SignUpSuccess"
 import VerificationContainer from "./VerificationContainer"
+import AdminSuccessContainer from "./AdminSuccessContainer"
 import NotFound from "../Exception/NotFoundContainer";
 
 const index = ({ match }) => (
@@ -35,6 +36,11 @@ const index = ({ match }) => (
                 exact
                 path={`${match.url}/verify/:token`}
                 component={VerificationContainer}
+            />
+            <Route
+                exact
+                path={`${match.url}/admin/:token`}
+                component={AdminSuccessContainer}
             />
             <Route component={NotFound} />
         </Switch>
