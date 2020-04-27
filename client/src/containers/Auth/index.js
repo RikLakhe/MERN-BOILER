@@ -9,7 +9,7 @@ import VerificationContainer from "./VerificationContainer"
 import AdminSuccessContainer from "./AdminSuccessContainer"
 import NotFound from "../Exception/NotFoundContainer";
 
-const index = ({ match }) => (
+const Auth = ({ match }) => (
     <Fragment>
         <Switch>
             <Route
@@ -47,4 +47,4 @@ const index = ({ match }) => (
     </Fragment>
 );
 
-export default index;
+export default Auth;

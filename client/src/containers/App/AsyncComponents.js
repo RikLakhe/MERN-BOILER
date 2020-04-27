@@ -51,3 +51,9 @@ export const AsyncUser = loadable({
     loader: () => import('../User'),
     loading: Loading,
 });
+
+// Product containers
+export const AsyncProduct = loadable({
+    loader: () => import('../Product'),
+    loading: Loading,
+});

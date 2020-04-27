@@ -15,7 +15,7 @@ export default [
         menuKey: 'products',
         icon: 'tags',
         route: '/products',
-        permission: 'PARTNER'
+        permission: 'ADMIN'
     }, {
         menuName: 'Checkout',
         menuKey: 'checkout',
