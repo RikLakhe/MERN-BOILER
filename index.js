@@ -41,12 +41,12 @@ app.listen(port, () => {
     console.log(`server running in port : ${port}`);
 
     // replace the uri string with your connection string.
-    mongoose
-        .connect(AppConfig.mongoDB.url, {
-            dbName: AppConfig.mongoDB.database,
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        })
-        .then(() => console.log(`DB Connected Database : ${AppConfig.mongoDB.database}`))
-        .catch(err => console.log('error', err));
+    // mongoose
+    //     .connect(AppConfig.mongoDB.url, {
+    //         dbName: AppConfig.mongoDB.database,
+    //         useNewUrlParser: true,
+    //         useUnifiedTopology: true
+    //     })
+    //     .then(() => console.log(`DB Connected Database : ${AppConfig.mongoDB.database}`))
+    //     .catch(err => console.log('error', err));
 });
