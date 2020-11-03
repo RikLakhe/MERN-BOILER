@@ -12,7 +12,7 @@ import "./styles/normalization.sass"
 import {ConnectedRouter} from "connected-react-router";
 
 const store = configureStore({}, history);
-const mountNode = document.getElementById('root');
+     const mountNode = document.getElementById("root");
 
 render(
     <Suspense fallback={null}>
