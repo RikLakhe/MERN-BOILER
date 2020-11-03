@@ -50,7 +50,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,tsx,json,css,scss,md}": [
-      "prettier ---trailing-comma es5 --single-quote --write"
+      "prettier --write"
     ]
   }
 }
