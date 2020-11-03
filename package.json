@@ -10,7 +10,7 @@
     "start": "node index.js",
     "build": "npm install && cd client && npm install && npm run build",
     "server": "concurrently \"nodemon index.js\" \"cd client && npm start\"",
-    "prettier": "prettier --write ./client/src/*"
+    "prettier": "prettier --write ./*"
   },
   "repository": {
     "type": "git",
@@ -49,7 +49,7 @@
     }
   },
   "lint-staged": {
-    "./*.{js,jsx,tsx,json,css,scss,md}": [
+    "*.{js,jsx,tsx,json,css,scss,md}": [
       "prettier ---trailing-comma es5 --single-quote --write"
     ]
   }
