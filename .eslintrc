@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "space-before-function-paren": "error",
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ]
+  }
+}
