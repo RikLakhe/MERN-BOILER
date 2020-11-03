@@ -49,7 +49,7 @@
     }
   },
   "lint-staged": {
-    "./client/src/*.{js,jsx,tsx,json,css,scss,md}": [
+    "./*.{js,jsx,tsx,json,css,scss,md}": [
       "prettier ---trailing-comma es5 --single-quote --write"
     ]
   }
