@@ -40,7 +40,7 @@
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.11",
     "morgan": "^1.10.0",
-    "nodemailer": "^6.4.14",
+    "nodemailer": "^6.4.16",
     "path": "^0.12.7"
   },
   "husky": {
